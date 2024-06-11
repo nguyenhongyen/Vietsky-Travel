@@ -15,10 +15,14 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-<header id="header" class="position-relative zi-5">
+<header id="header" class="zi-5 transition-default">
     <div class="container">
-        <div class="header-top d-flex align-items-center gap-3 justify-content-end">
-            <ul class="list-unstyled mb-0 d-flex align-items-center gap-4 justify-content-end">
+        <div class="header-top d-flex align-items-center gap-3 justify-content-end transition-default">
+            <a href="" aria-label="" class="d-xl-none d-block header-top__logo me-auto">
+                <img src="./assets/images/Logo/logo-white.png" width="576" height="149" alt="">
+            </a>
+
+            <ul class="list-unstyled mb-0 d-xl-flex d-none align-items-center gap-4 justify-content-end">
                 <li>
                     <a href="" aria-label="" class="text-white transition-default d-block fw-300">Contact us</a>
                 </li>
@@ -32,27 +36,26 @@
                     <a href="" aria-label="" class="text-white transition-default d-block fw-300">My Steppes</a>
                 </li>
             </ul>
-            <div class="header-language position-relative">
-				<span class="header-language__image ">
-					<img src="./assets/images/us.svg" width="20" height="20" alt="Logo">
-				</span>
-                <div class="language-absolute position-absolute d-block top-100 start-50 bg-white">
-                    <a href="" aria-label="" class="w-100 d-block transition-default text-secondary">
-                        <img src="./assets/images/logovietnam.png" width="25" height="25" alt="Logo">
-                        <span class="ms-2">1800 571 2985</span>
-                    </a>
-                </div>
-            </div>
-            <a role="button" href="tel:" aria-label="" class="header-phone text-secondary transition-default d-block">1800
+            <a href="#" aria-label="" class="header-language">
+                <img src="./assets/images/logovietnam.png" width="183" height="124" alt="Logo">
+            </a>
+            <a role="button" href="tel:" aria-label=""
+               class="header-phone text-secondary transition-default d-md-block d-none">1800
                 571 2985</a>
+            <button class="d-xl-none d-flex header-top__bars" aria-label="Menu mobile" id="hamburger-button">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
-        <div class="header-bottom d-flex align-items-center gap-3 justify-content-between">
+        <div class="header-bottom d-xl-flex d-none align-items-center gap-3 justify-content-between ">
             <a href="" aria-label="" class="d-block header-bottom__logo">
                 <img src="./assets/images/Logo/logo-white.png" width="576" height="149" alt="">
             </a>
             <div class="header-bottom__wrap d-flex align-items-center gap-3 ">
                 <div class="header-navigation">
-                    <ul class="list-unstyled mb-0 d-flex align-items-center">
+                    <ul class="list-unstyled mb-0 d-flex align-items-center position-relative">
+                        <span class="header-line"></span>
                         <li>
                             <a href="aboutus.html" aria-label="" class="text-white">
                                 About us <span class="icon"><i class="fal fa-angle-down"></i></span>
@@ -95,25 +98,57 @@
     </div>
 </header>
 <main>
-    <section class="section-hero position-relative" id="section-hero">
+    <section class="section-hero position-relative " id="section-hero">
         <div class="container-fluid p-0 ">
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide h-auto">
-                        <div class="section-hero__item ratio ratio-16x9">
-                            <img src="./assets/images/banner.webp" width="1440" height="810" alt="">
+                        <div class="section-hero__item ">
+                            <img src="./assets/images/banner.webp" class="animation-image" width="1440" height="810"
+                                 alt="">
                         </div>
                     </div>
+                    <div class="swiper-slide h-auto">
+                        <div class="section-hero__item">
+                            <div class="ratio ratio-16x9">
+                                <video autoplay muted>
+                                    <source src="./assets/images/dulich.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide h-auto">
+                        <div class="section-hero__item">
+                            <div class="ratio ratio-16x9">
+                                <iframe class="render-youtube" id="render-youtube" data-id="Au6LqK1UH8g" frameborder="0"
+                                        allowfullscreen=""
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        referrerpolicy="strict-origin-when-cross-origin"
+                                        title="XIN CHÀO VIỆT NAM | DU LỊCH XUYÊN VIỆT | PHIÊN BẢN FLYCAM | HELLO VIET NAM"
+                                        width="640" height="360"
+                                        src="https://www.youtube.com/embed/Au6LqK1UH8g?autoplay=1&amp;controls=0&amp;playsinline=1&amp;showinfo=0&amp;autohide=1&amp;modestbranding=1&amp;loop=1&amp;disablekb=1&amp;enablejsapi=1&amp;fs=0&amp;iv_load_policy=3&amp;playlist=Au6LqK1UH8g&amp;origin=https%3A%2F%2Fcanthotravel.com&amp;widgetid=1"></iframe>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide h-auto">
+                        <div class="section-hero__item">
+                            <img src="./assets/images/intro3.jpg" class="animation-image" width="1440" height="810"
+                                 alt="">
+                        </div>
+                    </div>
+
                 </div>
             </div>
-            <div class="section-search position-absolute top-0 h-100 zi-4 w-100 d-flex flex-column align-items-center justify-content-center">
+            <div class="section-search position-absolute mt-5 top-0 h-100 zi-4 w-100 d-flex flex-column align-items-center justify-content-center">
                 <div class="row justify-content-center">
                     <div class="col">
-                        <div class="search-heading text-white text-center position-relative zi-5">
+                        <div class="search-heading text-white text-center  position-relative zi-5">
                             <h1 class="search-heading__title ">
                                 Discover Extraordinary<span class="text-secondary">.</span>
                             </h1>
-                            <h6 class="search-heading__text mb-4">Beautiful adventures & remarkable holidays tailored to
+                            <h6 class="search-heading__text mb-4 d-lg-block d-none">Beautiful adventures & remarkable
+                                holidays tailored to
                                 you</h6>
                         </div>
                         <form id="frm-search" novalidate>
@@ -125,7 +160,7 @@
                                             <path d="M21.9,20.7l-5.5-5.5C16.2,15.1,16.1,15,16,15h-0.4c1.5-1.6,2.4-3.7,2.4-6.1c0-4.9-4-8.9-8.9-8.9S0,4,0,8.9s4,8.9,8.9,8.9 c2.3,0,4.5-0.9,6.1-2.4V16c0,0.1,0.1,0.3,0.2,0.4l5.5,5.5c0.2,0.2,0.5,0.2,0.7,0l0.4-0.4C22.1,21.2,22.1,20.9,21.9,20.7z M8.9,16.5 c-4.2,0-7.6-3.4-7.6-7.6s3.4-7.6,7.6-7.6s7.6,3.4,7.6,7.6S13.1,16.5,8.9,16.5z"></path>
                                         </svg>
                                     </button>
-                                    <input type="text" name="" autocomplete="false"
+                                    <input type="text" name="" autocomplete="false" id="input-search"
                                            class="form-control bg-transparent w-100"
                                            placeholder="Where would you like to explore?"/>
                                 </div>
@@ -133,16 +168,16 @@
                                     class="list-unstyled mb-0 custom-scrollbar section-search__result bg-white position-absolute start-0 top-100 w-100 zi-2 mt-1">
                                     <li>
                                         <a href="" aria-label="" class="search-item d-flex align-items-center fw-500">
-                                            <span class="search-item__icon flex-shrink-0 me-3">
+                                            <span class="search-item__icon flex-shrink-0 me-3 fs-5">
                                                 <i class="far fa-globe-asia"></i>
                                             </span>
                                             <span class="search-item__title me-1">Vietnam</span>
-                                            <span class="search-item__type text-secondary fw-700">Destination</span>
+                                            <span class="search-item__type text-secondary fw-800">Destination</span>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="" aria-label="" class="search-item d-flex align-items-center fw-500">
-                                            <span class="search-item__icon flex-shrink-0 me-3">
+                                            <span class="search-item__icon flex-shrink-0 me-3 fs-5">
                                                <i class="far fa-calendar-edit"></i>
                                             </span>
                                             <span class="search-item__title me-1">Vietnam by Robin Barrett</span>
@@ -151,7 +186,7 @@
                                     </li>
                                     <li>
                                         <a href="" aria-label="" class="search-item d-flex align-items-center fw-500">
-                                            <span class="search-item__icon flex-shrink-0 me-3">
+                                            <span class="search-item__icon flex-shrink-0 me-3 fs-5">
                                               <i class="far fa-tree-palm"></i>
                                             </span>
                                             <span class="search-item__title me-1">Highlights of Vietnam</span>
@@ -160,7 +195,7 @@
                                     </li>
                                     <li>
                                         <a href="" aria-label="" class="search-item d-flex align-items-center fw-500">
-                                            <span class="search-item__icon flex-shrink-0 me-3">
+                                            <span class="search-item__icon flex-shrink-0 me-3 fs-5">
                                                <i class="far fa-calendar-edit"></i>
                                             </span>
                                             <span class="search-item__title me-1">Vietnam by Robin Barrett</span>
@@ -169,7 +204,7 @@
                                     </li>
                                     <li>
                                         <a href="" aria-label="" class="search-item d-flex align-items-center fw-500">
-                                            <span class="search-item__icon flex-shrink-0 me-3">
+                                            <span class="search-item__icon flex-shrink-0 me-3 fs-5">
                                                <i class="far fa-calendar-edit"></i>
                                             </span>
                                             <span class="search-item__title me-1">Vietnam by Robin Barrett</span>
@@ -178,7 +213,7 @@
                                     </li>
                                     <li>
                                         <a href="" aria-label="" class="search-item d-flex align-items-center fw-500">
-                                            <span class="search-item__icon flex-shrink-0 me-3">
+                                            <span class="search-item__icon flex-shrink-0 me-3 fs-5">
                                               <i class="far fa-tree-palm"></i>
                                             </span>
                                             <span class="search-item__title me-1">Highlights of Vietnam</span>
@@ -187,7 +222,7 @@
                                     </li>
                                     <li>
                                         <a href="" aria-label="" class="search-item d-flex align-items-center fw-500">
-                                            <span class="search-item__icon flex-shrink-0 me-3">
+                                            <span class="search-item__icon flex-shrink-0 me-3 fs-5">
                                                <i class="far fa-calendar-edit"></i>
                                             </span>
                                             <span class="search-item__title me-1">Vietnam by Robin Barrett</span>
@@ -196,7 +231,7 @@
                                     </li>
                                     <li>
                                         <a href="" aria-label="" class="search-item d-flex align-items-center fw-500">
-                                            <span class="search-item__icon flex-shrink-0 me-3">
+                                            <span class="search-item__icon flex-shrink-0 me-3 fs-5">
                                                <i class="far fa-calendar-edit"></i>
                                             </span>
                                             <span class="search-item__title me-1">Vietnam by Robin Barrett</span>
@@ -205,7 +240,7 @@
                                     </li>
                                     <li>
                                         <a href="" aria-label="" class="search-item d-flex align-items-center fw-500">
-                                            <span class="search-item__icon flex-shrink-0 me-3">
+                                            <span class="search-item__icon flex-shrink-0 me-3 fs-5">
                                               <i class="far fa-tree-palm"></i>
                                             </span>
                                             <span class="search-item__title me-1">Highlights of Vietnam</span>
@@ -214,7 +249,7 @@
                                     </li>
                                     <li>
                                         <a href="" aria-label="" class="search-item d-flex align-items-center fw-500">
-                                            <span class="search-item__icon flex-shrink-0 me-3">
+                                            <span class="search-item__icon flex-shrink-0 me-3 fs-5">
                                                <i class="far fa-calendar-edit"></i>
                                             </span>
                                             <span class="search-item__title me-1">Vietnam by Robin Barrett</span>
@@ -224,12 +259,13 @@
                                 </ul>
                             </div>
                         </form>
-                        <div class="search-heading__bottom d-flex align-items-center justify-content-center gap-4 mt-5">
+                        <div class="search-heading__bottom d-flex align-items-center justify-content-center gap-4 mt-lg-5 mt-4">
                             <a href="" aria-label=""
                                class="d-block fw-700 text-white transition-default position-relative">
                                 Top Picks for 2024
                             </a>
-                            <a href="" aria-label=""
+                            <a href="https://www.youtube.com/watch?v=TrbtMqHSmcc" id="popup-video" aria-label=""
+                               data-fancybox="Video" data-caption=""
                                class="d-block fw-700 text-white transition-default position-relative">
                                 Our world in 60 seconds
                             </a>
@@ -247,17 +283,78 @@
                 <h2 class="heading-title mb-0 text-center">Why travel with Steppes<span class="text-secondary">.</span>
                 </h2>
             </div>
-            <div class="section-introduce__swiper" id="section-introduce">
-                <div class="swiper mySwiper sample-slider">
+            <div class="section-introduce__swiper overflow-hidden position-relative" id="section-introduce">
+                <div class="swiper mySwiper mb-5" >
                     <div class="swiper-wrapper">
                         <div class="swiper-slide h-auto">
-                            <div class="card-introduce h-100">
-                                <div class="card-introduce__image">
-                                    <img src="./assets/images/why1.jpg" width="1024" height="576" alt="">
-                                </div>
-                                <div class="card-introduce__content text-center">
-                                    <h4 class="card-introduce__title font-heading fw-700">
-                                        Sustainability at our core
+                            <div class="card-introduce__image">
+                                <img src="./assets/images/why1.jpg" width="1024" height="576" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide h-auto">
+                            <div class="card-introduce__image">
+                                <img src="./assets/images/why2.jpg" width="1024" height="576" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide h-auto">
+                            <div class="card-introduce__image">
+                                <img src="./assets/images/why3.jpg" width="1024" height="576" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide h-auto">
+                            <div class="card-introduce__image">
+                                <img src="./assets/images/why4.jpg" width="1024" height="576" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide h-auto">
+                            <div class="card-introduce__image">
+                                <img src="./assets/images/why3.jpg" width="1024" height="576" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide h-auto">
+                            <div class="card-introduce__image">
+                                <img src="./assets/images/why1.jpg" width="1024" height="576" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide h-auto">
+                            <div class="card-introduce__image">
+                                <img src="./assets/images/why2.jpg" width="1024" height="576" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide h-auto">
+                            <div class="card-introduce__image">
+                                <img src="./assets/images/why3.jpg" width="1024" height="576" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide h-auto">
+                            <div class="card-introduce__image">
+                                <img src="./assets/images/why4.jpg" width="1024" height="576" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide h-auto">
+                            <div class="card-introduce__image">
+                                <img src="./assets/images/why3.jpg" width="1024" height="576" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button">
+                    <button type="button" aria-label="Button prev" class="swiper-button__prev swiper-button__custom bg-white text-secondary d-flex align-items-center justify-content-center border-5 rounded-circle position-absolute top-50 zi-2 translate-middle-y">
+                        <i class="fal fa-angle-left"></i>
+                    </button>
+                    <button type="button" aria-label="Button next" class="swiper-button__next swiper-button__custom bg-white text-secondary d-flex align-items-center justify-content-center border-5 rounded-circle position-absolute top-50 zi-2 translate-middle-y">
+                        <i class="fal fa-angle-right"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="row justify-content-center" id="section-introduce-active">
+                <div class="col-lg-7">
+                    <div class="swiper mySwiper" >
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide h-auto">
+                                <div class="card-introduce__content text-center bg-white h-100">
+                                    <h4 class="card-introduce__title font-heading fw-700 text-black mb-3">
+                                        Sustainability at our core 1
                                     </h4>
                                     <div class="card-introduce__text">
                                         We’re a Certified B Corp meaning that when you choose to travel with us, you’re
@@ -272,15 +369,48 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="swiper-slide h-auto">
-                            <div class="card-introduce h-100">
-                                <div class="card-introduce__image">
-                                    <img src="./assets/images/why2.jpg" width="1024" height="576" alt="">
+                            <div class="swiper-slide h-auto">
+                                <div class="card-introduce__content text-center bg-white h-100">
+                                    <h4 class="card-introduce__title font-heading fw-700 text-black mb-3">
+                                        Sustainability at our core 2
+                                    </h4>
+                                    <div class="card-introduce__text">
+                                        We’re a Certified B Corp meaning that when you choose to travel with us, you’re
+                                        choosing to help protect what matters.
+
+                                    </div>
                                 </div>
-                                <div class="card-introduce__content text-center">
-                                    <h4 class="card-introduce__title font-heading fw-700">
-                                        Sustainability at our core
+                            </div>
+                            <div class="swiper-slide h-auto">
+                                <div class="card-introduce__content text-center bg-white h-100">
+                                    <h4 class="card-introduce__title font-heading fw-700 text-black mb-3">
+                                        Sustainability at our core 3
+                                    </h4>
+                                    <div class="card-introduce__text">
+                                        We’re a Certified B Corp meaning that when you choose to travel with us, you’re
+                                        choosing to help protect what matters.
+                                        <br>
+                                        Our Fund for Change programme supports community and sustainability projects and
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide h-auto">
+                                <div class="card-introduce__content text-center bg-white h-100">
+                                    <h4 class="card-introduce__title font-heading fw-700 text-black mb-3">
+                                        Sustainability at our core 4444
+                                    </h4>
+                                    <div class="card-introduce__text">
+                                       And because protecting our planet is part of everything we do, you can
+                                        travel in the knowledge that you’re contributing to its wellbeing with every
+                                        step of your journey.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide h-auto">
+                                <div class="card-introduce__content text-center bg-white h-100">
+                                    <h4 class="card-introduce__title font-heading fw-700 text-black mb-3">
+                                        Sustainability at our core 5
                                     </h4>
                                     <div class="card-introduce__text">
                                         We’re a Certified B Corp meaning that when you choose to travel with us, you’re
@@ -295,92 +425,13 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="swiper-slide h-auto">
-                            <div class="card-introduce h-100">
-                                <div class="card-introduce__image">
-                                    <img src="./assets/images/why3.jpg" width="1024" height="576" alt="">
-                                </div>
-                                <div class="card-introduce__content text-center">
-                                    <h4 class="card-introduce__title font-heading fw-700">
-                                        Sustainability at our core
+                            <div class="swiper-slide h-auto">
+                                <div class="card-introduce__content text-center bg-white h-100">
+                                    <h4 class="card-introduce__title font-heading fw-700 text-black mb-3">
+                                        Sustainability at our core 6
                                     </h4>
                                     <div class="card-introduce__text">
-                                        We’re a Certified B Corp meaning that when you choose to travel with us, you’re
-                                        choosing to help protect what matters.
-                                        <br>
-                                        Our Fund for Change programme supports community and sustainability projects and
-                                        local charities across the globe and we offset carbon emissions from your
-                                        flights. We insist our on-ground partners work to reduce their use of single-use
-                                        plastics. And because protecting our planet is part of everything we do, you can
-                                        travel in the knowledge that you’re contributing to its wellbeing with every
-                                        step of your journey.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide h-auto">
-                            <div class="card-introduce h-100">
-                                <div class="card-introduce__image">
-                                    <img src="./assets/images/why1.jpg" width="1024" height="576" alt="">
-                                </div>
-                                <div class="card-introduce__content text-center">
-                                    <h4 class="card-introduce__title font-heading fw-700">
-                                        Sustainability at our core
-                                    </h4>
-                                    <div class="card-introduce__text">
-                                        We’re a Certified B Corp meaning that when you choose to travel with us, you’re
-                                        choosing to help protect what matters.
-                                        <br>
-                                        Our Fund for Change programme supports community and sustainability projects and
-                                        local charities across the globe and we offset carbon emissions from your
-                                        flights. We insist our on-ground partners work to reduce their use of single-use
-                                        plastics. And because protecting our planet is part of everything we do, you can
-                                        travel in the knowledge that you’re contributing to its wellbeing with every
-                                        step of your journey.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide h-auto">
-                            <div class="card-introduce h-100">
-                                <div class="card-introduce__image">
-                                    <img src="./assets/images/why1.jpg" width="1024" height="576" alt="">
-                                </div>
-                                <div class="card-introduce__content text-center">
-                                    <h4 class="card-introduce__title font-heading fw-700">
-                                        Sustainability at our core
-                                    </h4>
-                                    <div class="card-introduce__text">
-                                        We’re a Certified B Corp meaning that when you choose to travel with us, you’re
-                                        choosing to help protect what matters.
-                                        <br>
-                                        Our Fund for Change programme supports community and sustainability projects and
-                                        local charities across the globe and we offset carbon emissions from your
-                                        flights. We insist our on-ground partners work to reduce their use of single-use
-                                        plastics. And because protecting our planet is part of everything we do, you can
-                                        travel in the knowledge that you’re contributing to its wellbeing with every
-                                        step of your journey.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide h-auto">
-                            <div class="card-introduce h-100">
-                                <div class="card-introduce__image">
-                                    <img src="./assets/images/why1.jpg" width="1024" height="576" alt="">
-                                </div>
-                                <div class="card-introduce__content text-center">
-                                    <h4 class="card-introduce__title font-heading fw-700">
-                                        Sustainability at our core
-                                    </h4>
-                                    <div class="card-introduce__text">
-                                        We’re a Certified B Corp meaning that when you choose to travel with us, you’re
-                                        choosing to help protect what matters.
-                                        <br>
-                                        Our Fund for Change programme supports community and sustainability projects and
-                                        local charities across the globe and we offset carbon emissions from your
-                                        flights. We insist our on-ground partners work to reduce their use of single-use
+                                       We insist our on-ground partners work to reduce their use of single-use
                                         plastics. And because protecting our planet is part of everything we do, you can
                                         travel in the knowledge that you’re contributing to its wellbeing with every
                                         step of your journey.
@@ -389,8 +440,43 @@
                             </div>
                         </div>
                     </div>
+                    <div class="section-box mt-5">
+                        <div class="row row-cols-3 g-md-5 g-4 justify-content-center">
+                            <div class="col">
+                                <div class="box-item h-100 d-flex flex-column align-items-center justify-content-center gap-2">
+                                    <div class="box-item__image mx-auto">
+                                        <img src="./assets/images/danhgia.png" width="150" height="150" alt="">
+                                    </div>
+                                    <h6 class="box-item__title text-center text-black font-heading fw-700">
+                                        Rated Excellent on Trustpilot
+                                    </h6>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="box-item h-100 d-flex flex-column align-items-center justify-content-center gap-2">
+                                    <div class="box-item__image mx-auto">
+                                        <img src="./assets/images/traveller.png" width="150" height="150" alt="">
+                                    </div>
+                                    <h6 class="box-item__title text-center text-black font-heading fw-700">
+                                        One of the World's Top 5 Travel Specialists
+                                    </h6>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="box-item h-100 d-flex flex-column align-items-center justify-content-center gap-2">
+                                    <div class="box-item__image mx-auto">
+                                        <img src="./assets/images/certified.png" width="150" height="150" alt="">
+                                    </div>
+                                    <h6 class="box-item__title text-center text-black font-heading fw-700">
+                                        Transparent and Accountable
+                                    </h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+
         </div>
     </section>
 </main>
@@ -401,5 +487,6 @@
 <script src="assets/plugins/swiper/swiper-bundle.min.js"></script>
 <script src="assets/plugins/aos/aos.js"></script>
 <script src="assets/js/app.js"></script>
+<script src="assets/js/index.js"></script>
 </body>
 </html>

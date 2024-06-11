@@ -3,51 +3,74 @@ const handleSliderHero = function () {
     if (slider.length > 0) {
         const elmSwiper = '#' + slider.attr('id')
         const objSwiper = {
-            speed: 2000, loop: true, spaceBetween: 20, slidesPerView: 3, autoplay: {
-                delay: 4000,
-            }, breakpoints: {
-                1200: {
-                    slidesPerView: 7, spaceBetween: 30,
-                }, 1024: {
-                    spaceBetween: 30, slidesPerView: 6,
-                }, 768: {
-                    spaceBetween: 30, slidesPerView: 4,
-                }, 425: {
-                    spaceBetween: 30, slidesPerView: 3,
-                }, 375: {
-                    slidesPerView: 3,
-                },
-            }
+            speed: 2000, loop: true, spaceBetween: 20, slidesPerView: 1, effect: "fade", // autoplay: {
+            //     delay: 5000,
+            // },
+
+
         }
         handleSwiper(elmSwiper + ' .swiper', objSwiper);
     }
 }
 
 const handleSliderIntroduce = function () {
-    const slider = $('#section-introduce');
-    if (slider.length > 0) {
-        const elmSwiper = '#' + slider.attr('id')
+    const sliderIntro = $('#section-introduce');
+     const sliderIntroActive = $('#section-introduce-active');
+
+    if (sliderIntro.length > 0) {
+        const elmSwiper = '#' + sliderIntro.attr('id')
         const objSwiper = {
-            loop: true,                         // loop
-            slidesPerView: 3,                   // how many slides to show
-            centeredSlides: true,               // centering the first slide
-            effect: "coverflow",                // applying the coverflow effect
+            slidesPerView: 3,
+            centeredSlides: true,
+            effect: "coverflow",
             coverflowEffect: {
-                rotate: 0,                      // Rotate of the prev and next slides
-                depth: 200,                     // Depth of the prev and next slides
-                stretch: 30,                    // Space between the slides
-                modifier: 1,                    // Multiply the values of rotate, depth, and stretc
-                scale: 1,                       // Size ratio of the prev and next slides
-                slideShadows: false,            // Presence of shadow on the surfaces of the prev and next slides
-            }, navigation: {                       // navigation(arrows)
-                nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev",
+                rotate: 20,
+                stretch: 1,
+                depth: 500,
+                modifier: 1,
+                slideShadows: !0
             },
         }
-        handleSwiper(elmSwiper + ' .swiper', objSwiper);
+        initSliderThumb = handleSwiper(elmSwiper + ' .swiper', objSwiper);
+
+        if(sliderIntroActive.length){
+            const elmSwiperAvatar = '#' + sliderIntroActive.attr('id')
+            const objSwiperAvatar = {
+                slidesPerView: 1,
+                effect: "fade",
+                thumbs: {
+                    swiper: initSliderThumb,
+                },
+                navigation: {
+                    nextEl: "#section-introduce .swiper-button__next",
+                    prevEl: "#section-introduce .swiper-button__prev",
+                },
+            }
+
+            handleSwiper(elmSwiperAvatar + ' .swiper', objSwiperAvatar);
+        }
+
+
+    }
+}
+
+const handleSearch = function () {
+    let inputSearch = $('#input-search');
+    if(inputSearch.length){
+        inputSearch.keyup(function (e) {
+            if (inputSearch !== '') {
+                $('body').addClass('is-result-search');
+            } else {
+                $('body').removeClass('is-result-search');
+            }
+
+        })
     }
 }
 
 $(function () {
     handleSliderHero()
     handleSliderIntroduce()
+    handleSearch()
+
 });

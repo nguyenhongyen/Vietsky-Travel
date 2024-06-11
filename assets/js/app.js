@@ -15,7 +15,7 @@ let handleApplyCollapse = function ($parent, $firstItem = false, $callFunction =
 		});
 	}
 
-	if (windowWidth <= 991) {
+	if (windowWidth <= 1024) {
 		let $objParentAttr = {};
 		let $objChildrenAttr = {
 			'data-bs-parent': '#' + $parent.attr('id')
@@ -88,7 +88,7 @@ let handleCallMenu = function () {
 		}
 	}
 
-	if (windowWidth <= 991) {
+	if (windowWidth <= 1024) {
 		const $hamburger = $('#hamburger-button');
 		if ($hamburger.length) {
 			$hamburger.click(function () {
@@ -105,14 +105,16 @@ let handleCallMenu = function () {
 	} else {
 		handleBody();
 	}
+
+
 }
 
 const handleStickHeader = function () {
 	$(window).scroll(function (e) {
-		if ($(document).scrollTop() > $('#header').innerHeight()) {
-			$('#header').addClass('is-scroll');
+		if ($(document).scrollTop() > 300) {
+			$('body').addClass('is-scroll');
 		} else {
-			$('#header').removeClass('is-scroll');
+			$('body').removeClass('is-scroll');
 		}
 	});
 }
@@ -208,6 +210,26 @@ const handleSwiper = function(elm, obj={}) {
 	});
 }
 
+const handleActiveNav = function(){
+	let headerNav = $(".header-navigation ul > li");
+	let activeNav = $(".header-navigation .header-line");
+
+	if(headerNav){
+		headerNav.each(function () {
+			let elm = $(this);
+			elm.on("mouseenter", function () {
+				activeNav.css({
+					left: $(this)[0].offsetLeft,
+					width: $(this)[0].offsetWidth,
+				});
+			})
+		});
+	}
+
+
+}
+
+
 $(function () {
 	handleApplyCollapse($('#header-navigation > ul'), true, true);
 	handleCallMenu();
@@ -217,9 +239,7 @@ $(function () {
 	});
 
 	handleStickHeader();
-
 	handleInitFancybox();
-
 	handleContentDetail();
-
+	handleActiveNav();
 });

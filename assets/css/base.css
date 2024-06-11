@@ -4,13 +4,13 @@
 	--transition-default: 0.3s all ease-in-out;
 	--font-theme: "Nunito Sans", sans-serif;
 	--font-heading:"Libre Caslon Text", serif;
-	--size-theme: 14px;
+	--size-theme: 15px;
 
 
 	/* Color Base */
 	--primary-color: #130654;
 	--primary-hover: #130654;
-	--primary-rgb: 26, 173, 166;
+	--primary-rgb: 19, 6, 84;
 
 	--secondary-color: #f7931d;
 	--secondary-hover: #f7931d;
@@ -26,17 +26,19 @@
 	--dark-300: #ADB1BC;
 
 	--bg-light: #F8F8F9;
+	--text-color:#666;
 }
 
 body {
 	position: relative;
 	width: 100%;
-	color: var(--dark-color);
+	color: var(--text-color);
 	font-family: var(--font-theme);
 	font-size: var(--size-theme);
 	font-weight: 400;
 	font-style: normal;
 	background-color: var(--bs-white);
+	line-height: 28px;
 }
 
 a,
@@ -408,5 +410,5 @@ textarea:focus {
 	font-family: var(--font-heading);
 }
 main{
-	margin-top: -109px;
+	margin-top: -120px;
 }
