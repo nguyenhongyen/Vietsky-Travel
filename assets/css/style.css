@@ -35,6 +35,13 @@
     margin-top: 30px;
 }
 
+@media (max-width: 992px) {
+    .section-heading .heading-subtitle {
+        font-size: 1.1em;
+        margin-bottom: 10px;
+    }
+}
+
 .link-custom {
     position: relative;
     padding-bottom: 6px;
@@ -82,6 +89,19 @@
 
 .link-custom:hover::after {
     left: 0;
+}
+
+.link-custom-2 {
+    border: 1px solid var(--bs-white);
+    text-transform: uppercase;
+    padding: 8px 20px;
+    color: var(--bs-white);
+    transition: var(--transition-default);
+}
+
+.link-custom-2:hover {
+    border: 1px solid var(--bs-gray-200);
+    color: var(--bs-gray-200);
 }
 
 /*==================================
@@ -386,23 +406,33 @@ header {
 /*======================================
         section-hero
 ==========================================*/
+.section-introduce__swiper .swiper-slide {
+    width: 500px !important;
+    height: 400px !important;
+}
+
+.card-introduce__image,
 .card-introduce__image > img {
     width: 100% !important;
     height: auto !important;
+    object-fit: cover;
 }
 
 .swiper-button__custom {
     width: 45px;
     height: 45px;
     border: 1px solid transparent;
+    font-size: 1.85em;
 }
 
 .section-introduce__swiper .swiper-button__prev {
-    left: 410px;
+    left: 375px;
+    top: calc(50% - 1.5rem) !important;
 }
 
 .section-introduce__swiper .swiper-button__next {
-    right: 410px;
+    right: 375px;
+    top: calc(50% - 1.5rem) !important;
 }
 
 .box-item__image {
@@ -410,11 +440,6 @@ header {
     height: 150px;
 }
 
-.box-item__image > img {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: contain;
-}
 
 @media (max-width: 1024px) {
     .box-item__image {
@@ -442,6 +467,12 @@ header {
 
     .section-introduce__swiper .swiper-button__next {
         right: 150px;
+    }
+
+    .swiper-button__custom {
+        width: 40px;
+        height: 40px;
+        font-size: 1.3em;
     }
 }
 
@@ -509,9 +540,11 @@ header {
     margin-top: 10px;
     border-top: 1px solid var(--bs-gray-500);
 }
-.card-holiday__link{
+
+.card-holiday__link {
     height: 48px;
 }
+
 .card-holiday__desc {
     height: 0;
 }
@@ -525,22 +558,24 @@ header {
 }
 
 .section-holiday__column .swiper-button__prev {
-    left: 320px;
+    left: calc(100% / 3.5 - 28px);
     top: 50%;
     z-index: 3;
 }
 
 .section-holiday__column .swiper-button__next {
-    right: -20px;
+    right: -22.5px;
     top: 50%;
     z-index: 3;
 }
-.section-holiday__type .section-holiday__column .swiper-button__prev{
+
+.section-holiday__type .section-holiday__column .swiper-button__prev {
     left: -20px;
     top: 50%;
     z-index: 3;
 }
-.section-holiday__type .section-holiday__column .swiper-button__next{
+
+.section-holiday__type .section-holiday__column .swiper-button__next {
     right: 320px;
     top: 50%;
     z-index: 3;
@@ -561,18 +596,201 @@ header {
     .card-holiday__category {
         font-size: 0.8em;
     }
-    .card-holiday__desc{
+
+    .card-holiday__desc {
         font-size: 0.9em;
     }
-    .card-holiday__link{
+
+    .card-holiday__link {
         font-size: 0.85em;
     }
 }
-@media(max-width: 320px) {
-    .card-holiday__meta{
+
+@media (max-width: 320px) {
+    .card-holiday__meta {
         flex-direction: column;
         align-items: flex-start !important;
         justify-content: flex-start !important;
         gap: 5px !important;
     }
+}
+
+
+/*======================================
+        card article
+==========================================*/
+.card-article__avatar {
+    width: 102px;
+    height: 102px;
+    transform: translate(-50%, -50%);
+}
+
+.card-article__layer {
+    padding: 50px;
+}
+
+.card-article__top.pseudo:after {
+    height: 2px;
+    background-color: var(--bs-white);
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    z-index: 3;
+    opacity: 0.5;
+
+}
+
+.card-article__category {
+    font-size: 1.2em;
+}
+
+.card-article__author {
+    font-size: 0.9em;
+}
+
+.card-article__desc {
+    font-size: 1em;
+}
+
+.section-article .swiper-slide {
+    opacity: .5;
+    -webkit-transform: scale(.9);
+    transform: scale(.9);
+}
+
+.section-article .swiper-slide.swiper-slide-active {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+@media (max-width: 992px) {
+    .card-article__layer {
+        padding: 20px;
+    }
+
+    .card-article__avatar {
+        width: 60px;
+        height: 60px;
+    }
+
+    .card-article__title {
+        font-size: 1.3em;
+    }
+
+    .section-article .swiper-button {
+        display: none !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .card-article__desc {
+        display: none !important;
+    }
+
+    .card-article {
+        font-size: 0.9em;
+    }
+
+    .section-article .swiper-slide {
+        -webkit-transform: scale(.95);
+        transform: scale(.95);
+    }
+}
+
+
+/*======================================
+      card-trustpilot
+==========================================*/
+.card-trustpilot {
+    background-color: #f6f2e0;
+    border-radius: 2px;
+    border: 1px solid #ccddee;
+    padding: 50px;
+}
+
+.card-trustpilot__text {
+    font-size: 0.9em;
+}
+
+@media (max-width: 992px) {
+    .card-trustpilot {
+        padding: 30px;
+    }
+
+    .section-trustpilot .section-heading svg {
+        width: 150px;
+    }
+}
+
+/*======================================
+      section-form
+==========================================*/
+.section-form {
+    margin-top: 50px;
+    background-color: #f6f2e0;
+    border-top: 1px #d1d1d1 solid;
+}
+
+.section-form__avatar {
+    transform: translate(-50%, -50%);
+}
+
+.section-form__avatar .form-avatar:nth-child(odd) {
+    width: 80px;
+    height: 80px;
+}
+
+.section-form__avatar .form-avatar:nth-child(even) {
+    width: 102px;
+    height: 102px;
+}
+
+.section-form__avatar .form-avatar-1 {
+    transform: translateX(20px);
+}
+
+.section-form__avatar .form-avatar-3 {
+    transform: translateX(-20px);
+}
+
+.form-group input {
+    border: 1px solid #666;
+    height: 42px;
+    font-size: 0.95em;
+}
+
+.form-group textarea {
+    font-size: 0.95em;
+    border: 1px solid #666;
+}
+
+/*======================================
+      feature-press
+==========================================*/
+.feature-press__logo {
+    width: 120px;
+    height: 40px;
+}
+
+@media (max-width: 576px) {
+    .feature-press__logo {
+        width: 90px;
+        height: 30px;
+    }
+}
+
+@media (max-width: 375px) {
+    .feature-press__logo {
+        width: 70px;
+    }
+}
+
+/*======================================
+      footer
+==========================================*/
+footer {
+    padding: 25px 0;
+    background-color: #f6f2e0;
 }

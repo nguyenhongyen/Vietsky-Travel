@@ -80,6 +80,7 @@ textarea:focus {
 	box-shadow: none !important;
 	-webkit-box-shadow: none !important;
 	outline: none !important;
+	border-color:var(--secondary-color) !important;
 }
 
 .transition-default {
@@ -443,6 +444,24 @@ textarea:focus {
 	-webkit-line-clamp: 4;
 	display: -webkit-box;
 	-webkit-box-orient: vertical;
+}
+.button-primary{
+	border: 1px solid transparent;
+	background-color: var(--primary-color);
+	color:var(--secondary-color);
+	text-transform: uppercase;
+	max-width: 350px;
+	width: 100%;
+	font-weight: 700;
+	padding: 6px 12px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 4px;
+	transition: var(--transition-default);
+}
+.button-primary:hover{
+	opacity: 0.85;
 }
 .bg-primary{
 	background-color: var(--primary-color) !important;

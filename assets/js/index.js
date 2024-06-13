@@ -3,11 +3,7 @@ const handleSliderHero = function () {
     if (slider.length > 0) {
         const elmSwiper = '#' + slider.attr('id')
         const objSwiper = {
-            speed: 2000, loop: true,
-            spaceBetween: 20,
-            slidesPerView: 1,
-            effect: "fade",
-            autoplay: {
+            speed: 2000, loop: true, spaceBetween: 20, slidesPerView: 1, effect: "fade", autoplay: {
                 delay: 5000,
             },
         }
@@ -20,11 +16,10 @@ const handleSliderIntroduce = function () {
     const sliderIntro = $('#section-introduce');
 
 
-    if(sliderIntroActive.length){
+    if (sliderIntroActive.length) {
         const elmSwiperAvatar = '#' + sliderIntroActive.attr('id')
         const objSwiperAvatar = {
-            slidesPerView: 1,
-            effect: "fade",
+            slidesPerView: 1, effect: "fade", allowTouchMove: false, speed: 0,
         }
 
         initSliderAvatar = handleSwiper(elmSwiperAvatar + ' .swiper', objSwiperAvatar);
@@ -33,29 +28,17 @@ const handleSliderIntroduce = function () {
         if (sliderIntro.length > 0) {
             const elmSwiper = '#' + sliderIntro.attr('id')
             const objSwiper = {
-                slidesPerView: 1.5,
-                centeredSlides: true,
-                effect: "coverflow",
-                freeMode: true,
-                coverflowEffect: {
-                    rotate: 20,
-                    stretch: 1,
-                    depth: 500,
-                    modifier: 1,
-                    slideShadows: !0
-                },
-                thumbs: {
+                slidesPerView: 1.5, centeredSlides: true, effect: "coverflow", freeMode: true, coverflowEffect: {
+                    rotate: 20, stretch: 1, depth: 500, modifier: 1, slideShadows: !0
+                }, thumbs: {
                     swiper: initSliderAvatar,
-                },
-                navigation: {
+                }, navigation: {
                     nextEl: "#section-introduce .swiper-button__next",
                     prevEl: "#section-introduce .swiper-button__prev",
-                },
-                breakpoints: {
+                }, breakpoints: {
                     1440: {
                         slidesPerView: 3,
-                    },
-                    768: {
+                    }, 768: {
                         slidesPerView: 2,
                     },
                 },
@@ -70,7 +53,7 @@ const handleSliderIntroduce = function () {
 
 const handleSearch = function () {
     let inputSearch = $('#input-search');
-    if(inputSearch.length){
+    if (inputSearch.length) {
         inputSearch.keyup(function (e) {
             if (inputSearch !== '') {
                 $('body').addClass('is-result-search');
@@ -89,34 +72,92 @@ let handleSliderHoliday = function () {
 
             new Swiper(elm_id + ' .swiper', {
                 navigation: {
-                    nextEl: elm_id + " .swiper-button__next",
-                    prevEl: elm_id + " .swiper-button__prev",
-                },
-                slidesPerView: 1.5,
-                loop: true,
-                speed: 1000,
-                // autoplay: {
+                    nextEl: elm_id + " .swiper-button__next", prevEl: elm_id + " .swiper-button__prev",
+                }, slidesPerView: 1.5, loop: true, speed: 1000, // autoplay: {
                 //     delay: 6000,
                 //     disableOnInteraction: true,
                 // },
-                spaceBetween: 20,
-                breakpoints: {
+                spaceBetween: 20, breakpoints: {
                     320: {
                         slidesPerView: 1.5,
-                    },
-                    768: {
+                    }, 768: {
                         slidesPerView: 3.2,
-                    },
-                    1024: {
+                    }, 1024: {
                         slidesPerView: 3.5,
-                    },
-                    1199: {
-                        spaceBetween: 28,
-                        slidesPerView: 3,
+                    }, 1199: {
+                        spaceBetween: 28, slidesPerView: 3,
                     }
                 }
             });
         });
+    }
+}
+
+const handleSliderIntroduce2 = function () {
+    const slider = $('#swiperIntroduce2');
+    if (slider.length > 0) {
+        const elmSwiper = '#' + slider.attr('id')
+        const objSwiper = {
+            speed: 800, loop: true, spaceBetween: 0, slidesPerView: 1, effect: "fade", navigation: {
+                nextEl: elmSwiper + " .swiper-button__next", prevEl: elmSwiper + " .swiper-button__prev",
+            },
+        }
+        handleSwiper(elmSwiper + ' .swiper', objSwiper);
+    }
+}
+
+const handleSliderArticle = function () {
+    const slider = $('#swiperArticle');
+    if (slider.length > 0) {
+        const elmSwiper = '#' + slider.attr('id')
+        const objSwiper = {
+            speed: 800, loop: true, spaceBetween: 0, slidesPerView: 1, centeredSlides: true, navigation: {
+                nextEl: elmSwiper + " .swiper-button__next", prevEl: elmSwiper + " .swiper-button__prev",
+            }, breakpoints: {
+                375: {
+                    slidesPerView: 1,
+                }, 425: {
+                    slidesPerView: 1.2,
+                }, 1024: {
+                    slidesPerView: 1.5,
+                }, 1440: {
+                    slidesPerView: 1.8,
+                }
+            }
+        }
+        handleSwiper(elmSwiper + ' .swiper', objSwiper);
+    }
+}
+
+
+const handleSliderTrustpilot = function () {
+    const slider = $('#swiperTrustpilot');
+    if (slider.length > 0) {
+        const elmSwiper = '#' + slider.attr('id')
+        const objSwiper = {
+            speed: 800,
+            loop: true,
+            spaceBetween: 20,
+            slidesPerView: 1,
+            autoplay: {
+                delay: 6000,
+                disableOnInteraction: true,
+            }, breakpoints: {
+                375: {
+                    slidesPerView: 1,
+                },
+                425: {
+                    slidesPerView: 1.2,
+                },
+                1024: {
+                    slidesPerView: 2.2,
+                }, 1440: {
+                    slidesPerView: 3,
+                },
+
+            }
+        }
+        handleSwiper(elmSwiper + ' .swiper', objSwiper);
     }
 }
 
@@ -125,4 +166,7 @@ $(function () {
     handleSliderIntroduce()
     handleSearch()
     handleSliderHoliday()
+    handleSliderIntroduce2()
+    handleSliderArticle()
+    handleSliderTrustpilot()
 });
