@@ -11,59 +11,59 @@ const handleSliderHero = function () {
     }
 }
 
+
 const handleSliderIntroduce = function () {
     const sliderIntroActive = $('#section-introduce-active');
     const sliderIntro = $('#section-introduce');
 
-
-    if (sliderIntroActive.length) {
+    if(sliderIntroActive.length){
         const elmSwiperAvatar = '#' + sliderIntroActive.attr('id')
         const objSwiperAvatar = {
-            slidesPerView: 1, effect: "fade", allowTouchMove: false, speed: 0,
+            slidesPerView: 1,
+            effect: "fade",
+            allowTouchMove: false,
+            speed: 0,
         }
 
-        initSliderAvatar = handleSwiper(elmSwiperAvatar + ' .swiper', objSwiperAvatar);
-
+        let initSliderAvatar = handleSwiper(elmSwiperAvatar + ' .swiper', objSwiperAvatar);
 
         if (sliderIntro.length > 0) {
             const elmSwiper = '#' + sliderIntro.attr('id')
             const objSwiper = {
-                slidesPerView: 1.5, centeredSlides: true, effect: "coverflow", freeMode: true, coverflowEffect: {
-                    rotate: 20, stretch: 1, depth: 500, modifier: 1, slideShadows: !0
-                }, thumbs: {
+                effect: "coverflow",
+                loop: 1,
+                grabCursor: !0,
+                direction: "horizontal",
+                centeredSlides: 1,
+                speed: 800,
+                slidesPerView: 'auto',
+                coverflowEffect: {
+                    rotate: 20,
+                    stretch: 1,
+                    depth: 500,
+                    modifier: 1,
+                    slideShadows: !0
+                },
+                thumbs: {
                     swiper: initSliderAvatar,
-                }, navigation: {
+                },
+                navigation: {
                     nextEl: "#section-introduce .swiper-button__next",
                     prevEl: "#section-introduce .swiper-button__prev",
-                }, breakpoints: {
+                },
+                breakpoints: {
                     1440: {
-                        slidesPerView: 3,
-                    }, 768: {
-                        slidesPerView: 2,
+                        slidesPerView: 'auto',
                     },
                 },
             }
-            initSliderThumb = handleSwiper(elmSwiper + ' .swiper', objSwiper);
-
+            let initSliderThumb = handleSwiper(elmSwiper + ' .swiper', objSwiper);
         }
     }
-
-
 }
 
-const handleSearch = function () {
-    let inputSearch = $('#input-search');
-    if (inputSearch.length) {
-        inputSearch.keyup(function (e) {
-            if (inputSearch !== '') {
-                $('body').addClass('is-result-search');
-            } else {
-                $('body').removeClass('is-result-search');
-            }
 
-        })
-    }
-}
+
 
 let handleSliderHoliday = function () {
     if ($('.section-holiday').length) {
@@ -164,7 +164,6 @@ const handleSliderTrustpilot = function () {
 $(function () {
     handleSliderHero()
     handleSliderIntroduce()
-    handleSearch()
     handleSliderHoliday()
     handleSliderIntroduce2()
     handleSliderArticle()
