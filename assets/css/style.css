@@ -1398,9 +1398,13 @@ footer {
 .section-breadcrumb__wrap {
     padding: 0 100px;
 }
+.section-breadcrumb ol > li > a:hover{
+    opacity: 1!important;
+}
 
 .section-breadcrumb__title {
     font-size: 4em;
+    line-height: 1.6;
 }
 
 .breadcrumb-content__item {
@@ -1411,6 +1415,12 @@ footer {
     font-size: 2em;
 }
 
+.breadcrumb-logo-1{
+    width: 100px;
+    height: 100px;
+    right: 20px;
+    bottom: 20px;
+}
 @media(max-width: 1024px) {
     .section-breadcrumb__wrap {
         padding: 0 20px;
@@ -1444,4 +1454,11 @@ footer {
 .section-map iframe{
     width: 100% !important;
     height: 100% !important;
+}
+
+/*==============================
+     page-holiday
+===================================*/
+.page-holiday__heading{
+    background-color: rgb(var(--secondary-rgb),0.1);
 }
