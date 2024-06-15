@@ -16,7 +16,8 @@
     font-size: 1.2em;
 }
 
-.heading-tile__line {
+.heading-tile__line,
+.heading-title__line-2{
     padding-bottom: 20px;
 
 }
@@ -26,8 +27,18 @@
     content: '';
     left: 0;
     bottom: 0;
-    width: 10%;
+    width: 15%;
     height: 2px;
+    background-color: var(--secondary-color);
+}
+.heading-title__line-2::after {
+    position: absolute;
+    content: '';
+    left: 50%;
+    bottom: 0;
+    width: 60px;
+    height: 2px;
+    transform: translateX(-50%);
     background-color: var(--secondary-color);
 }
 
@@ -1460,5 +1471,158 @@ footer {
      page-holiday
 ===================================*/
 .page-holiday__heading{
+    background-color: rgb(var(--secondary-rgb),0.1);
+}
+.holiday-nav > a{
+    font-size: 1.1em;
+}
+.holiday-duration{
+    width: max-content;
+    border: 1px solid #ddd;
+}
+.holiday-duration .duration-item__title{
+    font-size: 0.9em;
+}
+.holiday-duration .duration-item__text{
+    font-size: 1.1em;
+}
+.page-holiday__text{
+    font-size: 1.2em;
+    line-height: 38px;
+}
+.page-holiday__text > a{
+    padding-bottom: 2px;
+    border-bottom: 1px solid var(--secondary-color);
+    color:var(--bs-gray-800);
+}
+.itinerary-item__title{
+    font-size: 1.15em;
+}
+small.itinerary-item__icon{
+    font-size: 0.8em;
+}
+.itinerary-item__icon{
+    background-color: #f8f8f8;
+    padding: 0 30px;
+    width: 100px;
+}
+.itinerary-item__icon > img{
+    width: 60px !important;
+    height: 60px !important;
+}
+.itinerary-item__icon.pseudo::after{
+    width: 2px;
+    top: 0;
+    left: 50%;
+    bottom: 0;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(33%, rgb(183, 183, 183)), color-stop(0%, rgba(255, 255, 255, 0)));
+    background-image: linear-gradient(rgb(183, 183, 183) 33%, rgba(255, 255, 255, 0) 0%);
+    background-position: right;
+    background-size: 2px 5px;
+    background-repeat: repeat-y;
+    z-index: -1;
+}
+.itinerary-item__content{
+    padding: 0 0 40px 40px;
+}
+.section-itinerary__box{
+    background-color: rgb(var(--secondary-rgb),0.1);
+    border: 1px solid var(--secondary-color);
+    padding: 5px;
+}
+
+@media(max-width: 992px) {
+    small.itinerary-item__icon {
+        font-size: 0.5em;
+    }
+    .itinerary-item__icon {
+        padding: 0 10px;
+        width: 70px;
+    }
+    .itinerary-item__content{
+        padding: 0 0 25px 15px;
+    }
+    .itinerary-item__icon > img {
+        width: 50px !important;
+        height: 50px !important;
+    }
+}
+
+@media(max-width: 576px) {
+
+    .itinerary-item__icon {
+        width: 55px;
+    }
+    .itinerary-item__content{
+        padding: 0 0 20px 5px;
+    }
+}
+
+.card-accommodation__image{
+    width: 400px;
+}
+.card-accommodation__range{
+    font-size: 0.8em;
+}
+.section-accommodation__swiper .swiper-slide {
+    opacity: .5;
+    -webkit-transform: scale(.9);
+    transform: scale(.9);
+}
+
+.section-accommodation__swiper .swiper-slide.swiper-slide-active {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+@media(max-width: 992px) {
+    .card-accommodation__image{
+        width: unset !important;
+        height: unset !important;
+    }
+    .card-accommodation__image > img{
+        height: auto !important;
+        object-fit: contain !important;
+    }
+}
+
+.section-sustainability__wrap{
+    border: 1px solid var(--secondary-color);
+    background-color: rgb(var(--secondary-rgb),0.1);
+    padding: 30px;
+}
+.sustainability-tab .nav-link{
+    width: 120px;
+    height: 80px;
+    border: 1px solid transparent;
+    background-color: var(--bs-white);
+}
+.sustainability-tab .nav-link.active{
+    background-color: var(--bs-white);
+    border: 1px solid var(--secondary-color);
+}
+.sustainability-tab .tab-content .image{
+    width: 150px;
+}
+@media(max-width: 992px) {
+    .sustainability-tab .nav-link {
+        width: 80px;
+        height: 60px;
+    }
+}
+@media(max-width: 576px) {
+    .section-sustainability__wrap{
+        padding: 20px;
+    }
+    .sustainability-tab .nav-link {
+        width: 65px;
+        height: 50px;
+    }
+}
+
+.holiday-form__wrap{
+    padding: 40px;
+    border-right: 3px solid var(--secondary-color);
+    border-bottom: 3px solid var(--secondary-color);
     background-color: rgb(var(--secondary-rgb),0.1);
 }
