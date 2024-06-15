@@ -891,7 +891,7 @@ background-color: #25252a;
 .card-introduce__image,
 .card-introduce__image > img {
     width: 100% !important;
-    height: auto !important;
+    height: 100% !important;
     object-fit: cover;
 }
 
