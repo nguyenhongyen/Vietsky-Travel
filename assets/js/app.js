@@ -3,74 +3,11 @@ window.addEventListener("resize", () => {
 	windowWidth = document.documentElement.clientWidth;
 });
 
-let handleApplyCollapse = function ($parent, $firstItem = false, $callFunction = false) {
-	let $childUl = $parent.find('> li > ul');
-	if ($childUl.length === 0) {
-		return;
-	}
-
-	if ($callFunction) {
-		$parent.find('> li a').each(function () {
-			$(this).attr('data-href', $(this).attr('href'))
-		});
-	}
-
-	if (windowWidth <= 1024) {
-		let $objParentAttr = {};
-		let $objChildrenAttr = {
-			'data-bs-parent': '#' + $parent.attr('id')
-		}
-
-		if ($firstItem) {
-			let $parentID = 'menu-' + Math.random().toString(36).substring(7);
-			$parent.attr('id', $parentID);
-			$objParentAttr = {
-				'data-bs-parent': '#' + $parentID
-			}
-
-			$objChildrenAttr = {};
-		}
-
-		$childUl.each(function () {
-			let $parentUl = $(this).closest('ul');
-			let $parentListItem = $(this).closest('li');
-			let $parentListItemAnchor = $parentListItem.children('a');
-
-			let $parentUlID = 'menu-' + Math.random().toString(36).substring(7);
-
-			$parentUl.addClass('collapse').attr({
-				'id': 'collapse-' + $parentUlID, ...$objParentAttr, ...$objChildrenAttr
-			});
-
-			$parentListItemAnchor.replaceWith(function () {
-				return `<button aria-label="${$parentListItemAnchor.attr('aria-label')}" data-href="${$parentListItemAnchor.attr('data-href')}" data-bs-toggle="collapse" data-bs-target="#${$parentUl.attr('id')}">${$parentListItemAnchor.html()}</button>`
-			})
-
-			handleApplyCollapse($parentUl, false);
-
-			$parentUl.on('show.bs.collapse', function () {
-				$parent.find('.collapse.show').not($parentUl).collapse('hide');
-			});
-		});
-	} else {
-		$parent.removeAttr('id');
-
-		$childUl.each(function () {
-			let $parentUl = $(this).closest('ul');
-			let $parentListItem = $(this).closest('li');
-
-			$parentUl.removeClass('collapse').removeAttr('data-bs-parent id');
-			$parentListItem.children('a').attr('href', $parentListItem.children('a').attr('data-href'));
-
-			$parentListItem.children('button').replaceWith(function () {
-				return `<a aria-label="${$(this).attr('aria-label')}" href="${$(this).attr('data-href')}" data-href="${$(this).attr('data-href')}">${$(this).html()}</a>`
-			})
-
-			handleApplyCollapse($parentUl);
-		});
+const handleTouchMoveNavigation = function (ev) {
+	if (!$(ev.target).closest('#header-navigation').length) {
+		ev.preventDefault();
 	}
 }
-
 const renderFirstLi = (title) => {
 	return `<li class="li-header"><button type="button" class="navigation-sub_back"><i class="far fa-arrow-left"></i></button>${title}</li>`;
 }
@@ -142,7 +79,7 @@ let handleCallMenu = function () {
 		}
 	}
 
-	if (windowWidth <= 1024) {
+	if (windowWidth <= 1200) {
 		const $hamburger = $('#hamburger-button');
 		if ($hamburger.length) {
 			$hamburger.click(function () {
@@ -153,6 +90,13 @@ let handleCallMenu = function () {
 		const $overlay = $('#header-overlay');
 		if ($overlay.length) {
 			$overlay.click(function () {
+				handleBody();
+			});
+		}
+
+		const $closenav = $('#js-close_navigation');
+		if ($closenav.length) {
+			$closenav.click(function () {
 				handleBody();
 			});
 		}

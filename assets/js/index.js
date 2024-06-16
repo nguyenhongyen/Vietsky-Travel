@@ -16,13 +16,10 @@ const handleSliderIntroduce = function () {
     const sliderIntroActive = $('#section-introduce-active');
     const sliderIntro = $('#section-introduce');
 
-    if(sliderIntroActive.length){
+    if (sliderIntroActive.length) {
         const elmSwiperAvatar = '#' + sliderIntroActive.attr('id')
         const objSwiperAvatar = {
-            slidesPerView: 1,
-            effect: "fade",
-            allowTouchMove: false,
-            speed: 0,
+            slidesPerView: 1, effect: "fade", allowTouchMove: false, speed: 0,
         }
 
         let initSliderAvatar = handleSwiper(elmSwiperAvatar + ' .swiper', objSwiperAvatar);
@@ -38,11 +35,7 @@ const handleSliderIntroduce = function () {
                 speed: 800,
                 slidesPerView: 'auto',
                 coverflowEffect: {
-                    rotate: 20,
-                    stretch: 1,
-                    depth: 500,
-                    modifier: 1,
-                    slideShadows: !0
+                    rotate: 20, stretch: 1, depth: 500, modifier: 1, slideShadows: !0
                 },
                 thumbs: {
                     swiper: initSliderAvatar,
@@ -61,8 +54,6 @@ const handleSliderIntroduce = function () {
         }
     }
 }
-
-
 
 
 let handleSliderHoliday = function () {
@@ -135,21 +126,14 @@ const handleSliderTrustpilot = function () {
     if (slider.length > 0) {
         const elmSwiper = '#' + slider.attr('id')
         const objSwiper = {
-            speed: 800,
-            loop: true,
-            spaceBetween: 20,
-            slidesPerView: 1,
-            autoplay: {
-                delay: 6000,
-                disableOnInteraction: true,
+            speed: 800, loop: true, spaceBetween: 20, slidesPerView: 1, autoplay: {
+                delay: 6000, disableOnInteraction: true,
             }, breakpoints: {
                 375: {
                     slidesPerView: 1,
-                },
-                425: {
+                }, 425: {
                     slidesPerView: 1.2,
-                },
-                1024: {
+                }, 1024: {
                     slidesPerView: 2.2,
                 }, 1440: {
                     slidesPerView: 3,

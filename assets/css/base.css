@@ -88,6 +88,10 @@ textarea:focus {
 	transition: var(--transition-default);
 	-webkit-transition: var(--transition-default);
 }
+ul{
+	list-style-type: none;
+	margin-bottom: 0;
+}
 
 .background-cover {
 	background-size: cover;
@@ -529,6 +533,9 @@ textarea:focus {
 }
 .shadow-1{
 	box-shadow: 0 0 10px rgba(0, 0, 0, .1) !important;
+}
+.border-secondary{
+	border-color: var(--secondary-color) !important;
 }
 main{
 	margin-top: -120px;

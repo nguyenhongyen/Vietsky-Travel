@@ -3,8 +3,11 @@ const handleSliderAccommodation = function () {
     if (slider.length > 0) {
         const elmSwiper = '#' + slider.attr('id')
         const objSwiper = {
-            speed: 1000, loop: true, spaceBetween: 0, slidesPerView: 1, centeredSlides: true, navigation: {
-                nextEl: elmSwiper + " .swiper-button__next", prevEl: elmSwiper + " .swiper-button__prev",
+            speed: 1000, loop: true, spaceBetween: 0, slidesPerView: 1,
+            centeredSlides: true,
+            navigation: {
+                nextEl: elmSwiper + " .swiper-button__next",
+                prevEl: elmSwiper + " .swiper-button__prev",
             }, breakpoints: {
                 375: {
                     slidesPerView: 1,
@@ -48,6 +51,7 @@ let handleSliderHoliday = function () {
         });
     }
 }
+
 const handleSliderSuggestion = function () {
     const slider = $('#swiperSuggestion');
     if (slider.length > 0) {
