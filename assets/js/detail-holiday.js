@@ -48,7 +48,54 @@ let handleSliderHoliday = function () {
         });
     }
 }
+const handleSliderSuggestion = function () {
+    const slider = $('#swiperSuggestion');
+    if (slider.length > 0) {
+        const elmSwiper = '#' + slider.attr('id')
+        const objSwiper = {
+            speed: 1000, loop: true, spaceBetween: 20, slidesPerView: 1, autoplay: {
+                delay: 6000, disableOnInteraction: true,
+            }, navigation: {
+                nextEl: elmSwiper + " .swiper-button__next", prevEl: elmSwiper + " .swiper-button__prev",
+            },
+        }
+        handleSwiper(elmSwiper + ' .swiper', objSwiper);
+    }
+}
+const handleScrollDiv = function () {
+    let getItem = $('#holiday-nav a');
+    if (getItem.length) {
+        getItem.each(function () {
+            let elm = $(this);
+            elm.click(function () {
+                let getId = $(this).attr('href');
+
+                setTimeout(function () {
+                    $("html, body").animate({
+                        scrollTop: $("#" + getId).offset().top + (-150)
+                    }, 1000);
+                }, 500);
+            })
+        })
+    }
+
+    if ($('#holiday-nav__mobile').length) {
+        $('#holiday-nav__mobile').on('change', function () {
+            let $option = $(this).find('option:selected');
+            let getValue = $option.val();
+            setTimeout(function () {
+                $("html, body").animate({
+                    scrollTop: $("#" + getValue).offset().top + (-150)
+                }, 1000);
+            }, 500);
+        });
+    }
+}
+
+
 $(function () {
     handleSliderAccommodation()
     handleSliderHoliday()
+    handleSliderSuggestion()
+    handleScrollDiv()
 });

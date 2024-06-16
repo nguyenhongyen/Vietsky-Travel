@@ -1010,13 +1010,14 @@
                  alt="">
         </a>
     </section>
-    <div class="page-holiday">
+    <div class="page-holiday overflow-hidden">
         <div class="page-holiday__heading padding-20">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-xl-10">
                         <div class="d-flex align-items-center justify-content-between gap-3">
-                            <div class="holiday-nav d-lg-flex d-none flex-wrap justify-content-center align-items-center gap-4">
+                            <div class="holiday-nav d-lg-flex d-none flex-wrap justify-content-center align-items-center gap-4"
+                                 id="holiday-nav">
                                 <a href="#Overview" class="text-dark fw-700 transition-default">Overview</a>
                                 <a href="#Itinerary" class="text-dark fw-700 transition-default">Itinerary</a>
                                 <a href="#MoreDetails" class="text-dark fw-700 transition-default">More Details</a>
@@ -1029,17 +1030,30 @@
                             </div>
 
                             <div class="holiday-nav__mobile d-lg-none d-flex form-group w-50">
-                                <select class="bg-white rounded-0 form-select">
-                                    <option selected value="#Overview">
+                                <select class="bg-white rounded-0 form-select" id="holiday-nav__mobile">
+                                    <option selected value="Overview">
                                         Overview
                                     </option>
-                                    <option value="#Itinerary">
+                                    <option value="Itinerary">
                                         Itinerary
+                                    </option>
+                                    <option value="MoreDetails">
+                                        More Details
+                                    </option>
+                                    <option value="Accommodation">
+                                        Accommodation
+                                    </option>
+                                    <option value="Sustainability">
+                                        Sustainability
+                                    </option>
+                                    <option value="ExtensionIdeas">
+                                        Extension Ideas
                                     </option>
                                 </select>
                             </div>
 
-                            <button type="button" role="button" class="button-primary w-15">
+                            <button type="button" role="button" class="button-primary w-15" data-bs-toggle="modal"
+                                    data-bs-target="#modalContact">
                                 <span class="d-lg-block d-none">CONTACT US</span>
                                 <span class="d-lg-none d-block"><i class="fas fa-envelope"></i></span>
                             </button>
@@ -1460,7 +1474,8 @@
                     </div>
                 </div>
                 <div class="container-fluid p-0">
-                    <div class="section-accommodation__swiper position-relative" id="swiperAccommodation">
+                    <div class="section-accommodation__swiper overflow-hidden position-relative"
+                         id="swiperAccommodation">
                         <div class="swiper mySwiper">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide h-auto transition-default">
@@ -1767,27 +1782,26 @@
                     </div>
                 </div>
             </div>
-            <div class="holiday-form">
+            <div class="holiday-form mb-5">
                 <div class="container">
                     <div class="row justify-content-center g-5">
-                        <div class="col-xl-4 col-lg-5 pe-lg-5">
-                            <div class="holiday-form__wrap">
+                        <div class="col-lg-5 pe-lg-5">
+                            <div class="holiday-form__wrap h-100">
                                 <div class="section-heading mb-5">
                                     <h2 class="heading-title heading-tile__line position-relative mb-0">
                                         Start planning your trip<span class="text-secondary">.</span>
                                     </h2>
                                 </div>
-                                <div class="section-heading">
-                                    <h2 class="heading-title heading-tile__line position-relative mb-0">
-                                        01285 880 980
-                                    </h2>
+
+                                <div class="phone">
+                                    <h4 class="fw-bold text-dark font-heading text-secondary">01285 880 980</h4>
                                 </div>
                                 <h6 class="fw-700 text-dark">Send us an enquiry</h6>
-                                <p class="pb-0">Complete our enquiry form and start your next journey.</p>
+                                <p class="mb-0">Complete our enquiry form and start your next journey.</p>
                             </div>
 
                         </div>
-                        <div class="col-xl-4 col-lg-5">
+                        <div class="col-lg-5">
                             <form id="" novalidate>
                                 <div class="section-form__wrap">
                                     <div class="row mb-3 align-items-end">
@@ -1872,327 +1886,900 @@
                     </div>
                 </div>
             </div>
-            <div class="section-introduce-3 overflow-hidden">
+            <div class="section-suggestion overflow-hidden bg-primary padding-20" id="swiperSuggestion">
                 <div class="container">
-                    Slier
+                    <div class="row justify-content-center">
+                        <div class="col-xl-10">
+                            <div class="section-suggestion__swiper position-relative">
+                                <div class="swiper mySwiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide h-auto transition-default">
+                                            <div class="card-suggestion bg-white rounded-0 transition-default h-100">
+                                                <div class="row row-cols-lg-2 row-cols-1 g-3">
+                                                    <div class="col">
+                                                        <div class="card-suggestion__content">
+                                                            <div class="section-heading">
+                                                                <div class="heading-subtitle text-uppercase">
+                                                                    Suggested Extension
+                                                                </div>
+                                                                <h2 class="heading-title mb-0 heading-tile__line position-relative">
+                                                                    India: The Blue City of Jodhpur
+                                                                </h2>
+                                                                <div class="heading-desc">
+                                                                    A few days in Udaipur offers a romantic setting that
+                                                                    is hard to beat. With the Aravalli mountains in the
+                                                                    distance and beauty of Lake Pichola, it is a
+                                                                    picturesque and peaceful spot. Add to this Jain
+                                                                    temples, bazaars and vibrant art scene and it offers
+                                                                    something for those wishing to just relax for a few
+                                                                    days or continue soaking up the culture and buzz of
+                                                                    Rajasthan. Stay at the Lake Palace for unbeatable
+                                                                    views over the lake.
+                                                                </div>
+                                                            </div>
+                                                            <div class="card-suggestion__text fw-700 text-dark">
+                                                                <strong>3 days. Price on request</strong>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="card-suggestion__image h-100">
+                                                            <img src="./assets/images/intro3.jpg" width="400"
+                                                                 height="600" class="w-100 h-100 object-fit-cover">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide h-auto transition-default">
+                                            <div class="card-suggestion bg-white rounded-0 transition-default h-100">
+                                                <div class="row row-cols-lg-2 row-cols-1 g-3">
+                                                    <div class="col">
+                                                        <div class="card-suggestion__content">
+                                                            <div class="section-heading">
+                                                                <div class="heading-subtitle text-uppercase">
+                                                                    Suggested Extension
+                                                                </div>
+                                                                <h2 class="heading-title mb-0 heading-tile__line position-relative">
+                                                                    India: The Blue City of Jodhpur
+                                                                </h2>
+                                                                <div class="heading-desc">
+                                                                    A few days in Udaipur offers a romantic setting that
+                                                                    is hard to beat. With the Aravalli mountains in the
+                                                                    distance and beauty of Lake Pichola, it is a
+                                                                    picturesque and peaceful spot. Add to this Jain
+                                                                    temples, bazaars and vibrant art scene and it offers
+                                                                    something for those wishing to just relax for a few
+                                                                    days or continue soaking up the culture and buzz of
+                                                                    Rajasthan. Stay at the Lake Palace for unbeatable
+                                                                    views over the lake.
+                                                                </div>
+                                                            </div>
+                                                            <div class="card-suggestion__text fw-700 text-dark">
+                                                                <strong>3 days. Price on request</strong>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="card-suggestion__image h-100">
+                                                            <img src="./assets/images/intro2.jpg" width="400"
+                                                                 height="600" class="w-100 h-100 object-fit-cover">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide h-auto transition-default">
+                                            <div class="card-suggestion bg-white rounded-0 transition-default h-100">
+                                                <div class="row row-cols-lg-2 row-cols-1 g-3">
+                                                    <div class="col">
+                                                        <div class="card-suggestion__content">
+                                                            <div class="section-heading">
+                                                                <div class="heading-subtitle text-uppercase">
+                                                                    Suggested Extension
+                                                                </div>
+                                                                <h2 class="heading-title mb-0 heading-tile__line position-relative">
+                                                                    India: The Blue City of Jodhpur
+                                                                </h2>
+                                                                <div class="heading-desc">
+                                                                    A few days in Udaipur offers a romantic setting that
+                                                                    is hard to beat. With the Aravalli mountains in the
+                                                                    distance and beauty of Lake Pichola, it is a
+                                                                    picturesque and peaceful spot. Add to this Jain
+                                                                    temples, bazaars and vibrant art scene and it offers
+                                                                    something for those wishing to just relax for a few
+                                                                    days or continue soaking up the culture and buzz of
+                                                                    Rajasthan. Stay at the Lake Palace for unbeatable
+                                                                    views over the lake.
+                                                                </div>
+                                                            </div>
+                                                            <div class="card-suggestion__text fw-700 text-dark">
+                                                                <strong>3 days. Price on request</strong>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="card-suggestion__image h-100">
+                                                            <img src="./assets/images/intro1.jpg" width="400"
+                                                                 height="600" class="w-100 h-100 object-fit-cover">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-button d-md-flex d-none">
+                                    <button type="button" aria-label="Button prev"
+                                            class="swiper-button__prev swiper-button__custom bg-dark shadow-1 text-secondary d-flex align-items-center justify-content-center border-5 rounded-circle position-absolute top-50 zi-2 ">
+                                        <i class="fal fa-angle-left"></i>
+                                    </button>
+                                    <button type="button" aria-label="Button next"
+                                            class="swiper-button__next swiper-button__custom bg-dark shadow-1 text-secondary d-flex align-items-center justify-content-center border-5 rounded-circle position-absolute top-50 zi-2">
+                                        <i class="fal fa-angle-right"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+            <div class="holiday-note p-50 pb-0">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-xl-10 col-md-11">
+                            <div class="holiday-note__wrap">
+                                <div class="row row-cols-lg-2 row-cols-1 g-5">
+                                    <div class="col">
+                                        <div class="holiday-note__column">
+                                            <div class="section-heading">
+                                                <h2 class="heading-title heading-tile__line position-relative mb-0">
+                                                    A note on price<span class="text-secondary">.</span>
+                                                </h2>
+                                                <div class="heading-desc">
+                                                    Prices will vary depending on the time of year you are travelling.
+                                                    Prices do not include international flights. Please ask one of our
+                                                    Travel Experts for an accurate quote. Flights purchased through
+                                                    Steppes Travel departing from the UK are ATOL protected.
+                                                </div>
+                                            </div>
+                                            <div class="border-bottom border-top pt-4 pb-4">
+                                                <div class="title">
+                                                    This Itinerary
+                                                </div>
+                                                <div class="price-title text-uppercase">
+                                                    PRICE
+                                                </div>
+                                                <div class="price">
+                                                    from <strong class="text-dark fw-700">£5,995</strong> per person
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col ps-xl-5">
+                                        <div class="holiday-note__column">
+                                            <div class="section-heading">
+                                                <h2 class="heading-title heading-tile__line position-relative mb-0">
+                                                    When to travel<span class="text-secondary">.</span>
+                                                </h2>
+                                            </div>
+                                            <div class="holiday-note__month">
+                                                <ul class="nav nav-pills mb-4 d-flex align-items-center gap-xl-3 gap-2"
+                                                    id="pills-tab" role="tablist">
+                                                    <li class="nav-item" role="presentation">
+                                                        <button class="nav-link active month-item rounded-0 border-1 bg-white text-uppercase border border-dark text-uppercase "
+                                                                id="pills-jan-tab" data-bs-toggle="pill"
+                                                                data-bs-target="#pills-jan" type="button" role="tab"
+                                                                aria-controls="pills-jan" aria-selected="true">
+                                                            jan
+                                                        </button>
+                                                    </li>
+                                                    <li class="nav-item" role="presentation">
+                                                        <button class="nav-link month-item rounded-0 border-1 bg-white text-uppercase border border-dark text-uppercase "
+                                                                id="pills-feb-tab" data-bs-toggle="pill"
+                                                                data-bs-target="#pills-feb" type="button" role="tab"
+                                                                aria-controls="pills-fab" aria-selected="true">
+                                                            feb
+                                                        </button>
+                                                    </li>
+                                                    <li class="nav-item" role="presentation">
+                                                        <button class="nav-link month-item rounded-0 border-1 bg-white text-uppercase border border-dark text-uppercase "
+                                                                id="pills-mar-tab" data-bs-toggle="pill"
+                                                                data-bs-target="#pills-mar" type="button" role="tab"
+                                                                aria-controls="pills-fab" aria-selected="true">
+                                                            mar
+                                                        </button>
+                                                    </li>
+                                                    <li class="nav-item" role="presentation">
+                                                        <button class="nav-link month-item rounded-0 border-1 bg-white text-uppercase border border-dark text-uppercase "
+                                                                id="pills-apr-tab" data-bs-toggle="pill"
+                                                                data-bs-target="#pills-apr" type="button" role="tab"
+                                                                aria-controls="pills-fab" aria-selected="true">
+                                                            apr
+                                                        </button>
+                                                    </li>
+                                                    <li class="nav-item" role="presentation">
+                                                        <button class="nav-link month-item rounded-0 border-1 bg-white text-uppercase border border-dark text-uppercase "
+                                                                id="pills-may-tab" data-bs-toggle="pill"
+                                                                data-bs-target="#pills-may" type="button" role="tab"
+                                                                aria-controls="pills-fab" aria-selected="true">
+                                                            may
+                                                        </button>
+                                                    </li>
+                                                    <li class="nav-item" role="presentation">
+                                                        <button class="nav-link month-item rounded-0 border-1 bg-white text-uppercase border border-dark text-uppercase "
+                                                                id="pills-jun-tab" data-bs-toggle="pill"
+                                                                data-bs-target="#pills-jun" type="button" role="tab"
+                                                                aria-controls="pills-fab" aria-selected="true">
+                                                            jun
+                                                        </button>
+                                                    </li>
+                                                    <li class="nav-item" role="presentation">
+                                                        <button class="nav-link month-item rounded-0 border-1 bg-white text-uppercase border border-dark text-uppercase "
+                                                                id="pills-jul-tab" data-bs-toggle="pill"
+                                                                data-bs-target="#pills-jul" type="button" role="tab"
+                                                                aria-controls="pills-fab" aria-selected="true">
+                                                            jul
+                                                        </button>
+                                                    </li>
+                                                    <li class="nav-item" role="presentation">
+                                                        <button class="nav-link month-item rounded-0 border-1 bg-white text-uppercase border border-dark text-uppercase "
+                                                                id="pills-aug-tab" data-bs-toggle="pill"
+                                                                data-bs-target="#pills-aug" type="button" role="tab"
+                                                                aria-controls="pills-fab" aria-selected="true">
+                                                            aug
+                                                        </button>
+                                                    </li>
+                                                    <li class="nav-item" role="presentation">
+                                                        <button class="nav-link month-item rounded-0 border-1 bg-white text-uppercase border border-dark text-uppercase "
+                                                                id="pills-sep-tab" data-bs-toggle="pill"
+                                                                data-bs-target="#pills-sep" type="button" role="tab"
+                                                                aria-controls="pills-fab" aria-selected="true">
+                                                            sep
+                                                        </button>
+                                                    </li>
+                                                    <li class="nav-item" role="presentation">
+                                                        <button class="nav-link month-item rounded-0 border-1 bg-white text-uppercase border border-dark text-uppercase "
+                                                                id="pills-oct-tab" data-bs-toggle="pill"
+                                                                data-bs-target="#pills-oct" type="button" role="tab"
+                                                                aria-controls="pills-fab" aria-selected="true">
+                                                            oct
+                                                        </button>
+                                                    </li>
+                                                    <li class="nav-item" role="presentation">
+                                                        <button class="nav-link month-item rounded-0 border-1 bg-white text-uppercase border border-dark text-uppercase "
+                                                                id="pills-nov-tab" data-bs-toggle="pill"
+                                                                data-bs-target="#pills-nov" type="button" role="tab"
+                                                                aria-controls="pills-fab" aria-selected="true">
+                                                            nov
+                                                        </button>
+                                                    </li>
+                                                    <li class="nav-item" role="presentation">
+                                                        <button class="nav-link month-item rounded-0 border-1 bg-white text-uppercase border border-dark text-uppercase "
+                                                                id="pills-dec-tab" data-bs-toggle="pill"
+                                                                data-bs-target="#pills-dec" type="button" role="tab"
+                                                                aria-controls="pills-fab" aria-selected="true">
+                                                            dec
+                                                        </button>
+                                                    </li>
+                                                </ul>
+                                                <div class="tab-content" id="pills-tabContent">
+                                                    <div class="tab-pane fade show active" id="pills-jan"
+                                                         role="tabpanel" aria-labelledby="pills-jan-tab">
+                                                        <h5 class="text-dark mb-3">India in September</h5>
+                                                        <p class="mb-0">January is a very popular time to travel to
+                                                            India, due to mild temperatures and very little rainfall.
+                                                            The climate varies across India from snow in the Northern
+                                                            States to the Southern regions experiencing daily sunshine –
+                                                            perfect for an escape to Kerala’s beaches.</p>
+                                                    </div>
+                                                    <div class="tab-pane fade" id="pills-feb" role="tabpanel"
+                                                         aria-labelledby="pills-feb-tab">
+                                                        <h5 class="text-dark mb-3">India in February</h5>
+                                                        <p class="mb-0">
+                                                            During peak season, February is an ideal month to travel to
+                                                            India, experiencing all regions of the country from
+                                                            Rajasthan in the North to Karnataka in the South.
+                                                        </p>
+                                                    </div>
+                                                    <div class="tab-pane fade" id="pills-mar" role="tabpanel"
+                                                         aria-labelledby="pills-contact-tab">
+                                                        <h5 class="text-dark mb-3">India in February</h5>
+                                                        <p class="mb-0">
+                                                            During peak season, February is an ideal month to travel to
+                                                            India, experiencing all regions of the country from
+                                                            Rajasthan in the North to Karnataka in the South.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
+                </div>
+            </div>
         </div>
-        <section class="section-holiday p-50 overflow-hidden" id="section-holiday-1">
-            <div class="container-fluid p-xl-0">
-                <div class="row g-5 align-items-center">
-                    <div class="col-xl-8 order-xl-1 order-2">
-                        <div class="section-holiday__column position-relative">
-                            <div class="swiper mySwiper">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide h-auto">
-                                        <div class="card-holiday h-100 position-relative transition-default overflow-hidden">
-                                            <div class="card-holiday__image d-block overflow-hidden">
-                                                <img src="./assets/images/Holiday/holiday1.jpg"
-                                                     class="transition-default"
-                                                     width="500" height="800" alt="">
-                                            </div>
-                                            <a href="#" aria-label="#"
-                                               class="card-holiday__layer transition-default p-3 position-absolute top-0 start-0 zi-1 w-100  d-flex flex-column justify-content-between">
-                                                <div class="card-holiday__type  zi-1 d-flex flex-column align-items-center justify-content-center gap-1 ">
+    </div>
+    <section class="section-holiday p-50 overflow-hidden" id="section-holiday-1">
+        <div class="container-fluid p-xl-0">
+            <div class="row g-5 align-items-center">
+                <div class="col-xl-8 order-xl-1 order-2">
+                    <div class="section-holiday__column position-relative">
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide h-auto">
+                                    <div class="card-holiday h-100 position-relative transition-default overflow-hidden">
+                                        <div class="card-holiday__image d-block overflow-hidden">
+                                            <img src="./assets/images/Holiday/holiday1.jpg"
+                                                 class="transition-default"
+                                                 width="500" height="800" alt="">
+                                        </div>
+                                        <a href="#" aria-label="#"
+                                           class="card-holiday__layer transition-default p-3 position-absolute top-0 start-0 zi-1 w-100  d-flex flex-column justify-content-between">
+                                            <div class="card-holiday__type  zi-1 d-flex flex-column align-items-center justify-content-center gap-1 ">
                                                         <span class="type-icon">
                                                             <svg width="26" height="26" fill="white"
                                                                  viewBox="0 0 26 26">
                                                                     <path d="M3.6,14.6c-0.2,2.1-0.4,4.3-0.4,6.4l0,0.6l-3,3C0.1,24.8,0,25,0,25.2C0,25.7,0.4,26,0.8,26c0.2,0,0.4-0.1,0.6-0.2l3-3l0.6,0 c2.1,0,4.3-0.1,6.4-0.4C24.1,21.1,25.8,2.6,26,0C23.4,0.2,4.9,1.9,3.6,14.6z M5.2,14.8c1-9.7,13.8-12.3,18.9-13 c-0.3,2.3-1,6-2.4,9.6h-6l1.9-1.9c0.3-0.3,0.3-0.8,0-1.1s-0.8-0.3-1.1,0L4.9,19.9C5,18.2,5,16.5,5.2,14.8L5.2,14.8z M10.9,16.2 l3.2-3.2H21c-0.6,1.2-1.3,2.3-2.1,3.2H10.9z M11.2,20.8C9.5,21,7.8,21,6.1,21.1l3.2-3.2h8.2C15.8,19.4,13.8,20.5,11.2,20.8z"></path>
                                                             </svg>
                                                         </span>
-                                                    <span class="type-title text-white">
+                                                <span class="type-title text-white">
                                                     Group tour
                                                     </span>
-                                                </div>
-                                                <div class="card-holiday__content zi-1">
-                                                    <div class="card-holiday__category text-uppercase text-secondary fw-700">
-                                                        Costa Rica
-                                                    </div>
-                                                    <h5 class="card-holiday__name mb-2 text-white fw-700 font-heading lh-base">
-                                                        Costa Rica’s Wild South
-                                                    </h5>
-                                                    <div class="card-holiday__desc limit-3 transition-default lh-base">
-                                                        This holiday to Costa Rica combines the highlights in the north
-                                                        of the country with the
-                                                        This holiday to Costa Rica combines the highlights in the north
-                                                        of the country with the
-                                                        This holiday to Costa Rica combines the highlights in the north
-                                                        of the country with the
-                                                    </div>
-                                                    <div class="card-holiday__meta zi-1 d-flex align-items-center justify-content-between gap-2">
-                                                        <div class="card-holiday__day">
-                                                            15 days
-                                                        </div>
-                                                        <div class="card-holiday__price">
-                                                            from 789,98pp
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                            <a href="#" aria-label="#"
-                                               class="card-holiday__link text-uppercase fw-700 bg-secondary text-white w-100 d-flex align-items-center justify-content-center gap-1">
-                                                VIEW HOLIDAY DETAIL <i class="fal fa-long-arrow-right"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide h-auto">
-                                        <div class="card-holiday h-100 position-relative transition-default overflow-hidden">
-                                            <div class="card-holiday__image d-block overflow-hidden">
-                                                <img src="./assets/images/Holiday/holiday2.jpg"
-                                                     class="transition-default"
-                                                     width="500" height="800" alt="">
                                             </div>
-                                            <a href="#" aria-label="#"
-                                               class="card-holiday__layer transition-default p-3 position-absolute top-0 start-0 zi-1 w-100  d-flex flex-column justify-content-between">
-                                                <div class="card-holiday__type  zi-1 d-flex flex-column align-items-center justify-content-center gap-1 ">
-                                                        <span class="type-icon">
-                                                            <svg width="26" height="26" fill="white"
-                                                                 viewBox="0 0 26 26">
-                                                                    <path d="M3.6,14.6c-0.2,2.1-0.4,4.3-0.4,6.4l0,0.6l-3,3C0.1,24.8,0,25,0,25.2C0,25.7,0.4,26,0.8,26c0.2,0,0.4-0.1,0.6-0.2l3-3l0.6,0 c2.1,0,4.3-0.1,6.4-0.4C24.1,21.1,25.8,2.6,26,0C23.4,0.2,4.9,1.9,3.6,14.6z M5.2,14.8c1-9.7,13.8-12.3,18.9-13 c-0.3,2.3-1,6-2.4,9.6h-6l1.9-1.9c0.3-0.3,0.3-0.8,0-1.1s-0.8-0.3-1.1,0L4.9,19.9C5,18.2,5,16.5,5.2,14.8L5.2,14.8z M10.9,16.2 l3.2-3.2H21c-0.6,1.2-1.3,2.3-2.1,3.2H10.9z M11.2,20.8C9.5,21,7.8,21,6.1,21.1l3.2-3.2h8.2C15.8,19.4,13.8,20.5,11.2,20.8z"></path>
-                                                            </svg>
-                                                        </span>
-                                                    <span class="type-title text-white">
-                                                    Group tour
-                                                    </span>
+                                            <div class="card-holiday__content zi-1">
+                                                <div class="card-holiday__category text-uppercase text-secondary fw-700">
+                                                    Costa Rica
                                                 </div>
-                                                <div class="card-holiday__content zi-1">
-                                                    <div class="card-holiday__category text-uppercase text-secondary fw-700">
-                                                        Costa Rica
+                                                <h5 class="card-holiday__name mb-2 text-white fw-700 font-heading lh-base">
+                                                    Costa Rica’s Wild South
+                                                </h5>
+                                                <div class="card-holiday__desc limit-3 transition-default lh-base">
+                                                    This holiday to Costa Rica combines the highlights in the north
+                                                    of the country with the
+                                                    This holiday to Costa Rica combines the highlights in the north
+                                                    of the country with the
+                                                    This holiday to Costa Rica combines the highlights in the north
+                                                    of the country with the
+                                                </div>
+                                                <div class="card-holiday__meta zi-1 d-flex align-items-center justify-content-between gap-2">
+                                                    <div class="card-holiday__day">
+                                                        15 days
                                                     </div>
-                                                    <h5 class="card-holiday__name mb-2 text-white fw-700 font-heading lh-base">
-                                                        Costa Rica’s Wild South Costa Rica’s Wild South
-                                                    </h5>
-                                                    <div class="card-holiday__desc limit-3 transition-default lh-base">
-                                                        This holiday to Costa Rica combines the highlights in the north
-                                                        of the country with the
-                                                    </div>
-                                                    <div class="card-holiday__meta zi-1 d-flex align-items-center justify-content-between gap-2">
-                                                        <div class="card-holiday__day">
-                                                            15 days
-                                                        </div>
-                                                        <div class="card-holiday__price">
-                                                            from 789,98pp
-                                                        </div>
+                                                    <div class="card-holiday__price">
+                                                        from 789,98pp
                                                     </div>
                                                 </div>
-                                            </a>
-                                            <a href="#" aria-label="#"
-                                               class="card-holiday__link text-uppercase fw-700 bg-secondary text-white w-100 d-flex align-items-center justify-content-center gap-1">
-                                                VIEW HOLIDAY DETAIL <i class="fal fa-long-arrow-right"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide h-auto">
-                                        <div class="card-holiday h-100 position-relative transition-default overflow-hidden">
-                                            <div class="card-holiday__image d-block overflow-hidden">
-                                                <img src="./assets/images/Holiday/holiday3.jpg"
-                                                     class="transition-default"
-                                                     width="500" height="800" alt="">
                                             </div>
-                                            <a href="#" aria-label="#"
-                                               class="card-holiday__layer transition-default p-3 position-absolute top-0 start-0 zi-1 w-100  d-flex flex-column justify-content-between">
-                                                <div class="card-holiday__type  zi-1 d-flex flex-column align-items-center justify-content-center gap-1 ">
-                                                        <span class="type-icon">
-                                                            <svg width="26" height="26" fill="white"
-                                                                 viewBox="0 0 26 26">
-                                                                    <path d="M3.6,14.6c-0.2,2.1-0.4,4.3-0.4,6.4l0,0.6l-3,3C0.1,24.8,0,25,0,25.2C0,25.7,0.4,26,0.8,26c0.2,0,0.4-0.1,0.6-0.2l3-3l0.6,0 c2.1,0,4.3-0.1,6.4-0.4C24.1,21.1,25.8,2.6,26,0C23.4,0.2,4.9,1.9,3.6,14.6z M5.2,14.8c1-9.7,13.8-12.3,18.9-13 c-0.3,2.3-1,6-2.4,9.6h-6l1.9-1.9c0.3-0.3,0.3-0.8,0-1.1s-0.8-0.3-1.1,0L4.9,19.9C5,18.2,5,16.5,5.2,14.8L5.2,14.8z M10.9,16.2 l3.2-3.2H21c-0.6,1.2-1.3,2.3-2.1,3.2H10.9z M11.2,20.8C9.5,21,7.8,21,6.1,21.1l3.2-3.2h8.2C15.8,19.4,13.8,20.5,11.2,20.8z"></path>
-                                                            </svg>
-                                                        </span>
-                                                    <span class="type-title text-white">
-                                                    Group tour
-                                                    </span>
-                                                </div>
-                                                <div class="card-holiday__content zi-1">
-                                                    <div class="card-holiday__category text-uppercase text-secondary fw-700">
-                                                        Costa Rica
-                                                    </div>
-                                                    <h5 class="card-holiday__name mb-2 text-white fw-700 font-heading lh-base">
-                                                        Costa Rica’s Wild South Costa Rica’s Wild South
-                                                    </h5>
-                                                    <div class="card-holiday__desc limit-3 transition-default lh-base">
-                                                        This holiday to Costa Rica combines the highlights in the north
-                                                        of the country with the
-                                                    </div>
-                                                    <div class="card-holiday__meta zi-1 d-flex align-items-center justify-content-between gap-2">
-                                                        <div class="card-holiday__day">
-                                                            15 days
-                                                        </div>
-                                                        <div class="card-holiday__price">
-                                                            from 789,98pp
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                            <a href="#" aria-label="#"
-                                               class="card-holiday__link text-uppercase fw-700 bg-secondary text-white w-100 d-flex align-items-center justify-content-center gap-1">
-                                                VIEW HOLIDAY DETAIL <i class="fal fa-long-arrow-right"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide h-auto">
-                                        <div class="card-holiday h-100 position-relative transition-default overflow-hidden">
-                                            <div class="card-holiday__image d-block overflow-hidden">
-                                                <img src="./assets/images/Holiday/holiday4.jpg"
-                                                     class="transition-default"
-                                                     width="500" height="800" alt="">
-                                            </div>
-                                            <a href="#" aria-label="#"
-                                               class="card-holiday__layer transition-default p-3 position-absolute top-0 start-0 zi-1 w-100  d-flex flex-column justify-content-between">
-                                                <div class="card-holiday__type  zi-1 d-flex flex-column align-items-center justify-content-center gap-1 ">
-                                                        <span class="type-icon">
-                                                            <svg width="26" height="26" fill="white"
-                                                                 viewBox="0 0 26 26">
-                                                                    <path d="M3.6,14.6c-0.2,2.1-0.4,4.3-0.4,6.4l0,0.6l-3,3C0.1,24.8,0,25,0,25.2C0,25.7,0.4,26,0.8,26c0.2,0,0.4-0.1,0.6-0.2l3-3l0.6,0 c2.1,0,4.3-0.1,6.4-0.4C24.1,21.1,25.8,2.6,26,0C23.4,0.2,4.9,1.9,3.6,14.6z M5.2,14.8c1-9.7,13.8-12.3,18.9-13 c-0.3,2.3-1,6-2.4,9.6h-6l1.9-1.9c0.3-0.3,0.3-0.8,0-1.1s-0.8-0.3-1.1,0L4.9,19.9C5,18.2,5,16.5,5.2,14.8L5.2,14.8z M10.9,16.2 l3.2-3.2H21c-0.6,1.2-1.3,2.3-2.1,3.2H10.9z M11.2,20.8C9.5,21,7.8,21,6.1,21.1l3.2-3.2h8.2C15.8,19.4,13.8,20.5,11.2,20.8z"></path>
-                                                            </svg>
-                                                        </span>
-                                                    <span class="type-title text-white">
-                                                    Group tour
-                                                    </span>
-                                                </div>
-                                                <div class="card-holiday__content zi-1">
-                                                    <div class="card-holiday__category text-uppercase text-secondary fw-700">
-                                                        Costa Rica
-                                                    </div>
-                                                    <h5 class="card-holiday__name mb-2 text-white fw-700 font-heading lh-base">
-                                                        Costa Rica’s Wild South Costa Rica’s Wild South
-                                                    </h5>
-                                                    <div class="card-holiday__desc limit-3 transition-default lh-base">
-                                                        This holiday to Costa Rica combines the highlights in the north
-                                                        of the country with the
-                                                    </div>
-                                                    <div class="card-holiday__meta zi-1 d-flex align-items-center justify-content-between gap-2">
-                                                        <div class="card-holiday__day">
-                                                            15 days
-                                                        </div>
-                                                        <div class="card-holiday__price">
-                                                            from 789,98pp
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                            <a href="#" aria-label="#"
-                                               class="card-holiday__link text-uppercase fw-700 bg-secondary text-white w-100 d-flex align-items-center justify-content-center gap-1">
-                                                VIEW HOLIDAY DETAIL <i class="fal fa-long-arrow-right"></i>
-                                            </a>
-                                        </div>
+                                        </a>
+                                        <a href="#" aria-label="#"
+                                           class="card-holiday__link text-uppercase fw-700 bg-secondary text-white w-100 d-flex align-items-center justify-content-center gap-1">
+                                            VIEW HOLIDAY DETAIL <i class="fal fa-long-arrow-right"></i>
+                                        </a>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="swiper-button">
-                                <button type="button" aria-label="Button prev"
-                                        class="swiper-button__prev swiper-button__custom bg-primary text-secondary d-flex align-items-center justify-content-center border-5 rounded-circle position-absolute ">
-                                    <i class="fal fa-angle-left"></i>
-                                </button>
-                                <button type="button" aria-label="Button next"
-                                        class="swiper-button__next swiper-button__custom bg-primary text-secondary d-flex align-items-center justify-content-center border-5 rounded-circle position-absolute ">
-                                    <i class="fal fa-angle-right"></i>
-                                </button>
+                                <div class="swiper-slide h-auto">
+                                    <div class="card-holiday h-100 position-relative transition-default overflow-hidden">
+                                        <div class="card-holiday__image d-block overflow-hidden">
+                                            <img src="./assets/images/Holiday/holiday2.jpg"
+                                                 class="transition-default"
+                                                 width="500" height="800" alt="">
+                                        </div>
+                                        <a href="#" aria-label="#"
+                                           class="card-holiday__layer transition-default p-3 position-absolute top-0 start-0 zi-1 w-100  d-flex flex-column justify-content-between">
+                                            <div class="card-holiday__type  zi-1 d-flex flex-column align-items-center justify-content-center gap-1 ">
+                                                        <span class="type-icon">
+                                                            <svg width="26" height="26" fill="white"
+                                                                 viewBox="0 0 26 26">
+                                                                    <path d="M3.6,14.6c-0.2,2.1-0.4,4.3-0.4,6.4l0,0.6l-3,3C0.1,24.8,0,25,0,25.2C0,25.7,0.4,26,0.8,26c0.2,0,0.4-0.1,0.6-0.2l3-3l0.6,0 c2.1,0,4.3-0.1,6.4-0.4C24.1,21.1,25.8,2.6,26,0C23.4,0.2,4.9,1.9,3.6,14.6z M5.2,14.8c1-9.7,13.8-12.3,18.9-13 c-0.3,2.3-1,6-2.4,9.6h-6l1.9-1.9c0.3-0.3,0.3-0.8,0-1.1s-0.8-0.3-1.1,0L4.9,19.9C5,18.2,5,16.5,5.2,14.8L5.2,14.8z M10.9,16.2 l3.2-3.2H21c-0.6,1.2-1.3,2.3-2.1,3.2H10.9z M11.2,20.8C9.5,21,7.8,21,6.1,21.1l3.2-3.2h8.2C15.8,19.4,13.8,20.5,11.2,20.8z"></path>
+                                                            </svg>
+                                                        </span>
+                                                <span class="type-title text-white">
+                                                    Group tour
+                                                    </span>
+                                            </div>
+                                            <div class="card-holiday__content zi-1">
+                                                <div class="card-holiday__category text-uppercase text-secondary fw-700">
+                                                    Costa Rica
+                                                </div>
+                                                <h5 class="card-holiday__name mb-2 text-white fw-700 font-heading lh-base">
+                                                    Costa Rica’s Wild South Costa Rica’s Wild South
+                                                </h5>
+                                                <div class="card-holiday__desc limit-3 transition-default lh-base">
+                                                    This holiday to Costa Rica combines the highlights in the north
+                                                    of the country with the
+                                                </div>
+                                                <div class="card-holiday__meta zi-1 d-flex align-items-center justify-content-between gap-2">
+                                                    <div class="card-holiday__day">
+                                                        15 days
+                                                    </div>
+                                                    <div class="card-holiday__price">
+                                                        from 789,98pp
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="#" aria-label="#"
+                                           class="card-holiday__link text-uppercase fw-700 bg-secondary text-white w-100 d-flex align-items-center justify-content-center gap-1">
+                                            VIEW HOLIDAY DETAIL <i class="fal fa-long-arrow-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide h-auto">
+                                    <div class="card-holiday h-100 position-relative transition-default overflow-hidden">
+                                        <div class="card-holiday__image d-block overflow-hidden">
+                                            <img src="./assets/images/Holiday/holiday3.jpg"
+                                                 class="transition-default"
+                                                 width="500" height="800" alt="">
+                                        </div>
+                                        <a href="#" aria-label="#"
+                                           class="card-holiday__layer transition-default p-3 position-absolute top-0 start-0 zi-1 w-100  d-flex flex-column justify-content-between">
+                                            <div class="card-holiday__type  zi-1 d-flex flex-column align-items-center justify-content-center gap-1 ">
+                                                        <span class="type-icon">
+                                                            <svg width="26" height="26" fill="white"
+                                                                 viewBox="0 0 26 26">
+                                                                    <path d="M3.6,14.6c-0.2,2.1-0.4,4.3-0.4,6.4l0,0.6l-3,3C0.1,24.8,0,25,0,25.2C0,25.7,0.4,26,0.8,26c0.2,0,0.4-0.1,0.6-0.2l3-3l0.6,0 c2.1,0,4.3-0.1,6.4-0.4C24.1,21.1,25.8,2.6,26,0C23.4,0.2,4.9,1.9,3.6,14.6z M5.2,14.8c1-9.7,13.8-12.3,18.9-13 c-0.3,2.3-1,6-2.4,9.6h-6l1.9-1.9c0.3-0.3,0.3-0.8,0-1.1s-0.8-0.3-1.1,0L4.9,19.9C5,18.2,5,16.5,5.2,14.8L5.2,14.8z M10.9,16.2 l3.2-3.2H21c-0.6,1.2-1.3,2.3-2.1,3.2H10.9z M11.2,20.8C9.5,21,7.8,21,6.1,21.1l3.2-3.2h8.2C15.8,19.4,13.8,20.5,11.2,20.8z"></path>
+                                                            </svg>
+                                                        </span>
+                                                <span class="type-title text-white">
+                                                    Group tour
+                                                    </span>
+                                            </div>
+                                            <div class="card-holiday__content zi-1">
+                                                <div class="card-holiday__category text-uppercase text-secondary fw-700">
+                                                    Costa Rica
+                                                </div>
+                                                <h5 class="card-holiday__name mb-2 text-white fw-700 font-heading lh-base">
+                                                    Costa Rica’s Wild South Costa Rica’s Wild South
+                                                </h5>
+                                                <div class="card-holiday__desc limit-3 transition-default lh-base">
+                                                    This holiday to Costa Rica combines the highlights in the north
+                                                    of the country with the
+                                                </div>
+                                                <div class="card-holiday__meta zi-1 d-flex align-items-center justify-content-between gap-2">
+                                                    <div class="card-holiday__day">
+                                                        15 days
+                                                    </div>
+                                                    <div class="card-holiday__price">
+                                                        from 789,98pp
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="#" aria-label="#"
+                                           class="card-holiday__link text-uppercase fw-700 bg-secondary text-white w-100 d-flex align-items-center justify-content-center gap-1">
+                                            VIEW HOLIDAY DETAIL <i class="fal fa-long-arrow-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide h-auto">
+                                    <div class="card-holiday h-100 position-relative transition-default overflow-hidden">
+                                        <div class="card-holiday__image d-block overflow-hidden">
+                                            <img src="./assets/images/Holiday/holiday4.jpg"
+                                                 class="transition-default"
+                                                 width="500" height="800" alt="">
+                                        </div>
+                                        <a href="#" aria-label="#"
+                                           class="card-holiday__layer transition-default p-3 position-absolute top-0 start-0 zi-1 w-100  d-flex flex-column justify-content-between">
+                                            <div class="card-holiday__type  zi-1 d-flex flex-column align-items-center justify-content-center gap-1 ">
+                                                        <span class="type-icon">
+                                                            <svg width="26" height="26" fill="white"
+                                                                 viewBox="0 0 26 26">
+                                                                    <path d="M3.6,14.6c-0.2,2.1-0.4,4.3-0.4,6.4l0,0.6l-3,3C0.1,24.8,0,25,0,25.2C0,25.7,0.4,26,0.8,26c0.2,0,0.4-0.1,0.6-0.2l3-3l0.6,0 c2.1,0,4.3-0.1,6.4-0.4C24.1,21.1,25.8,2.6,26,0C23.4,0.2,4.9,1.9,3.6,14.6z M5.2,14.8c1-9.7,13.8-12.3,18.9-13 c-0.3,2.3-1,6-2.4,9.6h-6l1.9-1.9c0.3-0.3,0.3-0.8,0-1.1s-0.8-0.3-1.1,0L4.9,19.9C5,18.2,5,16.5,5.2,14.8L5.2,14.8z M10.9,16.2 l3.2-3.2H21c-0.6,1.2-1.3,2.3-2.1,3.2H10.9z M11.2,20.8C9.5,21,7.8,21,6.1,21.1l3.2-3.2h8.2C15.8,19.4,13.8,20.5,11.2,20.8z"></path>
+                                                            </svg>
+                                                        </span>
+                                                <span class="type-title text-white">
+                                                    Group tour
+                                                    </span>
+                                            </div>
+                                            <div class="card-holiday__content zi-1">
+                                                <div class="card-holiday__category text-uppercase text-secondary fw-700">
+                                                    Costa Rica
+                                                </div>
+                                                <h5 class="card-holiday__name mb-2 text-white fw-700 font-heading lh-base">
+                                                    Costa Rica’s Wild South Costa Rica’s Wild South
+                                                </h5>
+                                                <div class="card-holiday__desc limit-3 transition-default lh-base">
+                                                    This holiday to Costa Rica combines the highlights in the north
+                                                    of the country with the
+                                                </div>
+                                                <div class="card-holiday__meta zi-1 d-flex align-items-center justify-content-between gap-2">
+                                                    <div class="card-holiday__day">
+                                                        15 days
+                                                    </div>
+                                                    <div class="card-holiday__price">
+                                                        from 789,98pp
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="#" aria-label="#"
+                                           class="card-holiday__link text-uppercase fw-700 bg-secondary text-white w-100 d-flex align-items-center justify-content-center gap-1">
+                                            VIEW HOLIDAY DETAIL <i class="fal fa-long-arrow-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-xl-4 order-xl-2 order-1">
-                        <div class="section-holiday__column ps-xl-5 pe-xl-5">
-                            <div class="section-heading">
-                                <div class="heading-subtitle">
-                                    HOLIDAY IDEAS
-                                </div>
-                                <h2 class="heading-title mb-0 heading-tile__line position-relative">
-                                    Find inspiration
-                                </h2>
-                                <div class="heading-desc">
-                                    Here are some of the carefully-tailored, luxury experiences that we have recently
-                                    created for our clients to give you a sense of what is possible when our expertise
-                                    is
-                                    put to the task.
-                                </div>
-                            </div>
-                            <a href="" aria-label="" class="link-custom">
-                                View Collection
-                            </a>
+                        <div class="swiper-button">
+                            <button type="button" aria-label="Button prev"
+                                    class="swiper-button__prev swiper-button__custom bg-primary text-secondary d-flex align-items-center justify-content-center border-5 rounded-circle position-absolute ">
+                                <i class="fal fa-angle-left"></i>
+                            </button>
+                            <button type="button" aria-label="Button next"
+                                    class="swiper-button__next swiper-button__custom bg-primary text-secondary d-flex align-items-center justify-content-center border-5 rounded-circle position-absolute ">
+                                <i class="fal fa-angle-right"></i>
+                            </button>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        <section class="section-introduce-3 p-50 overflow-hidden"
-                 style="background: url('./assets/images/bg-why.png') center/cover no-repeat">
-            <div class="container">
-                <div class="row justify-content-end align-items-center">
-                    <div class="col-lg-6">
-                        <div class="section-introduce-3__content ps-lg-5 pe-lg-5 p-3">
-                            <div class="section-heading ">
-                                <h2 class="heading-title mb-0 heading-tile__line text-white position-relative">
-                                    Why Choose Steppes?
-                                </h2>
-                                <div class="heading-desc text-white">
-                                    Our knowledge, curiosity and expertise set us apart, driving us to create remarkable
-                                    holidays and Beautiful Adventures tailored perfectly to you, carefully curated to
-                                    help
-                                    protect and conserve our planet.
-
-                                    Are you ready to Discover Extraordinary?
-                                </div>
+                <div class="col-xl-4 order-xl-2 order-1">
+                    <div class="section-holiday__column ps-xl-5 pe-xl-5">
+                        <div class="section-heading">
+                            <div class="heading-subtitle">
+                                HOLIDAY IDEAS
                             </div>
-                            <a href="" aria-label="" class="link-custom-2 ">
-                                more about steppes
-                            </a>
-                            <div class="section-introduce-3__image mt-3">
-                                <img src="./assets/images/traveller.png" width="150" height="150" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="feature-press p-50">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-xl-8 col-lg-10">
-                        <div class="section-heading text-center">
-                            <h2 class="heading-title mb-0 ">
-                                Featured in the press
+                            <h2 class="heading-title mb-0 heading-tile__line position-relative">
+                                Find inspiration
                             </h2>
+                            <div class="heading-desc">
+                                Here are some of the carefully-tailored, luxury experiences that we have recently
+                                created for our clients to give you a sense of what is possible when our expertise
+                                is
+                                put to the task.
+                            </div>
                         </div>
-                        <div class="row row-cols-3 g-lg-4 g-3 justify-content-center align-items-center mt-1">
-                            <div class="col">
-                                <div class="feature-press__logo mx-auto">
-                                    <img src="./assets/images/logo1.png" width="96" height="34"
-                                         class="w-100 h-100 object-fit-contain" alt="">
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="feature-press__logo mx-auto">
-                                    <img src="./assets/images/logo2.png" width="142" height="24"
-                                         class="w-100 h-100 object-fit-contain" alt="">
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="feature-press__logo mx-auto">
-                                    <img src="./assets/images/logo5.png" width="180" height="15"
-                                         class="w-100 h-100 object-fit-contain" alt="">
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="feature-press__logo mx-auto">
-                                    <img src="./assets/images/logo3.png" width="114" height="24"
-                                         class="w-100 h-100 object-fit-contain" alt="">
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="feature-press__logo mx-auto">
-                                    <img src="./assets/images/logo4.png" width="144" height="24"
-                                         class="w-100 h-100 object-fit-contain" alt="">
-                                </div>
-                            </div>
+                        <a href="" aria-label="" class="link-custom">
+                            View Collection
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-introduce-3 p-50 overflow-hidden"
+             style="background: url('./assets/images/bg-why.png') center/cover no-repeat">
+        <div class="container">
+            <div class="row justify-content-end align-items-center">
+                <div class="col-lg-6">
+                    <div class="section-introduce-3__content ps-lg-5 pe-lg-5 p-3">
+                        <div class="section-heading ">
+                            <h2 class="heading-title mb-0 heading-tile__line text-white position-relative">
+                                Why Choose Steppes?
+                            </h2>
+                            <div class="heading-desc text-white">
+                                Our knowledge, curiosity and expertise set us apart, driving us to create remarkable
+                                holidays and Beautiful Adventures tailored perfectly to you, carefully curated to
+                                help
+                                protect and conserve our planet.
 
+                                Are you ready to Discover Extraordinary?
+                            </div>
+                        </div>
+                        <a href="" aria-label="" class="link-custom-2 ">
+                            more about steppes
+                        </a>
+                        <div class="section-introduce-3__image mt-3">
+                            <img src="./assets/images/traveller.png" width="150" height="150" alt="">
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
+    <section class="feature-press p-50">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-8 col-lg-10">
+                    <div class="section-heading text-center">
+                        <h2 class="heading-title mb-0 ">
+                            Featured in the press
+                        </h2>
+                    </div>
+                    <div class="row row-cols-3 g-lg-4 g-3 justify-content-center align-items-center mt-1">
+                        <div class="col">
+                            <div class="feature-press__logo mx-auto">
+                                <img src="./assets/images/logo1.png" width="96" height="34"
+                                     class="w-100 h-100 object-fit-contain" alt="">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="feature-press__logo mx-auto">
+                                <img src="./assets/images/logo2.png" width="142" height="24"
+                                     class="w-100 h-100 object-fit-contain" alt="">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="feature-press__logo mx-auto">
+                                <img src="./assets/images/logo5.png" width="180" height="15"
+                                     class="w-100 h-100 object-fit-contain" alt="">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="feature-press__logo mx-auto">
+                                <img src="./assets/images/logo3.png" width="114" height="24"
+                                     class="w-100 h-100 object-fit-contain" alt="">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="feature-press__logo mx-auto">
+                                <img src="./assets/images/logo4.png" width="144" height="24"
+                                     class="w-100 h-100 object-fit-contain" alt="">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </main>
+<div class="modal fade modal-contact" id="modalContact" tabindex="-1" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content rounded-0">
+            <div class="row g-0">
+                <div class="col-xl-4 d-xl-block d-none">
+                    <div class="modal-contact__info h-100 bg-primary p-lg-5 p-3">
+                        <div class="section-heading">
+                            <h3 class="heading-title text-white">
+                                Get in touch<span class="text-secondary">.</span>
+                            </h3>
+                            <div class="heading-desc text-white opacity-75">
+                                January is a very popular time to travel to India, due to mild temperatures and very
+                                little rainfall.
+                            </div>
+                        </div>
+                        <ul class="list-unstyled mb-0 d-flex flex-column gap-3">
+                            <li>
+                                <a href="" aria-label="" target="_blank"
+                                   class="text-white fw-500 d-flex align-items-start gap-2">
+                                    <span class="icon flex-shrink-0">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </span>
+                                    <span class="opacity-75">
+                                         51 Castle St, Cirencester, GL7 1QD, United Kingdom
+                                    </span>
+
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" aria-label="" class="text-white fw-500 d-flex align-items-start gap-2">
+                                    <span class="icon flex-shrink-0">
+                                       <i class="fas fa-phone"></i>
+                                    </span>
+                                    <span class="opacity-75">
+                                         01285 880 980
+                                    </span>
+
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" aria-label="" class="text-white fw-500 d-flex align-items-start gap-2">
+                                    <span class="icon flex-shrink-0">
+                                       <i class="fas fa-envelope"></i>
+                                    </span>
+                                    <span class="opacity-75">
+                                         email@gmail.com
+                                    </span>
+
+                                </a>
+                            </li>
+                        </ul>
+
+                        <div class="modal-social d-flex align-items-center gap-3 mt-5">
+                            <a href="" target="_blank" aria-label=""
+                               class="d-flex align-items-center justify-content-center rounded-circle">
+                                <svg width="12" height="22" fill="#fff" id="facebook-f" viewBox="0 0 12 18">
+                                    <path d="M11.2,10.4l0.6-4.1H7.9V3.7c0-1.1,0.5-2.2,2.3-2.2H12v-3.5c0,0-1.6-0.3-3.1-0.3c-3.2,0-5.3,1.9-5.3,5.5v3.1H0v4.1h3.6v9.8 h4.4v-9.8H11.2z"></path>
+                                </svg>
+                            </a>
+                            <a href="" target="_blank" aria-label=""
+                               class="d-flex align-items-center justify-content-center rounded-circle">
+                                <svg width="18" height="18" fill="#fff" id="X" viewBox="0 0 18 18">
+                                    <path class="cls-1"
+                                          d="M14.17.86h2.76l-6.03,6.89,7.1,9.38h-5.55l-4.35-5.69-4.98,5.69H.35l6.45-7.37L0,.86h5.69l3.93,5.2L14.17.86ZM13.2,15.49h1.53L4.86,2.43h-1.64l9.99,13.06Z"></path>
+                                </svg>
+                            </a>
+                            <a href="" target="_blank" aria-label=""
+                               class="d-flex align-items-center justify-content-center rounded-circle">
+                                <svg width="18" height="18" fill="#fff" id="instagram" viewBox="0 0 18 18">
+                                    <path d="M9.1,4.3c-2.6,0-4.6,2.1-4.6,4.6s2.1,4.6,4.6,4.6s4.6-2.1,4.6-4.6S11.6,4.3,9.1,4.3z M9.1,11.9c-1.7,0-3-1.3-3-3s1.3-3,3-3 s3,1.3,3,3S10.7,11.9,9.1,11.9L9.1,11.9z M14.9,4.1c0,0.6-0.5,1.1-1.1,1.1c-0.6,0-1.1-0.5-1.1-1.1S13.3,3,13.9,3S14.9,3.5,14.9,4.1z M18,5.2c-0.1-1.4-0.4-2.7-1.5-3.8C15.5,0.4,14.2,0,12.8,0c-1.5-0.1-5.9-0.1-7.4,0C3.9,0,2.6,0.4,1.6,1.4S0.2,3.7,0.1,5.2 C0,6.7,0,11.1,0.1,12.6c0.1,1.4,0.4,2.7,1.5,3.8c1.1,1.1,2.3,1.4,3.8,1.5c1.5,0.1,5.9,0.1,7.4,0c1.4-0.1,2.7-0.4,3.8-1.5 c1.1-1.1,1.4-2.3,1.5-3.8C18.1,11.1,18.1,6.7,18,5.2L18,5.2z M16.1,14.2c-0.3,0.8-0.9,1.4-1.7,1.7c-1.2,0.5-4,0.4-5.3,0.4 s-4.1,0.1-5.3-0.4C3,15.6,2.4,15,2,14.2c-0.5-1.2-0.4-4-0.4-5.3S1.6,4.8,2,3.6C2.3,2.8,3,2.2,3.7,1.9c1.2-0.5,4-0.4,5.3-0.4 s4.1-0.1,5.3,0.4c0.8,0.3,1.4,0.9,1.7,1.7c0.5,1.2,0.4,4,0.4,5.3S16.5,13,16.1,14.2z"></path>
+                                </svg>
+                            </a>
+                            <a href="" target="_blank" aria-label=""
+                               class="d-flex align-items-center justify-content-center rounded-circle">
+                                <svg width="18" height="18" fill="#fff" id="youtube" viewBox="0 0 18 16">
+                                    <path d="M17.6,3.7c-0.2-0.8-0.8-1.4-1.6-1.6c-1.4-0.4-7-0.4-7-0.4s-5.6,0-7,0.4C1.2,2.3,0.6,2.9,0.4,3.7C0,5.1,0,8,0,8 s0,2.9,0.4,4.4c0.2,0.8,0.8,1.4,1.6,1.6c1.4,0.4,7,0.4,7,0.4s5.6,0,7-0.4c0.8-0.2,1.4-0.8,1.6-1.6C18,11,18,8,18,8S18,5.1,17.6,3.7z  M7.2,10.7V5.3L11.9,8L7.2,10.7L7.2,10.7z"></path>
+                                </svg>
+                            </a>
+                            <a href="" target="_blank" aria-label=""
+                               class="d-flex align-items-center justify-content-center rounded-circle">
+                                <svg width="18" height="18" id="pinterest" fill="#fff" viewBox="0 0 18 18">
+                                    <path d="M18,9c0,5-4,9-9,9c-0.9,0-1.8-0.1-2.7-0.4C6.7,17,7.3,16,7.5,15.2C7.6,14.8,8,13.1,8,13.1c0.3,0.6,1.2,1,2.1,1 c2.7,0,4.7-2.5,4.7-5.6c0-3-2.4-5.2-5.5-5.2c-3.9,0-5.9,2.6-5.9,5.4c0,1.3,0.7,3,1.8,3.5c0.2,0.1,0.3,0,0.3-0.1c0-0.1,0.2-0.7,0.3-1 c0-0.1,0-0.2-0.1-0.3c-0.4-0.5-0.7-1.3-0.7-2.1c0-2,1.5-3.9,4.1-3.9c2.2,0,3.8,1.5,3.8,3.7c0,2.4-1.2,4.1-2.8,4.1 c-0.9,0-1.5-0.7-1.3-1.6c0.3-1.1,0.7-2.2,0.7-3c0-0.7-0.4-1.3-1.1-1.3C7.3,6.8,6.5,7.7,6.5,9c0,0.8,0.3,1.3,0.3,1.3 s-0.9,3.8-1.1,4.5c-0.2,0.8-0.1,1.9,0,2.6C2.4,16.1,0,12.8,0,9c0-5,4-9,9-9S18,4,18,9z"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-8">
+                    <div class="modal-contact__content p-lg-5 p-4">
+                        <button class="modal-contact__close d-flex align-items-center justify-content-center text-dark ms-auto bg-transparent rounded-0 border-0 transition-default position-absolute end-0 top-0 me-lg-3 mt-lg-3 me-1 mt-1"
+                                role="button" data-bs-dismiss="modal" aria-label="Close">
+                            <i class="far fa-times"></i>
+                        </button>
+                        <div class="section-heading">
+                            <h3 class="heading-title mb-0">
+                                Say hello<span class="text-secondary">.</span>
+                            </h3>
+                            <div class="heading-desc d-xl-none d-flex mt-2">
+                                January is a very popular time to travel to India, due to mild temperatures and very
+                                little rainfall.
+                            </div>
+                        </div>
+                        <form id="" novalidate>
+                            <div class="row mb-3">
+                                <div class="col-lg-6 col-md-8">
+                                    <div class="form-group">
+                                        <label for="frm-destination" class="form-label text-dark fw-700 mb-1">Destination
+                                            <small class="text-danger">*</small></label>
+                                        <select class="bg-white rounded-0 form-select" name="frm-destination"
+                                                id="frm-destination">
+                                            <option value="" data-id="" selected>
+                                                Take me to...
+                                            </option>
+                                            <option value="" data-id="">
+                                                USA
+                                            </option>
+                                            <option value="" data-id="">
+                                                Vietnam
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col">
+                                    <div class="form-group">
+                                        <label for="frm-mess" class="form-label text-dark fw-700 mb-1">How can we help
+                                            you <small class="text-danger">*</small></label>
+                                        <textarea name="frm-mess" id="frm-mess" class="form-control rounded-0" rows="5"
+                                                  required
+                                                  placeholder="Let us know who you are travelling with, how long you were thinking of going for and any key elements you want to include in the trip."></textarea>
+                                        <div class="invalid-feedback">
+                                            Please choose a username.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mb-3 g-3">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="frm-title" class="form-label text-dark fw-700 mb-1">Title <small
+                                                class="text-danger">*</small></label>
+                                        <input type="text" placeholder="" name="frm-title"
+                                               class="form-control bg-white rounded-0" id="frm-title" required="">
+                                        <div class="invalid-feedback">
+                                            Please choose a username.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="frm-firstname" class="form-label text-dark fw-700 mb-1">First
+                                            name<small
+                                                    class="text-danger">*</small></label>
+                                        <input type="text" placeholder="" name="frm-lastname"
+                                               class="form-control bg-white rounded-0" id="frm-firstname" required="">
+                                        <div class="invalid-feedback">
+                                            Please choose a username.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="frm-surname" class="form-label text-dark fw-700 mb-1">Surname<small
+                                                class="text-danger">*</small></label>
+                                        <input type="text" placeholder="" name="frm-surname"
+                                               class="form-control bg-white rounded-0" id="frm-surname" required="">
+                                        <div class="invalid-feedback">
+                                            Please choose a username.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mb-3 g-3">
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label for="frm-email" class="form-label text-dark fw-700 mb-1">Email Address
+                                            <small
+                                                    class="text-danger">*</small></label>
+                                        <input type="email" placeholder="" name="frm-email"
+                                               class="form-control bg-white rounded-0" id="frm-email" required="">
+                                        <div class="invalid-feedback">
+                                            Please choose a username.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label for="frm-phone" class="form-label text-dark fw-700 mb-1">Phone <small
+                                                class="text-danger">*</small></label>
+                                        <input type="tel" maxlength="20" min="20" placeholder="" name="frm-phone"
+                                               class="form-control bg-white rounded-0" id="frm-phone" required="">
+                                        <div class="invalid-feedback">
+                                            Please choose a username.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mb-4">
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label for="frm-note" class="form-label text-dark fw-700 mb-1">How did you hear
+                                            about us? <small class="text-danger">*</small></label>
+                                        <input type="text" placeholder="" name="frm-note"
+                                               class="form-control bg-white rounded-0" id="frm-note" required="">
+                                        <div class="invalid-feedback">
+                                            Please choose a username.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <div class="col">
+                                    <div class="form-group">
+                                        <label for="frm-note" class="form-label fw-700 text-dark mb-1">
+                                            We would love to contact you by email from time to time about exciting news,
+                                            holidays and events we think will be of interest to you.<span
+                                                class="text-danger">*</span>
+                                        </label>
+                                        <div class="form-check d-flex align-items-start gap-2">
+                                            <input class="form-check-input rounded-0 position-relative pseudo transition-default"
+                                                   type="checkbox" value="" id="flexCheckDefault">
+                                            <label class="form-check-label text-dark fw-700 mb-0"
+                                                   for="flexCheckDefault">
+                                                Yes
+                                            </label>
+                                        </div>
+                                        <div class="form-check d-flex align-items-start gap-2">
+                                            <input class="form-check-input rounded-0 position-relative pseudo transition-default"
+                                                   type="checkbox" value="" id="flexCheckChecked" checked>
+                                            <label class="form-check-label text-dark fw-700 mb-0"
+                                                   for="flexCheckChecked">
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group__text mb-4">
+                                By sending your enquiry you are stating that you agree to our T&C
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-group">
+                                        <button type="submit" role="button" ARIA-LABEL="" class="button-primary w-auto">
+                                            SUBMIT ENQUIRY
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
 
 <footer class="overflow-hidden">
     <div class="footer-top">
