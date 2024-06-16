@@ -72,9 +72,9 @@ const handleScrollDiv = function () {
 
                 setTimeout(function () {
                     $("html, body").animate({
-                        scrollTop: $("#" + getId).offset().top + (-150)
+                        scrollTop: $("#" + getId).offset().top
                     }, 1000);
-                }, 500);
+                });
             })
         })
     }
@@ -85,9 +85,9 @@ const handleScrollDiv = function () {
             let getValue = $option.val();
             setTimeout(function () {
                 $("html, body").animate({
-                    scrollTop: $("#" + getValue).offset().top + (-150)
+                    scrollTop: $("#" + getValue).offset().top + (-130)
                 }, 1000);
-            }, 500);
+            });
         });
     }
 }
