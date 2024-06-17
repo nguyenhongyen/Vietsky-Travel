@@ -57,12 +57,10 @@ const handleSliderAccommodation = function () {
     if (slider.length > 0) {
         const elmSwiper = '#' + slider.attr('id')
         const objSwiper = {
-            speed: 1000, loop: true, spaceBetween: 0, slidesPerView: 1, centeredSlides: true, navigation: {
+            speed: 1000, loop: true, spaceBetween: 0, slidesPerView: 1.1, centeredSlides: true, navigation: {
                 nextEl: elmSwiper + " .swiper-button__next", prevEl: elmSwiper + " .swiper-button__prev",
             }, breakpoints: {
                 375: {
-                    slidesPerView: 1,
-                }, 425: {
                     slidesPerView: 1.2,
                 }, 1024: {
                     slidesPerView: 1.5,
@@ -107,10 +105,29 @@ const handleSliderHolidayIdeas = function () {
 }
 
 
+const handleSliderOtherPlace = function () {
+    const slider = $('#swiperOtherPlace');
+    if (slider.length > 0) {
+        const elmSwiper = '#' + slider.attr('id')
+        const objSwiper = {
+            speed: 1000, loop: true, spaceBetween: 20, slidesPerView: 1.2, breakpoints: {
+                375: {
+                    slidesPerView: 1.3,
+                }, 768: {
+                    slidesPerView: 2,
+                },
+            }
+        }
+        handleSwiper(elmSwiper + ' .swiper', objSwiper);
+    }
+}
+
+
 $(function () {
 
     handleScrollDiv()
     handleSliderGallery()
     handleSliderAccommodation()
     handleSliderHolidayIdeas()
+    handleSliderOtherPlace()
 });

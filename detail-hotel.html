@@ -975,7 +975,7 @@
                                                                class="text-white transition-default fw-300 opacity-75">Home</a>
                                 </li>
                                 <li class="breadcrumb-item"><a href="#"
-                                                               class="text-white transition-default fw-300 opacity-75">Library</a>
+                                                               class="text-white transition-default fw-300 opacity-75">Hotel</a>
                                 </li>
                                 <li class="breadcrumb-item text-white transition-default fw-500  active"
                                     aria-current="page">Oberoi Amarvilas
@@ -985,8 +985,8 @@
                         <h1 class="section-breadcrumb__title position-relative heading-tile__line mb-0 font-heading text-white fw-800 text-shadow">
                             Samode Haveli<span class="text-secondary">.</span>
                         </h1>
-                        <div class="d-flex align-items-center gap-4 mt-5">
-                            <div class="text-white fw-700 d-flex align-items-center gap-2">
+                        <div class="d-flex align-items-center flex-wrap gap-4 mt-5">
+                            <div class="text-white fw-700 d-flex align-items-center flex-nowrap text-nowrap gap-2">
                                  <span class="type-icon">
                                    <svg width="20" height="20" fill="white" xmlns="http://www.w3.org/2000/svg"
                                         viewBox="0 0 42 42">
@@ -1042,28 +1042,24 @@
                                     <option selected value="Overview">
                                         Overview
                                     </option>
-                                    <option value="Itinerary">
-                                        Itinerary
+                                    <option value="Gallery">
+                                        Gallery
                                     </option>
-                                    <option value="MoreDetails">
-                                        More Details
+                                    <option value="HolidayIdeas">
+                                        Holiday Ideas
                                     </option>
-                                    <option value="Accommodation">
-                                        Accommodation
+                                    <option value="OtherPlace">
+                                        Other Places to Stay
                                     </option>
-                                    <option value="Sustainability">
-                                        Sustainability
-                                    </option>
-                                    <option value="ExtensionIdeas">
-                                        Extension Ideas
+                                    <option value="OtherProperties">
+                                        Other Properties
                                     </option>
                                 </select>
                             </div>
-                            <button type="button" role="button" class="button-primary w-15" data-bs-toggle="modal"
-                                    data-bs-target="#modalContact">
+                            <a href="contactus.html" role="button" class="button-primary w-15">
                                 <span class="d-lg-block d-none">CONTACT US</span>
                                 <span class="d-lg-none d-block"><i class="fas fa-envelope"></i></span>
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -1083,7 +1079,6 @@
                                                 the closest hotel to the Taj and has the best views. They need to be
                                                 seen to be believed. We don’t really need to say anymore.
                                             </h5>
-
                                             <div class="overview-text" id="detailContent">
                                                 <p>Nội dung mẫu, d&ugrave;ng để thể hiện c&aacute;c chức năng quản trị
                                                     vi&ecirc;n c&oacute; thể th&ecirc;m trong tr&igrave;nh soạn thảo th&ocirc;ng
@@ -1294,9 +1289,6 @@
 
 
                                             </div>
-                                            <button class="button-primary w-auto ">
-                                                read less
-                                            </button>
                                         </div>
                                     </div>
                                     <div class="col-lg-5 ps-xl-5 border-start border-2 border-secondary">
@@ -1429,10 +1421,10 @@
             <div id="HolidayIdeas" class="p-30">
                 <div class="container">
                     <div class="row justify-content-center">
-                        <div class="col-xl-10">
+                        <div class="col-xl-10 col-11">
                             <div class="holiday-ideas position-relative">
                                 <div class="row g-3 justify-content-center">
-                                    <div class="col-lg-4 col-md-6 col-11 order-md-1 order-2">
+                                    <div class="col-lg-4 col-md-6 order-md-1 order-2">
                                         <div class="overflow-hidden position-relative h-100" id="swiperHolidayOne">
                                             <div class="swiper mySwiper h-100">
                                                 <div class="swiper-wrapper mb-5">
@@ -1660,7 +1652,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-8 col-md-6 col-11 order-md-2 order-1">
+                                    <div class="col-lg-8 col-md-6 order-md-2 order-1">
                                         <div class="d-flex flex-column gap-3">
                                             <div class="section-heading">
                                                 <h2 class="heading-title heading-tile__line position-relative">
@@ -1925,20 +1917,435 @@
                     </div>
                 </div>
             </div>
-            <div id="OtherPlace">
+            <div id="OtherPlace" class="p-30">
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-xl-10 col-11">
                             <div class="section-heading">
-                                <h2 class="heading-title">
-                                    Where to stay in India 3333
+                                <h2 class="heading-title heading-title__line-2 position-relative text-center">
+                                    Where to stay in India <span class="text-secondary">.</span>
                                 </h2>
+                                <div class="heading-desc text-center">
+                                    Our team has handpicked this collection of properties to give you luxury options in
+                                    styles to suit any journey.
+                                </div>
+                            </div>
+                            <div class="row row-cols-lg-3 row-cols-md-2 row-cols-1 g-3 d-md-flex d-none">
+                                <div class="col">
+                                    <div class="card-hotel position-relative transition-default overflow-hidden">
+                                        <div class="card-hotel__image d-block overflow-hidden">
+                                            <img src="./assets/images/hotel-500x800.jpg"
+                                                 class="transition-default w-100 h-100 object-fit-cover"
+                                                 width="500" height="800" alt="">
+                                            <a href="#" aria-label="#"
+                                               class="card-hotel__link text-uppercase fw-700 bg-secondary text-white w-100 d-flex align-items-center justify-content-center gap-1 position-absolute start-0 bottom-0 zi-2">
+                                                View Property <i class="fal fa-long-arrow-right"></i>
+                                            </a>
+                                        </div>
+                                        <a href="#" aria-label="#"
+                                           class="card-hotel__layer transition-default p-3 position-absolute top-0 start-0 zi-3 w-100 d-flex flex-column justify-content-end">
+                                            <div class="card-hotel__content zi-1">
+                                                <div class="card-hotel__category text-uppercase text-secondary fw-700">
+                                                    india
+                                                </div>
+                                                <h5 class="card-hotel__name heading-tile__line position-relative mb-2 text-white fw-700 font-heading lh-base">
+                                                    Oberoi Amarvilas
+                                                </h5>
+                                                <div class="card-hotel__type d-flex align-items-end gap-2 pb-2">
+                                                    <div class="d-flex align-items-center gap-1 ">
+                                                        <span class="icon">
+                                                           <svg fill="#ffff" width="22" height="22"
+                                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42 42">
+<path d="M26 22.5h1.8c.3 0 .5-.2.5-.5v-2.9c0-.3-.2-.5-.5-.5H26c-.3 0-.5.2-.5.5V22c0 .2.2.5.5.5zm.5-2.9h.7v1.9h-.7v-1.9zm-4.3 2.9H24c.3 0 .5-.2.5-.5v-2.9c0-.3-.2-.5-.5-.5h-1.8c-.3 0-.5.2-.5.5V22c-.1.2.2.5.5.5zm.5-2.9h.7v1.9h-.7v-1.9zm-6.9 2.9h1.8c.3 0 .5-.2.5-.5v-2.9c0-.3-.2-.5-.5-.5h-1.8c-.3 0-.5.2-.5.5V22c0 .2.2.5.5.5zm.5-2.9h.7v1.9h-.7v-1.9zM12 22.5h1.8c.3 0 .5-.2.5-.5v-2.9c0-.3-.2-.5-.5-.5H12c-.3 0-.5.2-.5.5V22c-.1.2.2.5.5.5zm.5-2.9h.7v1.9h-.7v-1.9zM26 30h1.8c.3 0 .5-.2.5-.5v-2.9c0-.3-.2-.5-.5-.5H26c-.3 0-.5.2-.5.5v2.9c0 .2.2.5.5.5zm.5-2.9h.7V29h-.7v-1.9zM26 37.9h1.8c.3 0 .5-.2.5-.5v-2.7c0-.3-.2-.5-.5-.5H26c-.3 0-.5.2-.5.5v2.7c0 .3.2.5.5.5zm.5-2.7h.7v1.7h-.7v-1.7zM22.2 30H24c.3 0 .5-.2.5-.5v-2.9c0-.3-.2-.5-.5-.5h-1.8c-.3 0-.5.2-.5.5v2.9c-.1.2.2.5.5.5zm.5-2.9h.7V29h-.7v-1.9zM15.8 30h1.8c.3 0 .5-.2.5-.5v-2.9c0-.3-.2-.5-.5-.5h-1.8c-.3 0-.5.2-.5.5v2.9c0 .2.2.5.5.5zm.5-2.9h.7V29h-.7v-1.9zM12 30h1.8c.3 0 .5-.2.5-.5v-2.9c0-.3-.2-.5-.5-.5H12c-.3 0-.5.2-.5.5v2.9c-.1.2.2.5.5.5zm.5-2.9h.7V29h-.7v-1.9zm13.5-12h1.8c.3 0 .5-.2.5-.5v-2.9c0-.3-.2-.5-.5-.5H26c-.3 0-.5.2-.5.5v2.9c0 .3.2.5.5.5zm.5-2.9h.7v1.9h-.7v-1.9zm-4.3 2.9H24c.3 0 .5-.2.5-.5v-2.9c0-.3-.2-.5-.5-.5h-1.8c-.3 0-.5.2-.5.5v2.9c-.1.3.2.5.5.5zm.5-2.9h.7v1.9h-.7v-1.9z"></path>
+<path d="M.6 42h41c.3 0 .5-.2.5-.5s-.2-.5-.5-.5h-4.2V17h.2c.3 0 .5-.2.5-.5v-2.8c0-.3-.2-.5-.5-.5H31V7.3c.3 0 .5-.2.5-.5V3.5c0-.3-.2-.5-.5-.5V.5c0-.3-.2-.5-.5-.5h-11c-.3 0-.5.2-.5.5V3c-.3 0-.5.2-.5.5v3.3c0 .3.2.5.5.5v1.5h-9c-.3 0-.5.2-.5.5v2.1h-.1c-.3 0-.5.2-.5.5v3.3c0 .3.2.5.5.5h.1v25.2H5.1V39c1.4-.3 2.4-1.4 2.4-2.8 0-1-.5-1.9-1.4-2.5.4-.4.6-1 .6-1.5 0-1.2-1-2.2-2.2-2.2s-2.2 1-2.2 2.2c0 .6.2 1.1.6 1.5-.9.5-1.4 1.5-1.4 2.5 0 1.4 1 2.6 2.4 2.8v1.9H.6c-.3 0-.5.2-.5.5 0 .4.3.6.5.6zm30.3-27.9H37v1.8h-6.1v-1.8zm0 2.8h5.4v24h-5.4v-24zm-7.4 24h-1.8v-5.8h1.8v5.8zm6.4 0h-5.3v-6.3c0-.3-.2-.5-.5-.5h-2.9c-.3 0-.5.2-.5.5v6.3H20V7.3h9.9v33.6zM20 1.1h9.9V3H20V1.1zM19.5 4h10.9v2.3H19.5V4zm-3.8 36.9h-1.8v-5.8h1.8v5.8zm3.2 0h-2.2v-6.3c0-.3-.2-.5-.5-.5h-2.9c-.3 0-.5.2-.5.5v6.3h-2.2V15.7h8.3v25.2zm-8.3-31h8.3v1.5h-8.3V9.9zm-.7 2.5h9v2.2h-9v-2.2zM4.6 31.1c.6 0 1.1.5 1.1 1.1 0 .6-.5 1.1-1.1 1.1-.6 0-1.1-.5-1.1-1.1 0-.6.5-1 1.1-1.1zm-1.9 5.2c0-1 .8-1.8 1.8-1.8s1.8.8 1.8 1.8-.8 1.8-1.8 1.8-1.8-.8-1.8-1.8z"></path>
+<path d="M34.5 19.2h-1.8c-.3 0-.5.2-.5.5v2.9c0 .3.2.5.5.5h1.8c.3 0 .5-.2.5-.5v-2.9c0-.3-.2-.5-.5-.5zm-.5 2.9h-.7v-1.8h.7v1.8zm.5 4.5h-1.8c-.3 0-.5.2-.5.5V30c0 .3.2.5.5.5h1.8c.3 0 .5-.2.5-.5v-2.9c0-.3-.2-.5-.5-.5zm-.5 2.9h-.7v-1.8h.7v1.8zm.5 4.6h-1.8c-.3 0-.5.2-.5.5v2.9c0 .3.2.5.5.5h1.8c.3 0 .5-.2.5-.5v-2.9c0-.2-.2-.5-.5-.5zM34 37h-.7v-1.8h.7V37z"></path>
+</svg>
+                                                        </span>
+                                                        <span class="type text-white fw-300"> City</span>
+                                                    </div>
+                                                    <div class="card-hotel__range lh-base text-white">
+                                                        <span class="text-secondary">£</span>
+                                                        <span class="text-secondary">£</span>
+                                                        <span class="text-secondary">£</span>
+                                                        <span class="text-secondary">£</span>
+                                                        <span class="text-secondary">£</span>
+                                                    </div>
+                                                </div>
+                                                <div class="card-hotel__desc limit-4 fw-300 transition-default lh-base text-white">
+                                                    RAAS Devigarh is no ordinary palace hotel. Chic and elegant, it
+                                                    blends modern with 15th-century originality. It stands amongst wheat
+                                                    fields deep in the Aravalli hills, 30 minutes drive from Udaipur.
+                                                    Interiors are clean and contemporary…
+                                                </div>
+                                            </div>
+                                        </a>
+
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card-hotel position-relative transition-default overflow-hidden">
+                                        <div class="card-hotel__image d-block overflow-hidden">
+                                            <img src="./assets/images/hotel2-500x800.jpg"
+                                                 class="transition-default w-100 h-100 object-fit-cover"
+                                                 width="500" height="800" alt="">
+                                            <a href="#" aria-label="#"
+                                               class="card-hotel__link text-uppercase fw-700 bg-secondary text-white w-100 d-flex align-items-center justify-content-center gap-1 position-absolute start-0 bottom-0 zi-2">
+                                                View Property <i class="fal fa-long-arrow-right"></i>
+                                            </a>
+                                        </div>
+                                        <a href="#" aria-label="#"
+                                           class="card-hotel__layer transition-default p-3 position-absolute top-0 start-0 zi-3 w-100 d-flex flex-column justify-content-end">
+                                            <div class="card-hotel__content zi-1">
+                                                <div class="card-hotel__category text-uppercase text-secondary fw-700">
+                                                    india
+                                                </div>
+                                                <h5 class="card-hotel__name heading-tile__line position-relative mb-2 text-white fw-700 font-heading lh-base">
+                                                    Oberoi Amarvilas
+                                                </h5>
+                                                <div class="card-hotel__type d-flex align-items-end gap-2 pb-2">
+                                                    <div class="d-flex align-items-center gap-1 ">
+                                                        <span class="icon">
+                                                             <svg fill="#ffff" width="22" height="22"
+                                                                  xmlns="http://www.w3.org/2000/svg"
+                                                                  viewBox="0 0 42 42">
+                                                            <path d="M41 36.1h-3L21.6 12.5l4.7-6.8c.2-.2.1-.5-.1-.7-.2-.2-.5-.1-.7.1L21 11.7l-4.5-6.5c-.2-.3-.5-.4-.7-.2-.2.2-.3.5-.1.7l4.7 6.8L4 36.1H1c-.3 0-.5.2-.5.5s.2.5.5.5h40c.3 0 .5-.2.5-.5s-.2-.5-.5-.5zm-10.5 0c-4.4 0-8.7-13.5-9-22l15.3 22h-6.3zm-10-22c-.3 8.5-4.6 22-9 22H5.2l15.3-22zm-6.6 22c3.4-2.7 6-10.8 7.1-17.4 1 6.7 3.7 14.7 7.1 17.4H13.9z"></path>
+                                                                </svg>
+                                                        </span>
+                                                        <span class="type text-white fw-300"> Tented Camps</span>
+                                                    </div>
+                                                    <div class="card-hotel__range lh-base text-white">
+                                                        <span class="text-secondary">£</span>
+                                                        <span class="text-secondary">£</span>
+                                                        <span class="text-secondary">£</span>
+                                                        <span>£</span>
+                                                        <span>£</span>
+                                                    </div>
+                                                </div>
+                                                <div class="card-hotel__desc limit-4 fw-300 transition-default lh-base text-white">
+                                                    RAAS Devigarh is no ordinary palace hotel. Chic and elegant, it
+                                                </div>
+                                            </div>
+                                        </a>
+
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card-hotel position-relative transition-default overflow-hidden">
+                                        <div class="card-hotel__image d-block overflow-hidden">
+                                            <img src="./assets/images/hotel-500x800.jpg"
+                                                 class="transition-default w-100 h-100 object-fit-cover"
+                                                 width="500" height="800" alt="">
+                                            <a href="#" aria-label="#"
+                                               class="card-hotel__link text-uppercase fw-700 bg-secondary text-white w-100 d-flex align-items-center justify-content-center gap-1 position-absolute start-0 bottom-0 zi-2">
+                                                View Property <i class="fal fa-long-arrow-right"></i>
+                                            </a>
+                                        </div>
+                                        <a href="#" aria-label="#"
+                                           class="card-hotel__layer transition-default p-3 position-absolute top-0 start-0 zi-3 w-100 d-flex flex-column justify-content-end">
+                                            <div class="card-hotel__content zi-1">
+                                                <div class="card-hotel__category text-uppercase text-secondary fw-700">
+                                                    india
+                                                </div>
+                                                <h5 class="card-hotel__name heading-tile__line position-relative mb-2 text-white fw-700 font-heading lh-base">
+                                                    Oberoi Amarvilas
+                                                </h5>
+                                                <div class="card-hotel__type d-flex align-items-end gap-2 pb-2">
+                                                    <div class="d-flex align-items-center gap-1 ">
+                                                        <span class="icon">
+                                                             <svg fill="#ffff" width="22" height="22"
+                                                                  xmlns="http://www.w3.org/2000/svg"
+                                                                  viewBox="0 0 42 42">
+                                                            <path d="M41 36.1h-3L21.6 12.5l4.7-6.8c.2-.2.1-.5-.1-.7-.2-.2-.5-.1-.7.1L21 11.7l-4.5-6.5c-.2-.3-.5-.4-.7-.2-.2.2-.3.5-.1.7l4.7 6.8L4 36.1H1c-.3 0-.5.2-.5.5s.2.5.5.5h40c.3 0 .5-.2.5-.5s-.2-.5-.5-.5zm-10.5 0c-4.4 0-8.7-13.5-9-22l15.3 22h-6.3zm-10-22c-.3 8.5-4.6 22-9 22H5.2l15.3-22zm-6.6 22c3.4-2.7 6-10.8 7.1-17.4 1 6.7 3.7 14.7 7.1 17.4H13.9z"></path>
+                                                                </svg>
+                                                        </span>
+                                                        <span class="type text-white fw-300"> Tented Camps</span>
+                                                    </div>
+                                                    <div class="card-hotel__range lh-base text-white">
+                                                        <span class="text-secondary">£</span>
+                                                        <span class="text-secondary">£</span>
+                                                        <span class="text-secondary">£</span>
+                                                        <span>£</span>
+                                                        <span>£</span>
+                                                    </div>
+                                                </div>
+                                                <div class="card-hotel__desc limit-4 fw-300 transition-default lh-base text-white">
+                                                    RAAS Devigarh is no ordinary palace hotel. Chic and elegant, it
+                                                    blends modern with 15th-century originality. It stands amongst wheat
+                                                    fields deep in the Aravalli hills, 30 minutes drive from Udaipur.
+                                                    Interiors are clean and contemporary…
+                                                </div>
+                                            </div>
+                                        </a>
+
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card-hotel position-relative transition-default overflow-hidden">
+                                        <div class="card-hotel__image d-block overflow-hidden">
+                                            <img src="./assets/images/hotel-500x800.jpg"
+                                                 class="transition-default w-100 h-100 object-fit-cover"
+                                                 width="500" height="800" alt="">
+                                            <a href="#" aria-label="#"
+                                               class="card-hotel__link text-uppercase fw-700 bg-secondary text-white w-100 d-flex align-items-center justify-content-center gap-1 position-absolute start-0 bottom-0 zi-2">
+                                                View Property <i class="fal fa-long-arrow-right"></i>
+                                            </a>
+                                        </div>
+                                        <a href="#" aria-label="#"
+                                           class="card-hotel__layer transition-default p-3 position-absolute top-0 start-0 zi-3 w-100 d-flex flex-column justify-content-end">
+                                            <div class="card-hotel__content zi-1">
+                                                <div class="card-hotel__category text-uppercase text-secondary fw-700">
+                                                    india
+                                                </div>
+                                                <h5 class="card-hotel__name heading-tile__line position-relative mb-2 text-white fw-700 font-heading lh-base">
+                                                    Oberoi Amarvilas
+                                                </h5>
+                                                <div class="card-hotel__type d-flex align-items-end gap-2 pb-2">
+                                                    <div class="d-flex align-items-center gap-1 ">
+                                                        <span class="icon">
+                                                           <svg fill="#ffff" width="22" height="22"
+                                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42 42">
+<path d="M26 22.5h1.8c.3 0 .5-.2.5-.5v-2.9c0-.3-.2-.5-.5-.5H26c-.3 0-.5.2-.5.5V22c0 .2.2.5.5.5zm.5-2.9h.7v1.9h-.7v-1.9zm-4.3 2.9H24c.3 0 .5-.2.5-.5v-2.9c0-.3-.2-.5-.5-.5h-1.8c-.3 0-.5.2-.5.5V22c-.1.2.2.5.5.5zm.5-2.9h.7v1.9h-.7v-1.9zm-6.9 2.9h1.8c.3 0 .5-.2.5-.5v-2.9c0-.3-.2-.5-.5-.5h-1.8c-.3 0-.5.2-.5.5V22c0 .2.2.5.5.5zm.5-2.9h.7v1.9h-.7v-1.9zM12 22.5h1.8c.3 0 .5-.2.5-.5v-2.9c0-.3-.2-.5-.5-.5H12c-.3 0-.5.2-.5.5V22c-.1.2.2.5.5.5zm.5-2.9h.7v1.9h-.7v-1.9zM26 30h1.8c.3 0 .5-.2.5-.5v-2.9c0-.3-.2-.5-.5-.5H26c-.3 0-.5.2-.5.5v2.9c0 .2.2.5.5.5zm.5-2.9h.7V29h-.7v-1.9zM26 37.9h1.8c.3 0 .5-.2.5-.5v-2.7c0-.3-.2-.5-.5-.5H26c-.3 0-.5.2-.5.5v2.7c0 .3.2.5.5.5zm.5-2.7h.7v1.7h-.7v-1.7zM22.2 30H24c.3 0 .5-.2.5-.5v-2.9c0-.3-.2-.5-.5-.5h-1.8c-.3 0-.5.2-.5.5v2.9c-.1.2.2.5.5.5zm.5-2.9h.7V29h-.7v-1.9zM15.8 30h1.8c.3 0 .5-.2.5-.5v-2.9c0-.3-.2-.5-.5-.5h-1.8c-.3 0-.5.2-.5.5v2.9c0 .2.2.5.5.5zm.5-2.9h.7V29h-.7v-1.9zM12 30h1.8c.3 0 .5-.2.5-.5v-2.9c0-.3-.2-.5-.5-.5H12c-.3 0-.5.2-.5.5v2.9c-.1.2.2.5.5.5zm.5-2.9h.7V29h-.7v-1.9zm13.5-12h1.8c.3 0 .5-.2.5-.5v-2.9c0-.3-.2-.5-.5-.5H26c-.3 0-.5.2-.5.5v2.9c0 .3.2.5.5.5zm.5-2.9h.7v1.9h-.7v-1.9zm-4.3 2.9H24c.3 0 .5-.2.5-.5v-2.9c0-.3-.2-.5-.5-.5h-1.8c-.3 0-.5.2-.5.5v2.9c-.1.3.2.5.5.5zm.5-2.9h.7v1.9h-.7v-1.9z"></path>
+<path d="M.6 42h41c.3 0 .5-.2.5-.5s-.2-.5-.5-.5h-4.2V17h.2c.3 0 .5-.2.5-.5v-2.8c0-.3-.2-.5-.5-.5H31V7.3c.3 0 .5-.2.5-.5V3.5c0-.3-.2-.5-.5-.5V.5c0-.3-.2-.5-.5-.5h-11c-.3 0-.5.2-.5.5V3c-.3 0-.5.2-.5.5v3.3c0 .3.2.5.5.5v1.5h-9c-.3 0-.5.2-.5.5v2.1h-.1c-.3 0-.5.2-.5.5v3.3c0 .3.2.5.5.5h.1v25.2H5.1V39c1.4-.3 2.4-1.4 2.4-2.8 0-1-.5-1.9-1.4-2.5.4-.4.6-1 .6-1.5 0-1.2-1-2.2-2.2-2.2s-2.2 1-2.2 2.2c0 .6.2 1.1.6 1.5-.9.5-1.4 1.5-1.4 2.5 0 1.4 1 2.6 2.4 2.8v1.9H.6c-.3 0-.5.2-.5.5 0 .4.3.6.5.6zm30.3-27.9H37v1.8h-6.1v-1.8zm0 2.8h5.4v24h-5.4v-24zm-7.4 24h-1.8v-5.8h1.8v5.8zm6.4 0h-5.3v-6.3c0-.3-.2-.5-.5-.5h-2.9c-.3 0-.5.2-.5.5v6.3H20V7.3h9.9v33.6zM20 1.1h9.9V3H20V1.1zM19.5 4h10.9v2.3H19.5V4zm-3.8 36.9h-1.8v-5.8h1.8v5.8zm3.2 0h-2.2v-6.3c0-.3-.2-.5-.5-.5h-2.9c-.3 0-.5.2-.5.5v6.3h-2.2V15.7h8.3v25.2zm-8.3-31h8.3v1.5h-8.3V9.9zm-.7 2.5h9v2.2h-9v-2.2zM4.6 31.1c.6 0 1.1.5 1.1 1.1 0 .6-.5 1.1-1.1 1.1-.6 0-1.1-.5-1.1-1.1 0-.6.5-1 1.1-1.1zm-1.9 5.2c0-1 .8-1.8 1.8-1.8s1.8.8 1.8 1.8-.8 1.8-1.8 1.8-1.8-.8-1.8-1.8z"></path>
+<path d="M34.5 19.2h-1.8c-.3 0-.5.2-.5.5v2.9c0 .3.2.5.5.5h1.8c.3 0 .5-.2.5-.5v-2.9c0-.3-.2-.5-.5-.5zm-.5 2.9h-.7v-1.8h.7v1.8zm.5 4.5h-1.8c-.3 0-.5.2-.5.5V30c0 .3.2.5.5.5h1.8c.3 0 .5-.2.5-.5v-2.9c0-.3-.2-.5-.5-.5zm-.5 2.9h-.7v-1.8h.7v1.8zm.5 4.6h-1.8c-.3 0-.5.2-.5.5v2.9c0 .3.2.5.5.5h1.8c.3 0 .5-.2.5-.5v-2.9c0-.2-.2-.5-.5-.5zM34 37h-.7v-1.8h.7V37z"></path>
+</svg>
+                                                        </span>
+                                                        <span class="type text-white fw-300"> City</span>
+                                                    </div>
+                                                    <div class="card-hotel__range lh-base text-white">
+                                                        <span class="text-secondary">£</span>
+                                                        <span class="text-secondary">£</span>
+                                                        <span class="text-secondary">£</span>
+                                                        <span class="text-secondary">£</span>
+                                                        <span class="text-secondary">£</span>
+                                                    </div>
+                                                </div>
+                                                <div class="card-hotel__desc limit-4 fw-300 transition-default lh-base text-white">
+                                                    RAAS Devigarh is no ordinary palace hotel. Chic and elegant, it
+                                                    blends modern with 15th-century originality. It stands amongst wheat
+                                                    fields deep in the Aravalli hills, 30 minutes drive from Udaipur.
+                                                    Interiors are clean and contemporary…
+                                                </div>
+                                            </div>
+                                        </a>
+
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card-hotel position-relative transition-default overflow-hidden">
+                                        <div class="card-hotel__image d-block overflow-hidden">
+                                            <img src="./assets/images/hotel2-500x800.jpg"
+                                                 class="transition-default w-100 h-100 object-fit-cover"
+                                                 width="500" height="800" alt="">
+                                            <a href="#" aria-label="#"
+                                               class="card-hotel__link text-uppercase fw-700 bg-secondary text-white w-100 d-flex align-items-center justify-content-center gap-1 position-absolute start-0 bottom-0 zi-2">
+                                                View Property <i class="fal fa-long-arrow-right"></i>
+                                            </a>
+                                        </div>
+                                        <a href="#" aria-label="#"
+                                           class="card-hotel__layer transition-default p-3 position-absolute top-0 start-0 zi-3 w-100 d-flex flex-column justify-content-end">
+                                            <div class="card-hotel__content zi-1">
+                                                <div class="card-hotel__category text-uppercase text-secondary fw-700">
+                                                    india
+                                                </div>
+                                                <h5 class="card-hotel__name heading-tile__line position-relative mb-2 text-white fw-700 font-heading lh-base">
+                                                    Oberoi Amarvilas
+                                                </h5>
+                                                <div class="card-hotel__type d-flex align-items-end gap-2 pb-2">
+                                                    <div class="d-flex align-items-center gap-1 ">
+                                                        <span class="icon">
+                                                             <svg fill="#ffff" width="22" height="22"
+                                                                  xmlns="http://www.w3.org/2000/svg"
+                                                                  viewBox="0 0 42 42">
+                                                            <path d="M41 36.1h-3L21.6 12.5l4.7-6.8c.2-.2.1-.5-.1-.7-.2-.2-.5-.1-.7.1L21 11.7l-4.5-6.5c-.2-.3-.5-.4-.7-.2-.2.2-.3.5-.1.7l4.7 6.8L4 36.1H1c-.3 0-.5.2-.5.5s.2.5.5.5h40c.3 0 .5-.2.5-.5s-.2-.5-.5-.5zm-10.5 0c-4.4 0-8.7-13.5-9-22l15.3 22h-6.3zm-10-22c-.3 8.5-4.6 22-9 22H5.2l15.3-22zm-6.6 22c3.4-2.7 6-10.8 7.1-17.4 1 6.7 3.7 14.7 7.1 17.4H13.9z"></path>
+                                                                </svg>
+                                                        </span>
+                                                        <span class="type text-white fw-300"> Tented Camps</span>
+                                                    </div>
+                                                    <div class="card-hotel__range lh-base text-white">
+                                                        <span class="text-secondary">£</span>
+                                                        <span class="text-secondary">£</span>
+                                                        <span class="text-secondary">£</span>
+                                                        <span>£</span>
+                                                        <span>£</span>
+                                                    </div>
+                                                </div>
+                                                <div class="card-hotel__desc limit-4 fw-300 transition-default lh-base text-white">
+                                                    RAAS Devigarh is no ordinary palace hotel. Chic and elegant, it
+                                                </div>
+                                            </div>
+                                        </a>
+
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card-hotel position-relative transition-default overflow-hidden">
+                                        <div class="card-hotel__image d-block overflow-hidden">
+                                            <img src="./assets/images/hotel-500x800.jpg"
+                                                 class="transition-default w-100 h-100 object-fit-cover"
+                                                 width="500" height="800" alt="">
+                                            <a href="#" aria-label="#"
+                                               class="card-hotel__link text-uppercase fw-700 bg-secondary text-white w-100 d-flex align-items-center justify-content-center gap-1 position-absolute start-0 bottom-0 zi-2">
+                                                View Property <i class="fal fa-long-arrow-right"></i>
+                                            </a>
+                                        </div>
+                                        <a href="#" aria-label="#"
+                                           class="card-hotel__layer transition-default p-3 position-absolute top-0 start-0 zi-3 w-100 d-flex flex-column justify-content-end">
+                                            <div class="card-hotel__content zi-1">
+                                                <div class="card-hotel__category text-uppercase text-secondary fw-700">
+                                                    india
+                                                </div>
+                                                <h5 class="card-hotel__name heading-tile__line position-relative mb-2 text-white fw-700 font-heading lh-base">
+                                                    Oberoi Amarvilas
+                                                </h5>
+                                                <div class="card-hotel__type d-flex align-items-end gap-2 pb-2">
+                                                    <div class="d-flex align-items-center gap-1 ">
+                                                        <span class="icon">
+                                                             <svg fill="#ffff" width="22" height="22"
+                                                                  xmlns="http://www.w3.org/2000/svg"
+                                                                  viewBox="0 0 42 42">
+                                                            <path d="M41 36.1h-3L21.6 12.5l4.7-6.8c.2-.2.1-.5-.1-.7-.2-.2-.5-.1-.7.1L21 11.7l-4.5-6.5c-.2-.3-.5-.4-.7-.2-.2.2-.3.5-.1.7l4.7 6.8L4 36.1H1c-.3 0-.5.2-.5.5s.2.5.5.5h40c.3 0 .5-.2.5-.5s-.2-.5-.5-.5zm-10.5 0c-4.4 0-8.7-13.5-9-22l15.3 22h-6.3zm-10-22c-.3 8.5-4.6 22-9 22H5.2l15.3-22zm-6.6 22c3.4-2.7 6-10.8 7.1-17.4 1 6.7 3.7 14.7 7.1 17.4H13.9z"></path>
+                                                                </svg>
+                                                        </span>
+                                                        <span class="type text-white fw-300"> Tented Camps</span>
+                                                    </div>
+                                                    <div class="card-hotel__range lh-base text-white">
+                                                        <span class="text-secondary">£</span>
+                                                        <span class="text-secondary">£</span>
+                                                        <span class="text-secondary">£</span>
+                                                        <span>£</span>
+                                                        <span>£</span>
+                                                    </div>
+                                                </div>
+                                                <div class="card-hotel__desc limit-4 fw-300 transition-default lh-base text-white">
+                                                    RAAS Devigarh is no ordinary palace hotel. Chic and elegant, it
+                                                    blends modern with 15th-century originality. It stands amongst wheat
+                                                    fields deep in the Aravalli hills, 30 minutes drive from Udaipur.
+                                                    Interiors are clean and contemporary…
+                                                </div>
+                                            </div>
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="other-place__swiper d-md-none d-flex" id="swiperOtherPlace">
+                                <div class="swiper mySwiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide h-auto transition-default">
+                                            <div class="card-hotel position-relative transition-default overflow-hidden">
+                                                <div class="card-hotel__image d-block overflow-hidden">
+                                                    <img src="./assets/images/hotel-500x800.jpg"
+                                                         class="transition-default w-100 h-100 object-fit-cover"
+                                                         width="500" height="800" alt="">
+                                                    <a href="#" aria-label="#"
+                                                       class="card-hotel__link text-uppercase fw-700 bg-secondary text-white w-100 d-flex align-items-center justify-content-center gap-1 position-absolute start-0 bottom-0 zi-2">
+                                                        View Property <i class="fal fa-long-arrow-right"></i>
+                                                    </a>
+                                                </div>
+                                                <a href="#" aria-label="#"
+                                                   class="card-hotel__layer transition-default p-3 position-absolute top-0 start-0 zi-3 w-100 d-flex flex-column justify-content-end">
+                                                    <div class="card-hotel__content zi-1">
+                                                        <div class="card-hotel__category text-uppercase text-secondary fw-700">
+                                                            india
+                                                        </div>
+                                                        <h5 class="card-hotel__name heading-tile__line position-relative mb-2 text-white fw-700 font-heading lh-base">
+                                                            Oberoi Amarvilas
+                                                        </h5>
+                                                        <div class="card-hotel__type d-flex align-items-end gap-2 pb-2">
+                                                            <div class="d-flex align-items-center gap-1 ">
+                                                        <span class="icon">
+                                                           <svg fill="#ffff" width="22" height="22"
+                                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42 42">
+<path d="M26 22.5h1.8c.3 0 .5-.2.5-.5v-2.9c0-.3-.2-.5-.5-.5H26c-.3 0-.5.2-.5.5V22c0 .2.2.5.5.5zm.5-2.9h.7v1.9h-.7v-1.9zm-4.3 2.9H24c.3 0 .5-.2.5-.5v-2.9c0-.3-.2-.5-.5-.5h-1.8c-.3 0-.5.2-.5.5V22c-.1.2.2.5.5.5zm.5-2.9h.7v1.9h-.7v-1.9zm-6.9 2.9h1.8c.3 0 .5-.2.5-.5v-2.9c0-.3-.2-.5-.5-.5h-1.8c-.3 0-.5.2-.5.5V22c0 .2.2.5.5.5zm.5-2.9h.7v1.9h-.7v-1.9zM12 22.5h1.8c.3 0 .5-.2.5-.5v-2.9c0-.3-.2-.5-.5-.5H12c-.3 0-.5.2-.5.5V22c-.1.2.2.5.5.5zm.5-2.9h.7v1.9h-.7v-1.9zM26 30h1.8c.3 0 .5-.2.5-.5v-2.9c0-.3-.2-.5-.5-.5H26c-.3 0-.5.2-.5.5v2.9c0 .2.2.5.5.5zm.5-2.9h.7V29h-.7v-1.9zM26 37.9h1.8c.3 0 .5-.2.5-.5v-2.7c0-.3-.2-.5-.5-.5H26c-.3 0-.5.2-.5.5v2.7c0 .3.2.5.5.5zm.5-2.7h.7v1.7h-.7v-1.7zM22.2 30H24c.3 0 .5-.2.5-.5v-2.9c0-.3-.2-.5-.5-.5h-1.8c-.3 0-.5.2-.5.5v2.9c-.1.2.2.5.5.5zm.5-2.9h.7V29h-.7v-1.9zM15.8 30h1.8c.3 0 .5-.2.5-.5v-2.9c0-.3-.2-.5-.5-.5h-1.8c-.3 0-.5.2-.5.5v2.9c0 .2.2.5.5.5zm.5-2.9h.7V29h-.7v-1.9zM12 30h1.8c.3 0 .5-.2.5-.5v-2.9c0-.3-.2-.5-.5-.5H12c-.3 0-.5.2-.5.5v2.9c-.1.2.2.5.5.5zm.5-2.9h.7V29h-.7v-1.9zm13.5-12h1.8c.3 0 .5-.2.5-.5v-2.9c0-.3-.2-.5-.5-.5H26c-.3 0-.5.2-.5.5v2.9c0 .3.2.5.5.5zm.5-2.9h.7v1.9h-.7v-1.9zm-4.3 2.9H24c.3 0 .5-.2.5-.5v-2.9c0-.3-.2-.5-.5-.5h-1.8c-.3 0-.5.2-.5.5v2.9c-.1.3.2.5.5.5zm.5-2.9h.7v1.9h-.7v-1.9z"></path>
+<path d="M.6 42h41c.3 0 .5-.2.5-.5s-.2-.5-.5-.5h-4.2V17h.2c.3 0 .5-.2.5-.5v-2.8c0-.3-.2-.5-.5-.5H31V7.3c.3 0 .5-.2.5-.5V3.5c0-.3-.2-.5-.5-.5V.5c0-.3-.2-.5-.5-.5h-11c-.3 0-.5.2-.5.5V3c-.3 0-.5.2-.5.5v3.3c0 .3.2.5.5.5v1.5h-9c-.3 0-.5.2-.5.5v2.1h-.1c-.3 0-.5.2-.5.5v3.3c0 .3.2.5.5.5h.1v25.2H5.1V39c1.4-.3 2.4-1.4 2.4-2.8 0-1-.5-1.9-1.4-2.5.4-.4.6-1 .6-1.5 0-1.2-1-2.2-2.2-2.2s-2.2 1-2.2 2.2c0 .6.2 1.1.6 1.5-.9.5-1.4 1.5-1.4 2.5 0 1.4 1 2.6 2.4 2.8v1.9H.6c-.3 0-.5.2-.5.5 0 .4.3.6.5.6zm30.3-27.9H37v1.8h-6.1v-1.8zm0 2.8h5.4v24h-5.4v-24zm-7.4 24h-1.8v-5.8h1.8v5.8zm6.4 0h-5.3v-6.3c0-.3-.2-.5-.5-.5h-2.9c-.3 0-.5.2-.5.5v6.3H20V7.3h9.9v33.6zM20 1.1h9.9V3H20V1.1zM19.5 4h10.9v2.3H19.5V4zm-3.8 36.9h-1.8v-5.8h1.8v5.8zm3.2 0h-2.2v-6.3c0-.3-.2-.5-.5-.5h-2.9c-.3 0-.5.2-.5.5v6.3h-2.2V15.7h8.3v25.2zm-8.3-31h8.3v1.5h-8.3V9.9zm-.7 2.5h9v2.2h-9v-2.2zM4.6 31.1c.6 0 1.1.5 1.1 1.1 0 .6-.5 1.1-1.1 1.1-.6 0-1.1-.5-1.1-1.1 0-.6.5-1 1.1-1.1zm-1.9 5.2c0-1 .8-1.8 1.8-1.8s1.8.8 1.8 1.8-.8 1.8-1.8 1.8-1.8-.8-1.8-1.8z"></path>
+<path d="M34.5 19.2h-1.8c-.3 0-.5.2-.5.5v2.9c0 .3.2.5.5.5h1.8c.3 0 .5-.2.5-.5v-2.9c0-.3-.2-.5-.5-.5zm-.5 2.9h-.7v-1.8h.7v1.8zm.5 4.5h-1.8c-.3 0-.5.2-.5.5V30c0 .3.2.5.5.5h1.8c.3 0 .5-.2.5-.5v-2.9c0-.3-.2-.5-.5-.5zm-.5 2.9h-.7v-1.8h.7v1.8zm.5 4.6h-1.8c-.3 0-.5.2-.5.5v2.9c0 .3.2.5.5.5h1.8c.3 0 .5-.2.5-.5v-2.9c0-.2-.2-.5-.5-.5zM34 37h-.7v-1.8h.7V37z"></path>
+</svg>
+                                                        </span>
+                                                                <span class="type text-white fw-300"> City</span>
+                                                            </div>
+                                                            <div class="card-hotel__range lh-base text-white">
+                                                                <span class="text-secondary">£</span>
+                                                                <span class="text-secondary">£</span>
+                                                                <span class="text-secondary">£</span>
+                                                                <span class="text-secondary">£</span>
+                                                                <span class="text-secondary">£</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-hotel__desc limit-4 fw-300 transition-default lh-base text-white">
+                                                            RAAS Devigarh is no ordinary palace hotel. Chic and elegant,
+                                                            it
+                                                            blends modern with 15th-century originality. It stands
+                                                            amongst wheat
+                                                            fields deep in the Aravalli hills, 30 minutes drive from
+                                                            Udaipur.
+                                                            Interiors are clean and contemporary…
+                                                        </div>
+                                                    </div>
+                                                </a>
+
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide h-auto transition-default">
+                                            <div class="card-hotel position-relative transition-default overflow-hidden">
+                                                <div class="card-hotel__image d-block overflow-hidden">
+                                                    <img src="./assets/images/hotel-500x800.jpg"
+                                                         class="transition-default w-100 h-100 object-fit-cover"
+                                                         width="500" height="800" alt="">
+                                                    <a href="#" aria-label="#"
+                                                       class="card-hotel__link text-uppercase fw-700 bg-secondary text-white w-100 d-flex align-items-center justify-content-center gap-1 position-absolute start-0 bottom-0 zi-2">
+                                                        View Property <i class="fal fa-long-arrow-right"></i>
+                                                    </a>
+                                                </div>
+                                                <a href="#" aria-label="#"
+                                                   class="card-hotel__layer transition-default p-3 position-absolute top-0 start-0 zi-3 w-100 d-flex flex-column justify-content-end">
+                                                    <div class="card-hotel__content zi-1">
+                                                        <div class="card-hotel__category text-uppercase text-secondary fw-700">
+                                                            india
+                                                        </div>
+                                                        <h5 class="card-hotel__name heading-tile__line position-relative mb-2 text-white fw-700 font-heading lh-base">
+                                                            Oberoi Amarvilas
+                                                        </h5>
+                                                        <div class="card-hotel__type d-flex align-items-end gap-2 pb-2">
+                                                            <div class="d-flex align-items-center gap-1 ">
+                                                        <span class="icon">
+                                                             <svg fill="#ffff" width="22" height="22"
+                                                                  xmlns="http://www.w3.org/2000/svg"
+                                                                  viewBox="0 0 42 42">
+                                                            <path d="M41 36.1h-3L21.6 12.5l4.7-6.8c.2-.2.1-.5-.1-.7-.2-.2-.5-.1-.7.1L21 11.7l-4.5-6.5c-.2-.3-.5-.4-.7-.2-.2.2-.3.5-.1.7l4.7 6.8L4 36.1H1c-.3 0-.5.2-.5.5s.2.5.5.5h40c.3 0 .5-.2.5-.5s-.2-.5-.5-.5zm-10.5 0c-4.4 0-8.7-13.5-9-22l15.3 22h-6.3zm-10-22c-.3 8.5-4.6 22-9 22H5.2l15.3-22zm-6.6 22c3.4-2.7 6-10.8 7.1-17.4 1 6.7 3.7 14.7 7.1 17.4H13.9z"></path>
+                                                                </svg>
+                                                        </span>
+                                                                <span class="type text-white fw-300"> Tented Camps</span>
+                                                            </div>
+                                                            <div class="card-hotel__range lh-base text-white">
+                                                                <span class="text-secondary">£</span>
+                                                                <span class="text-secondary">£</span>
+                                                                <span class="text-secondary">£</span>
+                                                                <span>£</span>
+                                                                <span>£</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-hotel__desc limit-4 fw-300 transition-default lh-base text-white">
+                                                            RAAS Devigarh is no ordinary palace hotel. Chic and elegant,
+                                                            it
+                                                            blends modern with 15th-century originality. It stands
+                                                            amongst wheat
+                                                            fields deep in the Aravalli hills, 30 minutes drive from
+                                                            Udaipur.
+                                                            Interiors are clean and contemporary…
+                                                        </div>
+                                                    </div>
+                                                </a>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div id="Accommodation" class="section-accommodation p-30 overflow-hidden">
+            <div id="OtherProperties" class="section-accommodation p-30 overflow-hidden">
                 <div class="section-heading">
                     <h2 class="heading-title text-center mb-0">
                         Where to stay<span class="text-secondary">.</span>
@@ -2312,268 +2719,6 @@
         </div>
     </section>
 </main>
-<div class="modal fade modal-contact" id="modalContact" tabindex="-1" aria-labelledby="exampleModalLabel"
-     aria-hidden="true">
-    <div class="modal-dialog modal-xl">
-        <div class="modal-content rounded-0">
-            <div class="row g-0">
-                <div class="col-xl-4 d-xl-block d-none">
-                    <div class="modal-contact__info h-100 bg-primary p-lg-5 p-3">
-                        <div class="section-heading">
-                            <h3 class="heading-title text-white">
-                                Get in touch<span class="text-secondary">.</span>
-                            </h3>
-                            <div class="heading-desc text-white opacity-75">
-                                January is a very popular time to travel to India, due to mild temperatures and very
-                                little rainfall.
-                            </div>
-                        </div>
-                        <ul class="list-unstyled mb-0 d-flex flex-column gap-3">
-                            <li>
-                                <a href="" aria-label="" target="_blank"
-                                   class="text-white fw-500 d-flex align-items-start gap-2">
-                                    <span class="icon flex-shrink-0">
-                                        <i class="fas fa-map-marker-alt"></i>
-                                    </span>
-                                    <span class="opacity-75">
-                                         51 Castle St, Cirencester, GL7 1QD, United Kingdom
-                                    </span>
-
-                                </a>
-                            </li>
-                            <li>
-                                <a href="" aria-label="" class="text-white fw-500 d-flex align-items-start gap-2">
-                                    <span class="icon flex-shrink-0">
-                                       <i class="fas fa-phone"></i>
-                                    </span>
-                                    <span class="opacity-75">
-                                         01285 880 980
-                                    </span>
-
-                                </a>
-                            </li>
-                            <li>
-                                <a href="" aria-label="" class="text-white fw-500 d-flex align-items-start gap-2">
-                                    <span class="icon flex-shrink-0">
-                                       <i class="fas fa-envelope"></i>
-                                    </span>
-                                    <span class="opacity-75">
-                                         email@gmail.com
-                                    </span>
-
-                                </a>
-                            </li>
-                        </ul>
-
-                        <div class="modal-social d-flex align-items-center gap-3 mt-5">
-                            <a href="" target="_blank" aria-label=""
-                               class="d-flex align-items-center justify-content-center rounded-circle">
-                                <svg width="12" height="22" fill="#fff" id="facebook-f" viewBox="0 0 12 18">
-                                    <path d="M11.2,10.4l0.6-4.1H7.9V3.7c0-1.1,0.5-2.2,2.3-2.2H12v-3.5c0,0-1.6-0.3-3.1-0.3c-3.2,0-5.3,1.9-5.3,5.5v3.1H0v4.1h3.6v9.8 h4.4v-9.8H11.2z"></path>
-                                </svg>
-                            </a>
-                            <a href="" target="_blank" aria-label=""
-                               class="d-flex align-items-center justify-content-center rounded-circle">
-                                <svg width="18" height="18" fill="#fff" id="X" viewBox="0 0 18 18">
-                                    <path class="cls-1"
-                                          d="M14.17.86h2.76l-6.03,6.89,7.1,9.38h-5.55l-4.35-5.69-4.98,5.69H.35l6.45-7.37L0,.86h5.69l3.93,5.2L14.17.86ZM13.2,15.49h1.53L4.86,2.43h-1.64l9.99,13.06Z"></path>
-                                </svg>
-                            </a>
-                            <a href="" target="_blank" aria-label=""
-                               class="d-flex align-items-center justify-content-center rounded-circle">
-                                <svg width="18" height="18" fill="#fff" id="instagram" viewBox="0 0 18 18">
-                                    <path d="M9.1,4.3c-2.6,0-4.6,2.1-4.6,4.6s2.1,4.6,4.6,4.6s4.6-2.1,4.6-4.6S11.6,4.3,9.1,4.3z M9.1,11.9c-1.7,0-3-1.3-3-3s1.3-3,3-3 s3,1.3,3,3S10.7,11.9,9.1,11.9L9.1,11.9z M14.9,4.1c0,0.6-0.5,1.1-1.1,1.1c-0.6,0-1.1-0.5-1.1-1.1S13.3,3,13.9,3S14.9,3.5,14.9,4.1z M18,5.2c-0.1-1.4-0.4-2.7-1.5-3.8C15.5,0.4,14.2,0,12.8,0c-1.5-0.1-5.9-0.1-7.4,0C3.9,0,2.6,0.4,1.6,1.4S0.2,3.7,0.1,5.2 C0,6.7,0,11.1,0.1,12.6c0.1,1.4,0.4,2.7,1.5,3.8c1.1,1.1,2.3,1.4,3.8,1.5c1.5,0.1,5.9,0.1,7.4,0c1.4-0.1,2.7-0.4,3.8-1.5 c1.1-1.1,1.4-2.3,1.5-3.8C18.1,11.1,18.1,6.7,18,5.2L18,5.2z M16.1,14.2c-0.3,0.8-0.9,1.4-1.7,1.7c-1.2,0.5-4,0.4-5.3,0.4 s-4.1,0.1-5.3-0.4C3,15.6,2.4,15,2,14.2c-0.5-1.2-0.4-4-0.4-5.3S1.6,4.8,2,3.6C2.3,2.8,3,2.2,3.7,1.9c1.2-0.5,4-0.4,5.3-0.4 s4.1-0.1,5.3,0.4c0.8,0.3,1.4,0.9,1.7,1.7c0.5,1.2,0.4,4,0.4,5.3S16.5,13,16.1,14.2z"></path>
-                                </svg>
-                            </a>
-                            <a href="" target="_blank" aria-label=""
-                               class="d-flex align-items-center justify-content-center rounded-circle">
-                                <svg width="18" height="18" fill="#fff" id="youtube" viewBox="0 0 18 16">
-                                    <path d="M17.6,3.7c-0.2-0.8-0.8-1.4-1.6-1.6c-1.4-0.4-7-0.4-7-0.4s-5.6,0-7,0.4C1.2,2.3,0.6,2.9,0.4,3.7C0,5.1,0,8,0,8 s0,2.9,0.4,4.4c0.2,0.8,0.8,1.4,1.6,1.6c1.4,0.4,7,0.4,7,0.4s5.6,0,7-0.4c0.8-0.2,1.4-0.8,1.6-1.6C18,11,18,8,18,8S18,5.1,17.6,3.7z  M7.2,10.7V5.3L11.9,8L7.2,10.7L7.2,10.7z"></path>
-                                </svg>
-                            </a>
-                            <a href="" target="_blank" aria-label=""
-                               class="d-flex align-items-center justify-content-center rounded-circle">
-                                <svg width="18" height="18" id="pinterest" fill="#fff" viewBox="0 0 18 18">
-                                    <path d="M18,9c0,5-4,9-9,9c-0.9,0-1.8-0.1-2.7-0.4C6.7,17,7.3,16,7.5,15.2C7.6,14.8,8,13.1,8,13.1c0.3,0.6,1.2,1,2.1,1 c2.7,0,4.7-2.5,4.7-5.6c0-3-2.4-5.2-5.5-5.2c-3.9,0-5.9,2.6-5.9,5.4c0,1.3,0.7,3,1.8,3.5c0.2,0.1,0.3,0,0.3-0.1c0-0.1,0.2-0.7,0.3-1 c0-0.1,0-0.2-0.1-0.3c-0.4-0.5-0.7-1.3-0.7-2.1c0-2,1.5-3.9,4.1-3.9c2.2,0,3.8,1.5,3.8,3.7c0,2.4-1.2,4.1-2.8,4.1 c-0.9,0-1.5-0.7-1.3-1.6c0.3-1.1,0.7-2.2,0.7-3c0-0.7-0.4-1.3-1.1-1.3C7.3,6.8,6.5,7.7,6.5,9c0,0.8,0.3,1.3,0.3,1.3 s-0.9,3.8-1.1,4.5c-0.2,0.8-0.1,1.9,0,2.6C2.4,16.1,0,12.8,0,9c0-5,4-9,9-9S18,4,18,9z"></path>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-8">
-                    <div class="modal-contact__content p-lg-5 p-4">
-                        <button class="modal-contact__close d-flex align-items-center justify-content-center text-dark ms-auto bg-transparent rounded-0 border-0 transition-default position-absolute end-0 top-0 me-lg-3 mt-lg-3 me-1 mt-1"
-                                role="button" data-bs-dismiss="modal" aria-label="Close">
-                            <i class="far fa-times"></i>
-                        </button>
-                        <div class="section-heading">
-                            <h3 class="heading-title mb-0">
-                                Say hello<span class="text-secondary">.</span>
-                            </h3>
-                            <div class="heading-desc d-xl-none d-flex mt-2">
-                                January is a very popular time to travel to India, due to mild temperatures and very
-                                little rainfall.
-                            </div>
-                        </div>
-                        <form id="" novalidate>
-                            <div class="row mb-3">
-                                <div class="col-lg-6 col-md-8">
-                                    <div class="form-group">
-                                        <label for="frm-destination" class="form-label text-dark fw-700 mb-1">Destination
-                                            <small class="text-danger">*</small></label>
-                                        <select class="bg-white rounded-0 form-select" name="frm-destination"
-                                                id="frm-destination">
-                                            <option value="" data-id="" selected>
-                                                Take me to...
-                                            </option>
-                                            <option value="" data-id="">
-                                                USA
-                                            </option>
-                                            <option value="" data-id="">
-                                                Vietnam
-                                            </option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row mb-3">
-                                <div class="col">
-                                    <div class="form-group">
-                                        <label for="frm-mess" class="form-label text-dark fw-700 mb-1">How can we help
-                                            you <small class="text-danger">*</small></label>
-                                        <textarea name="frm-mess" id="frm-mess" class="form-control rounded-0" rows="5"
-                                                  required
-                                                  placeholder="Let us know who you are travelling with, how long you were thinking of going for and any key elements you want to include in the trip."></textarea>
-                                        <div class="invalid-feedback">
-                                            Please choose a username.
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row mb-3 g-3">
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label for="frm-title" class="form-label text-dark fw-700 mb-1">Title <small
-                                                class="text-danger">*</small></label>
-                                        <input type="text" placeholder="" name="frm-title"
-                                               class="form-control bg-white rounded-0" id="frm-title" required="">
-                                        <div class="invalid-feedback">
-                                            Please choose a username.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label for="frm-firstname" class="form-label text-dark fw-700 mb-1">First
-                                            name<small
-                                                    class="text-danger">*</small></label>
-                                        <input type="text" placeholder="" name="frm-lastname"
-                                               class="form-control bg-white rounded-0" id="frm-firstname" required="">
-                                        <div class="invalid-feedback">
-                                            Please choose a username.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label for="frm-surname" class="form-label text-dark fw-700 mb-1">Surname<small
-                                                class="text-danger">*</small></label>
-                                        <input type="text" placeholder="" name="frm-surname"
-                                               class="form-control bg-white rounded-0" id="frm-surname" required="">
-                                        <div class="invalid-feedback">
-                                            Please choose a username.
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row mb-3 g-3">
-                                <div class="col-lg-6">
-                                    <div class="form-group">
-                                        <label for="frm-email" class="form-label text-dark fw-700 mb-1">Email Address
-                                            <small
-                                                    class="text-danger">*</small></label>
-                                        <input type="email" placeholder="" name="frm-email"
-                                               class="form-control bg-white rounded-0" id="frm-email" required="">
-                                        <div class="invalid-feedback">
-                                            Please choose a username.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="form-group">
-                                        <label for="frm-phone" class="form-label text-dark fw-700 mb-1">Phone <small
-                                                class="text-danger">*</small></label>
-                                        <input type="tel" maxlength="20" min="20" placeholder="" name="frm-phone"
-                                               class="form-control bg-white rounded-0" id="frm-phone" required="">
-                                        <div class="invalid-feedback">
-                                            Please choose a username.
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row mb-4">
-                                <div class="col-lg-6">
-                                    <div class="form-group">
-                                        <label for="frm-note" class="form-label text-dark fw-700 mb-1">How did you hear
-                                            about us? <small class="text-danger">*</small></label>
-                                        <input type="text" placeholder="" name="frm-note"
-                                               class="form-control bg-white rounded-0" id="frm-note" required="">
-                                        <div class="invalid-feedback">
-                                            Please choose a username.
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row mb-3">
-                                <div class="col">
-                                    <div class="form-group">
-                                        <label for="frm-note" class="form-label fw-700 text-dark mb-1">
-                                            We would love to contact you by email from time to time about exciting news,
-                                            holidays and events we think will be of interest to you.<span
-                                                class="text-danger">*</span>
-                                        </label>
-                                        <div class="form-check d-flex align-items-start gap-2">
-                                            <input class="form-check-input rounded-0 position-relative pseudo transition-default"
-                                                   type="checkbox" value="" id="flexCheckDefault">
-                                            <label class="form-check-label text-dark fw-700 mb-0"
-                                                   for="flexCheckDefault">
-                                                Yes
-                                            </label>
-                                        </div>
-                                        <div class="form-check d-flex align-items-start gap-2">
-                                            <input class="form-check-input rounded-0 position-relative pseudo transition-default"
-                                                   type="checkbox" value="" id="flexCheckChecked" checked>
-                                            <label class="form-check-label text-dark fw-700 mb-0"
-                                                   for="flexCheckChecked">
-                                                No
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="form-group__text mb-4">
-                                By sending your enquiry you are stating that you agree to our T&C
-                            </div>
-                            <div class="row">
-                                <div class="col">
-                                    <div class="form-group">
-                                        <button type="submit" role="button" ARIA-LABEL="" class="button-primary w-auto">
-                                            SUBMIT ENQUIRY
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-</div>
-
 
 <footer class="overflow-hidden">
     <div class="footer-top">
