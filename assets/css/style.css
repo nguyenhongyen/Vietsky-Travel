@@ -1917,3 +1917,40 @@ small.itinerary-item__icon {
 .swiper-pagination-bullet.swiper-pagination-bullet-active {
     background-color: var(--secondary-color);
 }
+
+/*============================
+    custom select2
+ ==============================*/
+.select2-container{
+    width: 100%!important;
+}
+.select2-container--default .select2-selection--single{
+    border-radius: 0;
+    border: 1px solid #666;
+    height: unset !important;
+    font-size: 0.95em;
+    padding: 8px 10px;
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered{
+    height: 100%;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow{
+    height: 100%;
+    top:0;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow::before{
+    position: absolute;
+    font-family: "Font Awesome 5 Pro";
+    content: "\f329";
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    color: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    font-weight: 200;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow b{
+    display: none !important;
+}
