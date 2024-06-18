@@ -253,6 +253,59 @@ const handleSearch = function () {
 }
 
 
+let selectOptionCustom = function(){
+    let selectOption = $(".selectOption");
+    if(selectOption.length){
+        selectOption.each(function(){
+            $(this).select2();
+        })
+    }
+
+    let formSelect = $('.form-group__select');
+    if(formSelect.length){
+        formSelect.each(function(){
+            let elm = $(this);
+            elm.click(function (){
+                if($(this).hasClass('show')){
+                    elm.removeClass('show');
+                }else{
+                    elm.addClass('show');
+                }
+            });
+
+            $(document).on('click', function (e) {
+                if(!e.target.closest('.form-group__select')){
+                    $('.form-group__select').removeClass('show')
+                }
+            });
+        })
+
+    }
+
+}
+
+let handleLoadMore = function(){
+    let handleLoading = function () {
+        $('.loading').show();
+        setTimeout(function () {
+            $('.loading').hide();
+        }, 2000);
+
+    }
+
+    let btnLoadMore = $(".btnLoadMore");
+    if(btnLoadMore.length){
+        btnLoadMore.each(function(){
+            let elm = $(this);
+            elm.click(function (){
+                handleLoading()
+            })
+        })
+    }
+
+}
+
+
 $(function () {
     handleCallMenu()
     $(window).resize(function () {
@@ -265,4 +318,6 @@ $(function () {
     handleContentDetail();
     handleActiveNav();
     handleSearch()
+    selectOptionCustom()
+    handleLoadMore()
 });

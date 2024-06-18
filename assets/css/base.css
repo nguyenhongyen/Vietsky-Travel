@@ -40,6 +40,7 @@ body {
     font-style: normal;
     background-color: var(--bs-white);
     line-height: 28px;
+    overflow-x: hidden !important;
 }
 
 a,
