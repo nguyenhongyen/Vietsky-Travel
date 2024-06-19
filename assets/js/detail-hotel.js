@@ -8,8 +8,8 @@ const handleScrollDiv = function () {
 
                 setTimeout(function () {
                     $("html, body").animate({
-                        scrollTop: $("#" + getId).offset().top
-                    }, 1000);
+                        scrollTop: parseInt($(getId).offset().top) - parseInt($('header').height()) - 100
+                    }, 500);
                 });
             })
         })
@@ -21,8 +21,8 @@ const handleScrollDiv = function () {
             let getValue = $option.val();
             setTimeout(function () {
                 $("html, body").animate({
-                    scrollTop: $("#" + getValue).offset().top + (-130)
-                }, 1000);
+                    scrollTop: parseInt($('#' + getValue).offset().top) - parseInt($('header').height()) - 100
+                }, 500);
             });
         });
     }

@@ -1694,6 +1694,9 @@ small.itinerary-item__icon {
     background-color: rgb(var(--secondary-rgb), 0.1);
     box-shadow: -6px 6px 6px 1px rgb(109 153 196 / 76%);
 }
+.holiday-form__logo{
+    width: 160px;
+}
 
 .card-suggestion {
     padding: 30px 60px;
@@ -1978,7 +1981,8 @@ small.itinerary-item__icon {
     border-bottom: 1px solid var(--bs-gray-100);
 }
 .form-group__select ul > li > a:hover{
-    background-color: rgb(var(--primary-rgb),0.1);
+    background-color: var(--secondary-color);
+    color:var(--bs-white) !important;
 }
 .select2-container--default .select2-results__option--highlighted[aria-selected] {
     background-color: var(--secondary-color);
