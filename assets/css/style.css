@@ -2060,3 +2060,19 @@ small.itinerary-item__icon {
     }
 }
 
+.card-introduce-2.pseudo::after{
+    width: 100%;
+    height:100%;
+    left: 0;
+    bottom: 0;
+    background:linear-gradient(rgb(0 0 0 / 13%) 0%, rgba(0, 0, 0, 0.37) 100%);
+    z-index: 1;
+    transition: all 0.3s ease-in 0s;
+    opacity: 0;
+}
+.card-introduce-2.pseudo:hover::after{
+   opacity: 1;
+}
+.card-introduce-2 .stretched-link::after{
+    z-index: 4;
+}
