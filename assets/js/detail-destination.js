@@ -121,6 +121,52 @@ const handleSliderOtherPlace = function () {
     }
 }
 
+const handleSliderExpert = function () {
+    const sliderExpertActive = $('#swiperExpertActive');
+    const sliderExpertThumb = $('#swiperExpertThumb');
+
+    if (sliderExpertActive.length) {
+        const elmSwiperAvatar = '#' + sliderExpertActive.attr('id')
+        const objSwiperAvatar = {
+            slidesPerView: 1,
+            effect: "fade",
+            speed: 0,
+            loop:true,
+
+        }
+        initSliderAvatar = handleSwiper(elmSwiperAvatar + ' .swiper', objSwiperAvatar);
+    }
+    if (sliderExpertThumb.length > 0) {
+        const elmSwiper = '#' + sliderExpertThumb.attr('id')
+        const objSwiper = {
+            speed: 800,
+            spaceBetween: 2,
+            slidesPerView: 3,
+            loop:true,
+            thumbs: {
+                swiper: initSliderAvatar,
+
+            }, navigation: {
+                nextEl: ".section-experts .swiper-button__next",
+            }, breakpoints: {
+                375: {
+                    slidesPerView: 4,
+                },
+                425: {
+                    slidesPerView: 5,
+                },
+                768: {
+                    slidesPerView: 5,
+                }, 1024: {
+                    slidesPerView: 6,
+                },
+            }
+
+        }
+        handleSwiper(elmSwiper + ' .swiper', objSwiper);
+    }
+}
+
 
 $(function () {
 
@@ -128,4 +174,5 @@ $(function () {
     handleSliderHolidayIdeas()
     handleSliderIntroduce()
     handleSliderOtherPlace()
+    handleSliderExpert()
 });
