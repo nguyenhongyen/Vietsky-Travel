@@ -891,7 +891,7 @@ header {
 }
 
 /*======================================
-        section-hero
+        section-introduce
 ==========================================*/
 .section-introduce__swiper .swiper-slide {
     width: 500px !important;
@@ -922,11 +922,62 @@ header {
     top: calc(50% - 1.5rem) !important;
 }
 
+.card-introduce__layer {
+    padding-top: 200px;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.swiper-slideshow {
+    height: 100vh;
+}
+
+.swiper-slideshow .card-introduce__text {
+    font-size: 1.2em;
+}
+
 .box-item__image {
     width: 150px;
     height: 150px;
 }
 
+.swiper-slideshow .card-introduce__layer .heading-title {
+    transition: all 0.8s ease-in-out;
+    transition-delay: 0.3s;
+    transform: translateY(55px);
+}
+
+.swiper-slideshow .card-introduce__text {
+    transition: all 0.8s ease-in-out;
+    transform: translateY(55px);
+    transition-delay: 0.5s;
+}
+
+.swiper-slideshow .swiper-pagination-bullet {
+    font-family: var(--font-heading);
+    background-color: transparent;
+    border: 2px solid var(--secondary-color);
+    width: 30px;
+    height: 30px;
+    color: var(--secondary-color);
+    transition: var(--transition-default);
+    font-weight: 700;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    transform: scale(1);
+    margin: 8px 5px !important;
+    font-size: 0.8em;
+}
+
+.swiper-slideshow .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: transparent;
+    transform: scale(1.1);
+}
+
+.swiper-slideshow .swiper-slide.swiper-slide-active .card-introduce__layer .heading-title,
+.swiper-slideshow .swiper-slide.swiper-slide-active .card-introduce__text {
+    transform: translateY(0);
+}
 
 @media (max-width: 1024px) {
     .box-item__image {
@@ -966,6 +1017,21 @@ header {
         height: 40px;
         font-size: 1.3em;
     }
+
+    .swiper-slideshow .heading-title {
+        font-size: 1.8em;
+    }
+
+    .swiper-slideshow .card-introduce__text {
+        font-size: 0.9em;
+    }
+
+
+    .swiper-slideshow .heading-title__line-2::after {
+        left: 0;
+        transform: unset;
+    }
+
 }
 
 @media (max-width: 576px) {
@@ -987,8 +1053,26 @@ header {
     .section-introduce__swiper .swiper-button__next {
         display: none !important;
     }
-}
 
+    .card-introduce__layer {
+        padding-top: 200px;
+    }
+
+    .swiper-slideshow .heading-title {
+        font-size: 1.4em;
+    }
+
+    .swiper-slideshow .card-introduce__text {
+        font-size: 0.85em;
+        padding-right: 20px;
+    }
+
+    .swiper-slideshow .swiper-pagination-bullet {
+        width: 22px;
+        height: 22px;
+        font-size: 0.7em;
+    }
+}
 
 /*======================================
         card holiday + card hotel
@@ -1219,21 +1303,27 @@ header {
     -webkit-transform: scale(1);
     transform: scale(1);
 }
-.page-category .card-article{
+
+.page-category .card-article {
     height: 450px;
 }
-.page-category .card-article > img{
+
+.page-category .card-article > img {
     height: 100% !important;
 }
-.page-category .card-article:hover img{
+
+.page-category .card-article:hover img {
     transform: scale(1.05);
 }
-.page-category .card-article__layer{
+
+.page-category .card-article__layer {
     background: linear-gradient(rgb(0 0 0 / 28%) 0%, rgba(0, 0, 0, 0.36) 100%);
 }
-.page-category .card-article:hover .card-article__layer{
+
+.page-category .card-article:hover .card-article__layer {
     background: linear-gradient(rgb(0 0 0 / 28%) 0%, rgb(0 0 0 / 56%) 100%);
 }
+
 @media (max-width: 992px) {
     .card-article__layer {
         padding: 20px;
@@ -1251,7 +1341,8 @@ header {
     .section-article .swiper-button {
         display: none !important;
     }
-    .page-category .card-article{
+
+    .page-category .card-article {
         height: 400px;
     }
 }
@@ -1264,7 +1355,8 @@ header {
     .card-article {
         font-size: 0.9em;
     }
-    .page-category .card-article{
+
+    .page-category .card-article {
         height: 300px;
     }
 }
@@ -1976,13 +2068,14 @@ small.itinerary-item__icon {
         width: 160px;
         font-size: 0.85em;
     }
+
     #detailContent h1::after,
     #detailContent h2::after,
     #detailContent h3::after,
     #detailContent h4::after {
         position: unset !important;
         content: unset !important;
-        background-color:unset !important;
+        background-color: unset !important;
     }
 }
 
@@ -2213,6 +2306,7 @@ small.itinerary-item__icon {
     height: 2px;
     transform: translateX(-10px);
 }
+
 .experts-swiper__thumb.pseudo::before {
     top: 50%;
     left: 100%;
@@ -2229,7 +2323,8 @@ small.itinerary-item__icon {
 .experts-swiper__thumb .swiper-slide.swiper-slide-thumb-active {
     opacity: 1;
 }
-@media(max-width: 992px) {
+
+@media (max-width: 992px) {
     .experts-swiper__thumb .expert-circle {
         width: 50px !important;
         height: 50px !important;
@@ -2237,17 +2332,19 @@ small.itinerary-item__icon {
     }
 }
 
-@media(max-width: 768px) {
+@media (max-width: 768px) {
     .introduce-expert .section-heading .heading-tile__line::after {
         left: 50%;
         transform: translateX(-50%);
     }
+
     .experts-swiper__thumb.pseudo::before,
-    .experts-swiper__thumb.pseudo::after{
+    .experts-swiper__thumb.pseudo::after {
         display: none !important;
     }
 
 }
+
 @media (max-width: 576px) {
     .introduce-expert__image {
         flex-shrink: unset !important;
@@ -2377,52 +2474,63 @@ small.itinerary-item__icon {
 .page-item:not(:first-child) .page-link {
     margin-left: 0 !important;
 }
+
 /*=================================
        category-destination
  =========================================*/
-.destination-item__title{
+.destination-item__title {
     font-size: 2.5em;
 }
-.destination-item ul > li > a{
-    color:var(--text-color);
+
+.destination-item ul > li > a {
+    color: var(--text-color);
     font-size: 1.2em;
 }
-.destination-item ul > li > a:hover{
-    color:var(--primary-color);
+
+.destination-item ul > li > a:hover {
+    color: var(--primary-color);
 }
+
 /*=================================
       detail-blog
  =========================================*/
-.detail-blog{
+.detail-blog {
     margin-top: -30px;
 }
-.detail-blog__desc{
+
+.detail-blog__desc {
     padding: 25px;
     background-color: var(--secondary-color);
 }
-.detail-blog__meta{
+
+.detail-blog__meta {
     font-size: 1.1em;
 }
-.author-image{
+
+.author-image {
     width: 60px;
     height: 60px;
 }
-@media(max-width: 768px) {
-    .detail-blog__meta{
+
+@media (max-width: 768px) {
+    .detail-blog__meta {
         font-size: 1em;
     }
-    .author-image{
+
+    .author-image {
         width: 50px;
         height: 50px;
     }
+
     .detail-blog__desc {
         padding: 15px;
         font-size: 0.9em;
     }
 }
-@media(max-width: 375px) {
-    .detail-blog__meta{
-       flex-direction: column;
-        gap:5px !important;
+
+@media (max-width: 375px) {
+    .detail-blog__meta {
+        flex-direction: column;
+        gap: 5px !important;
     }
 }

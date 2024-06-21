@@ -307,6 +307,7 @@ let handleLoadMore = function(){
 
 
 $(function () {
+    AOS.init();
     handleCallMenu()
     $(window).resize(function () {
         handleCallMenu();
