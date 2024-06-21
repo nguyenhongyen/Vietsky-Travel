@@ -1219,7 +1219,21 @@ header {
     -webkit-transform: scale(1);
     transform: scale(1);
 }
-
+.page-category .card-article{
+    height: 450px;
+}
+.page-category .card-article > img{
+    height: 100% !important;
+}
+.page-category .card-article:hover img{
+    transform: scale(1.05);
+}
+.page-category .card-article__layer{
+    background: linear-gradient(rgb(0 0 0 / 28%) 0%, rgba(0, 0, 0, 0.36) 100%);
+}
+.page-category .card-article:hover .card-article__layer{
+    background: linear-gradient(rgb(0 0 0 / 28%) 0%, rgb(0 0 0 / 56%) 100%);
+}
 @media (max-width: 992px) {
     .card-article__layer {
         padding: 20px;
@@ -1237,6 +1251,9 @@ header {
     .section-article .swiper-button {
         display: none !important;
     }
+    .page-category .card-article{
+        height: 400px;
+    }
 }
 
 @media (max-width: 576px) {
@@ -1246,6 +1263,9 @@ header {
 
     .card-article {
         font-size: 0.9em;
+    }
+    .page-category .card-article{
+        height: 300px;
     }
 }
 
@@ -1956,6 +1976,14 @@ small.itinerary-item__icon {
         width: 160px;
         font-size: 0.85em;
     }
+    #detailContent h1::after,
+    #detailContent h2::after,
+    #detailContent h3::after,
+    #detailContent h4::after {
+        position: unset !important;
+        content: unset !important;
+        background-color:unset !important;
+    }
 }
 
 /*============================
@@ -2361,4 +2389,40 @@ small.itinerary-item__icon {
 }
 .destination-item ul > li > a:hover{
     color:var(--primary-color);
+}
+/*=================================
+      detail-blog
+ =========================================*/
+.detail-blog{
+    margin-top: -30px;
+}
+.detail-blog__desc{
+    padding: 25px;
+    background-color: var(--secondary-color);
+}
+.detail-blog__meta{
+    font-size: 1.1em;
+}
+.author-image{
+    width: 60px;
+    height: 60px;
+}
+@media(max-width: 768px) {
+    .detail-blog__meta{
+        font-size: 1em;
+    }
+    .author-image{
+        width: 50px;
+        height: 50px;
+    }
+    .detail-blog__desc {
+        padding: 15px;
+        font-size: 0.9em;
+    }
+}
+@media(max-width: 375px) {
+    .detail-blog__meta{
+       flex-direction: column;
+        gap:5px !important;
+    }
 }
