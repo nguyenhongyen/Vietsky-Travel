@@ -2019,6 +2019,9 @@ small.itinerary-item__icon {
     background-color: var(--secondary-color);
     color:var(--bs-white);
 }
+.select2-container--open .select2-dropdown--below{
+    z-index: 1 !important;
+}
 /*=================================
            loading
  =========================================*/
