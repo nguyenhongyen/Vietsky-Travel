@@ -1612,11 +1612,17 @@ footer {
         right: 5px;
         top: -50px;
     }
+    .section-breadcrumb__wrap h5{
+        font-size: 1.05em;
+    }
 }
 
 @media (max-width: 576px) {
     .section-breadcrumb__title {
         font-size: 1.6em;
+    }
+    .section-breadcrumb__wrap h5{
+        font-size: 1em;
     }
 }
 
@@ -1913,16 +1919,21 @@ small.itinerary-item__icon {
     }
 }
 
-#detailContent * {
+.detailContent * {
     font-family: var(--font-theme);
 }
 
-#detailContent img {
+.detailContent img {
     max-width: 100% !important;
     height: auto !important;
 }
-
-#detailContent h1 {
+.detailContent strong,
+.detailContent b{
+    font-family: var(--font-heading) !important;
+    font-weight: 800 !important;
+    color: var(--bs-gray-900);
+}
+.detailContent h1 {
     font-family: var(--font-heading) !important;
     font-weight: 800;
     color: var(--bs-gray-900);
@@ -1933,7 +1944,7 @@ small.itinerary-item__icon {
     padding-right: 10px;
 }
 
-#detailContent h2 {
+.detailContent h2 {
     font-family: var(--font-heading) !important;
     font-weight: 800;
     color: var(--bs-gray-900);
@@ -1944,7 +1955,7 @@ small.itinerary-item__icon {
     padding-right: 10px;
 }
 
-#detailContent h3 {
+.detailContent h3 {
     font-family: var(--font-heading) !important;
     font-weight: 800;
     color: var(--bs-gray-900);
@@ -1955,7 +1966,7 @@ small.itinerary-item__icon {
     padding-right: 10px;
 }
 
-#detailContent h4 {
+.detailContent h4 {
     font-family: var(--font-heading) !important;
     font-weight: 800;
     color: var(--bs-gray-900);
@@ -1966,7 +1977,7 @@ small.itinerary-item__icon {
     padding-right: 10px;
 }
 
-#detailContent h5 {
+.detailContent h5 {
     font-family: var(--font-heading) !important;
     font-weight: 800;
     color: var(--bs-gray-900);
@@ -1977,7 +1988,7 @@ small.itinerary-item__icon {
     padding-right: 10px;
 }
 
-#detailContent h6 {
+.detailContent h6 {
     font-family: var(--font-heading) !important;
     font-weight: 800;
     color: var(--bs-gray-900);
@@ -1988,10 +1999,10 @@ small.itinerary-item__icon {
     padding-right: 10px;
 }
 
-#detailContent h1::after,
-#detailContent h2::after,
-#detailContent h3::after,
-#detailContent h4::after {
+.detailContent h1::after,
+.detailContent h2::after,
+.detailContent h3::after,
+.detailContent h4::after {
     position: absolute;
     content: '';
     right: 3px;
@@ -2002,10 +2013,10 @@ small.itinerary-item__icon {
     border-radius: 50%;
 }
 
-#detailContent h1::before,
-#detailContent h2::before,
-#detailContent h3::before,
-#detailContent h4::before {
+.detailContent h1::before,
+.detailContent h2::before,
+.detailContent h3::before,
+.detailContent h4::before {
     position: absolute;
     content: '';
     left: 0;
@@ -2015,16 +2026,16 @@ small.itinerary-item__icon {
     background-color: var(--secondary-color);
 }
 
-#detailContent ul {
+.detailContent ul {
     padding-left: 0;
 }
 
-#detailContent ul > li {
+.detailContent ul > li {
     position: relative;
     padding-left: 12px;
 }
 
-#detailContent ul > li::before {
+.detailContent ul > li::before {
     position: absolute;
     content: '';
     top: 50%;
@@ -2036,8 +2047,11 @@ small.itinerary-item__icon {
     border: 2px solid var(--secondary-color);
 }
 
-#detailContent a {
+.detailContent a {
     color: var(--secondary-color);
+}
+.detailContent a:hover{
+    color: var(--secondary-hover);
 }
 
 .swiper-pagination-bullet {
@@ -2061,6 +2075,16 @@ small.itinerary-item__icon {
     background-color: var(--primary-color) !important;
     color: var(--secondary-color) !important;
 }
+@media(max-width: 992px) {
+    .detailContent h1::after,
+    .detailContent h2::after,
+    .detailContent h3::after,
+    .detailContent h4::after {
+        position: unset !important;
+        content: unset !important;
+        background-color: unset !important;
+    }
+}
 
 @media (max-width: 576px) {
     .highlights-nav button {
@@ -2069,14 +2093,7 @@ small.itinerary-item__icon {
         font-size: 0.85em;
     }
 
-    #detailContent h1::after,
-    #detailContent h2::after,
-    #detailContent h3::after,
-    #detailContent h4::after {
-        position: unset !important;
-        content: unset !important;
-        background-color: unset !important;
-    }
+
 }
 
 /*============================
@@ -2532,5 +2549,49 @@ small.itinerary-item__icon {
     .detail-blog__meta {
         flex-direction: column;
         gap: 5px !important;
+    }
+}
+
+/*=================================
+    booking-conditions
+ =========================================*/
+.booking-conditions_nav.nav-pills .nav-link:not(:last-child){
+    margin-bottom: 10px;
+}
+.booking-conditions_nav.nav-pills .nav-link::after{
+    left: 0;
+    width: 0;
+    height: 2px;
+    transition: var(--transition-default);
+    bottom: 0;
+    background-color: var(--secondary-color);
+    z-index: 1;
+}
+.booking-conditions_nav.nav-pills .nav-link{
+    font-size: 1.2em;
+    color:var(--bs-gray-600);
+    padding: 5px 0;
+
+}
+.booking-conditions_nav.nav-pills .nav-link.active{
+    background-color: transparent !important;
+    color:var(--bs-gray-800);
+    font-weight: 700;
+
+}
+.booking-conditions_nav.nav-pills .nav-link:hover{
+    color:var(--bs-gray-800);
+    font-weight: 700;
+
+}
+.booking-conditions_nav.nav-pills .nav-link.active::after{
+    width: 100%;
+}
+@media(max-width: 992px) {
+    .booking-conditions .border-end{
+        border-right:unset !important;
+    }
+    .booking-conditions_nav.nav-pills .nav-link {
+        font-size: 1.1em;
     }
 }

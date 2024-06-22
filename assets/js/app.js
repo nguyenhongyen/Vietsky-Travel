@@ -167,9 +167,9 @@ const handleInitFancybox = function () {
     }
 }
 const handleContentDetail = () => {
-    if ($('#detailContent').length > 0) {
-        if ($('#detailContent img').length > 0) {
-            $('#detailContent img').each((index, elm) => {
+    if ($('.detailContent').length > 0) {
+        if ($('.detailContent img').length > 0) {
+            $('.detailContent img').each((index, elm) => {
                 $(elm).wrap(`<a style="cursor: zoom-in" href="${$(elm).attr('src')}" data-caption="${$(elm).attr('alt')}" data-fancybox="images-detail"></a>`);
             });
 
@@ -180,8 +180,8 @@ const handleContentDetail = () => {
             });
         }
 
-        if ($('#detailContent table').length > 0) {
-            $('#detailContent table').map(function () {
+        if ($('.detailContent table').length > 0) {
+            $('.detailContent table').map(function () {
                 $(this).addClass('table table-bordered');
                 $(this).wrap('<div class="table-responsive"></div>');
             })
