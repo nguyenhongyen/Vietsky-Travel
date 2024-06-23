@@ -1089,11 +1089,7 @@ header {
 .card-boat,
 .card-boat__image {
     height: 350px;
-    background: var(--bs-white)!important;
-}
-
-.card-holiday {
-    height: 500px !important;
+    background: var(--bs-white) !important;
 }
 
 .card-people,
@@ -1101,15 +1097,19 @@ header {
     height: 450px;
 }
 
-.card-holiday__layer{
-    height: 99%;
+.card-holiday__layer {
+    height: 99.5%;
 
+}
+
+.card-boat__layer {
+    border-bottom: 4px solid var(--secondary-color);
 }
 
 .card-hotel__layer,
 .card-destination__layer,
 .card-people__layer,
-.card-boat__layer{
+.card-boat__layer {
     height: 100%;
 }
 
@@ -1150,9 +1150,13 @@ header {
 .card-holiday:hover .card-holiday__layer,
 .card-hotel:hover .card-hotel__layer,
 .card-destination:hover .card-destination__layer,
-.card-people:hover .card-people__layer,
-.card-boat:hover .card-boat__layer {
+.card-people:hover .card-people__layer {
     height: calc(100% - 48px);
+    color: transparent;
+}
+
+.card-boat:hover .card-boat__layer {
+    height: calc(100% - 44px);
     color: transparent;
 }
 
@@ -1190,9 +1194,12 @@ header {
 .card-holiday__link,
 .card-hotel__link,
 .card-destination__link,
-.card-people__link,
-.card-boat__link {
+.card-people__link {
     height: 48px;
+}
+
+.card-boat__link {
+    height: 44px;
 }
 
 
@@ -1238,15 +1245,25 @@ header {
     border-bottom: unset;
 }
 
+
 .card-holiday:hover .card-holiday__image > img,
-.card-hotel:hover .card-hotel__image > img,
 .card-destination:hover .card-destination__image > img,
-.card-people:hover .card-people__image > img,
-.card-boat:hover .card-boat__image > img {
+.card-people:hover .card-people__image > img {
     transform: scale(1.1);
 }
 
-.card-hotel__type .type {
+.card-hotel .card-hotel__image > img,
+.card-boat .card-boat__image > img {
+    transform: scale(1.1);
+}
+
+.card-hotel:hover .card-hotel__image > img,
+.card-boat:hover .card-boat__image > img {
+    transform: scale(1);
+}
+
+.card-hotel__type .type,
+.card-boat__type .type {
     transform: translateY(4px);
 }
 
@@ -1288,6 +1305,12 @@ header {
     .section-holiday .swiper-button {
         display: none !important;
     }
+
+    .card-hotel__name.heading-tile__line,
+    .card-boat__name.heading-tile__line {
+        padding-bottom: 10px !important;
+        margin-bottom: 15px !important;
+    }
 }
 
 @media (max-width: 992px) {
@@ -1305,6 +1328,22 @@ header {
 
     .card-holiday__link {
         font-size: 0.85em;
+    }
+
+    .card-hotel__name,
+    .card-boat__name {
+        font-size: 1.25em;
+    }
+
+    .card-boat__type {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 576px) {
+    .card-hotel__name,
+    .card-boat__name {
+        font-size: 1.2em;
     }
 }
 
@@ -1995,12 +2034,6 @@ small.itinerary-item__icon {
     width: 50px;
     height: 50px;
     font-size: 2em;
-}
-
-.holiday-ideas .card-holiday {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
 .holiday-ideas .card-holiday__image {
@@ -2866,6 +2899,11 @@ small.itinerary-item__icon {
         width: 220px;
         height: 220px;
     }
+
+    .card-people__name.heading-tile__line {
+        padding-bottom: 10px !important;
+        margin-bottom: 15px !important;
+    }
 }
 
 @media (max-width: 992px) {
@@ -2891,6 +2929,15 @@ small.itinerary-item__icon {
         width: 180px;
         height: 180px;
     }
+
+    .card-people__name {
+        font-size: 1.25em;
+    }
+
+    .card-people__type {
+        font-size: 0.9em;
+    }
+
 }
 
 @media (max-width: 576px) {
@@ -2915,3 +2962,71 @@ small.itinerary-item__icon {
 }
 
 
+/*.===================================
+             section-deck
+
+==================================================*/
+.table-boat li:not(:last-child) {
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--bs-gray-300);
+}
+
+.section-deck__nav .nav-link {
+    color: var(--bs-gray-600);
+    padding: 5px 0;
+    font-size: 1.05em;
+}
+
+.section-deck__nav .nav-link.active {
+    color: var(--bs-gray-900);
+    font-weight: 700;
+}
+
+.section-deck__nav .nav-link:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.section-deck__nav.nav-pills .nav-link::after {
+    left: 0;
+    width: 0;
+    height: 2px;
+    transition: var(--transition-default);
+    bottom: 0;
+    background-color: var(--secondary-color);
+    z-index: 1;
+}
+
+.section-deck__nav.nav-pills .nav-link:hover {
+    font-weight: 700;
+    color: var(--bs-gray-900);
+}
+
+.section-deck__nav.nav-pills .nav-link.active::after {
+    width: 100%;
+}
+
+@media (max-width: 992px) {
+    .section-deck__nav .nav-link {
+        font-size: 1em;
+    }
+
+    .section-deck .tab-content .heading-title {
+        font-size: 1.2em;
+    }
+}
+
+/*.===================================
+             other-boat
+
+==================================================*/
+
+.section-boat__column .col:nth-child(even) {
+    transform: translateY(30px);
+}
+
+@media (max-width: 767px) {
+    .section-boat__column .col:nth-child(even) {
+        transform: unset;
+    }
+}

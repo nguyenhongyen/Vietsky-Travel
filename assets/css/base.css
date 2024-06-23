@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 
 :root {
+    --transition: all 0.3s ease;
     --transition-default: 0.3s all ease-in-out;
     --font-theme: "Nunito Sans", sans-serif;
     --font-heading: "Libre Caslon Text", serif;
@@ -527,9 +528,11 @@ ul {
         transform: scale(1.05);
     }
 }
+
 .padding-xxl {
     padding: 350px 0 180px !important;
 }
+
 .padding-xl {
     padding: 350px 0 80px !important;
 }
@@ -567,15 +570,16 @@ main {
     margin-top: -120px;
 }
 
-@media(max-width: 992px) {
+@media (max-width: 992px) {
     .padding-xxl {
         padding: 240px 0 120px !important;
     }
 
 }
-@media(max-width: 576px) {
-	.padding-xl {
-		padding: 240px 0 50px !important;
-	}
+
+@media (max-width: 576px) {
+    .padding-xl {
+        padding: 240px 0 50px !important;
+    }
 
 }
