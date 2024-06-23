@@ -63,12 +63,17 @@ let handleSliderHoliday = function () {
 
             new Swiper(elm_id + ' .swiper', {
                 navigation: {
-                    nextEl: elm_id + " .swiper-button__next", prevEl: elm_id + " .swiper-button__prev",
-                }, slidesPerView: 1.5, loop: true, speed: 1000, // autoplay: {
+                    nextEl: elm_id + " .swiper-button__next",
+                    prevEl: elm_id + " .swiper-button__prev",
+                }, slidesPerView: 1.5,
+                loop: true,
+                speed: 1000,
+                // autoplay: {
                 //     delay: 6000,
                 //     disableOnInteraction: true,
                 // },
-                spaceBetween: 20, breakpoints: {
+                spaceBetween: 20,
+                breakpoints: {
                     320: {
                         slidesPerView: 1.5,
                     }, 768: {

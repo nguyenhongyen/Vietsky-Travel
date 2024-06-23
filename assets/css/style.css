@@ -1089,18 +1089,25 @@ header {
     height: 350px;
 }
 
+.card-people,
+.card-people__image {
+    height: 450px;
+}
+
 .card-holiday__layer {
     height: 99%;
 }
 
 .card-hotel__layer,
-.card-destination__layer {
+.card-destination__layer,
+.card-people__layer {
     height: 100%;
 }
 
 .card-holiday__layer:before,
 .card-hotel__layer:before,
-.card-destination__layer:before {
+.card-destination__layer:before,
+.card-people__layer:before {
     content: "";
     position: absolute;
     bottom: 0;
@@ -1115,12 +1122,14 @@ header {
 }
 
 .card-hotel__layer:before,
-.card-destination__layer:before {
+.card-destination__layer:before,
+.card-people__layer:before {
     background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0 0 0 / 36%) 100%);
 }
 
 .card-hotel:hover .card-hotel__layer:before,
-.card-destination:hover .card-destination__layer:before {
+.card-destination:hover .card-destination__layer:before,
+.card-people:hover .card-people__layer:before {
     background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(#000));
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000 100%);
 }
@@ -1128,7 +1137,8 @@ header {
 
 .card-holiday:hover .card-holiday__layer,
 .card-hotel:hover .card-hotel__layer,
-.card-destination:hover .card-destination__layer {
+.card-destination:hover .card-destination__layer,
+.card-people:hover .card-people__layer {
     height: calc(100% - 48px);
 }
 
@@ -1159,18 +1169,21 @@ header {
 
 .card-holiday__link,
 .card-hotel__link,
-.card-destination__link {
+.card-destination__link,
+.card-people__link {
     height: 48px;
 }
 
 .card-hotel__link,
-.card-destination__link {
+.card-destination__link,
+.card-people__link {
     opacity: 0;
     transform: translateY(100%);
 }
 
 .card-hotel:hover .card-hotel__link,
-.card-destination:hover .card-destination__link {
+.card-destination:hover .card-destination__link,
+.card-people:hover .card-people__link {
     opacity: 1;
     transform: translateY(0);
 }
@@ -1187,7 +1200,8 @@ header {
 
 .card-holiday:hover .card-holiday__image > img,
 .card-hotel:hover .card-hotel__image > img,
-.card-destination:hover .card-destination__image > img {
+.card-destination:hover .card-destination__image > img,
+.card-people:hover .card-people__image > img {
     transform: scale(1.1);
 }
 
@@ -1213,13 +1227,15 @@ header {
     z-index: 3;
 }
 
-.section-holiday__type .section-holiday__column .swiper-button__prev {
+.section-holiday__type .section-holiday__column .swiper-button__prev,
+.section-people .section-people__column .swiper-button__prev {
     left: -20px;
     top: 50%;
     z-index: 3;
 }
 
-.section-holiday__type .section-holiday__column .swiper-button__next {
+.section-holiday__type .section-holiday__column .swiper-button__next,
+.section-people .section-people__column .swiper-button__next {
     right: 320px;
     top: 50%;
     z-index: 3;
@@ -2635,6 +2651,7 @@ small.itinerary-item__icon {
 /*=================================
     booking-conditions
  =========================================*/
+
 .booking-conditions_nav.nav-pills .nav-link:not(:last-child) {
     margin-bottom: 10px;
 }
@@ -2681,13 +2698,178 @@ small.itinerary-item__icon {
     .booking-conditions_nav.nav-pills .nav-link {
         font-size: 1.1em;
     }
-}
 
-/*=================================
-    section-information
- =========================================*/
-@media (max-width: 992px) {
     .information-column__title {
         font-size: 1.25em;
     }
 }
+
+/*=================================
+    people-gird
+ =========================================*/
+.gird-item__layer {
+    background: rgba(0, 0, 0, .6);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.gird-item:hover .gird-item__layer {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.section-gird {
+    grid-template-rows: repeat(4, 200px);
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.section-gird .section-heading {
+    padding: 40px;
+    grid-column: 4 / -1;
+    grid-row-end: 3;
+    grid-row-start: 1;
+}
+
+.people-grid .gird-item {
+    background-color: #1d1e1f;
+    width: 185px;
+    height: 200px;
+}
+
+.people-grid .gird-item:nth-child(1) {
+    grid-row-start: 1;
+    grid-column-start: 1
+}
+
+.people-grid .gird-item:nth-child(2) {
+    grid-row-start: 2
+}
+
+.people-grid .gird-item:nth-child(3) {
+    grid-row-start: 3
+}
+
+.people-grid .gird-item:nth-child(4) {
+    grid-row-start: 4
+}
+
+.people-grid .gird-item:nth-child(5) {
+    grid-row-start: 5
+}
+
+.people-grid .gird-item:nth-child(6) {
+    grid-row-start: 6
+}
+
+.people-grid .gird-item:nth-child(7) {
+    grid-row-start: 7;
+    grid-column-start: 5
+}
+
+.people-grid .gird-item:nth-child(7) + .gird-item:nth-child(7) {
+    grid-column-start: 6
+}
+
+.people-grid .gird-item:nth-child(8) {
+    grid-row-start: 8;
+    grid-column-start: 6
+}
+
+
+.page-people {
+    margin-top: -150px;
+}
+
+.people-avatar {
+    width: 250px;
+    height: 250px;
+}
+
+.list-expertise {
+    overflow: auto;
+    max-height: 300px;
+}
+
+.list-expertise::-webkit-scrollbar {
+    width: 4px;
+}
+
+.list-expertise::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: var(--bs-gray-300);
+}
+
+.list-expertise__item .image {
+    width: 50px;
+}
+
+@media (max-width: 1024px) {
+    .section-gird {
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(4, 180px);
+    }
+
+    .section-gird .section-heading {
+        padding: 30px;
+        grid-column: 2 / -1;
+    }
+
+    .section-gird .gird-item .gird-item__layer h5 {
+        font-size: 1.1em;
+    }
+
+    .people-avatar {
+        width: 220px;
+        height: 220px;
+    }
+}
+
+@media (max-width: 992px) {
+    .section-gird {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 160px);
+    }
+
+    .section-gird .section-heading {
+        padding: 30px;
+        grid-column: 1 / -1;
+    }
+
+    .section-gird .gird-item .gird-item__layer h5 {
+        font-size: 1em;
+    }
+
+    .page-people {
+        margin-top: -100px;
+    }
+
+    .people-avatar {
+        width: 180px;
+        height: 180px;
+    }
+}
+
+@media (max-width: 576px) {
+    .section-gird .section-heading {
+        padding: 0;
+    }
+
+    .section-gird {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .people-avatar {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media (max-width: 376px) {
+    .section-gird {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
