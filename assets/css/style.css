@@ -1130,6 +1130,9 @@ header {
     z-index: 0;
     transition: all 0.3s ease-in;
 }
+.card-holiday__layer:before{
+    opacity: 0.8;
+}
 
 .card-hotel__layer:before,
 .card-destination__layer:before,
@@ -1153,6 +1156,9 @@ header {
 .card-people:hover .card-people__layer {
     height: calc(100% - 48px);
     color: transparent;
+}
+.card-holiday:hover .card-holiday__layer:before{
+    opacity: 1;
 }
 
 .card-boat:hover .card-boat__layer {
