@@ -396,12 +396,12 @@ ul {
 }
 
 .custom-scrollbar::-webkit-scrollbar {
-    width: 12px;
+    width: 10px;
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    background-color: var(--primary-color);
+    border-radius: 5px;
+    background-color: var(--bs-gray-500);
 }
 
 .text-secondary {

@@ -737,7 +737,7 @@ header {
 }
 
 .section-search__result {
-    height: 300px;
+    height: 12vh;
     overflow-y: scroll;
     -webkit-box-shadow: 0 0 2px 0 rgba(30, 30, 30, .4);
     box-shadow: 0 0 2px 0 rgba(30, 30, 30, .4);
@@ -774,6 +774,11 @@ header {
     border-bottom: 3px solid var(--secondary-color);
 }
 
+@media (min-width: 1400px) {
+    .section-search__result {
+        height: 30vh;
+    }
+}
 
 @media (max-width: 1024px) {
     .search-heading__title {
@@ -784,7 +789,9 @@ header {
         padding: 12px 10px 12px 70px;
         font-size: 1.1em;
     }
+
 }
+
 
 @media (max-width: 992px) {
     .search-heading__title {
@@ -796,10 +803,27 @@ header {
         font-size: 1em;
     }
 
+
     .section-search__result > li > a {
         padding: 6px 12px;
         color: var(--bs-gray-800);
         font-size: 0.9em;
+    }
+    .section-search__result {
+        height: 12vh;
+    }
+
+}
+
+@media (max-width: 900px) {
+    .section-search__result {
+        height: 12vh;
+    }
+}
+
+@media (max-width: 700px) {
+    .section-search__result {
+        height: 10vh;
     }
 }
 
@@ -826,7 +850,24 @@ header {
         width: 12px;
         height: 12px;
     }
+
+    .section-search__result {
+        height: 12vh;
+    }
 }
+
+@media (max-width: 376px) {
+    .section-search__result {
+        height: 18vh;
+    }
+}
+
+@media (max-width: 321px) {
+    .section-search__result {
+        height: 12vh;
+    }
+}
+
 
 /*======================================
         section-hero
@@ -1130,7 +1171,8 @@ header {
     z-index: 0;
     transition: all 0.3s ease-in;
 }
-.card-holiday__layer:before{
+
+.card-holiday__layer:before {
     opacity: 0.8;
 }
 
@@ -1157,7 +1199,8 @@ header {
     height: calc(100% - 48px);
     color: transparent;
 }
-.card-holiday:hover .card-holiday__layer:before{
+
+.card-holiday:hover .card-holiday__layer:before {
     opacity: 1;
 }
 
