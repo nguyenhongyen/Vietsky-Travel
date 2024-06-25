@@ -574,7 +574,9 @@ main {
     .padding-xxl {
         padding: 240px 0 120px !important;
     }
-
+    .custom-scrollbar::-webkit-scrollbar {
+        width: 7px;
+    }
 }
 
 @media (max-width: 576px) {
